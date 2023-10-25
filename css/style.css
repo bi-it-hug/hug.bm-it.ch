@@ -1,26 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Press Start 2P");
+@import url("https://fonts.googleapis.com/css?family=JetBrains%20Mono");
 
 :root {
     --font-color: rgb(255, 255, 255);
-    --background: #0d1117;
-    --header-footer-color: #21262d;
+    --background: rgb(20, 20, 20);
+    --header-footer-color: rgb(30, 30, 30);
+    --header-footer-height: 100px;
     --border-color: rgb(40, 40, 40);
-    --hover-color: rgb(170, 170, 170) 
+    --hover-color: rgb(180, 180, 180) 
 }
 
 body {
     margin: 0;
     padding: 0;
     overflow: auto;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(10, 10, 10);
-}
-
-.mainBoxHome,
-.mainBoxAboutMe,
-.mainBoxPython,
-.mainBoxHtml {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,8 +22,44 @@ body {
     background-color: var(--background);
 }
 
-.defaultCursor {
-    cursor: default;
+.h1 {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 3.6vw;
+    color: var(--font-color);
+}
+
+.h2 {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 0.8vw;
+    color: var(--font-color);
+}
+
+.mandoBox {
+    margin: 0;
+    padding: 0;
+    place-self: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.mando {
+    width: 20%;
+    height: 20%;
+}
+
+.mando:hover {
+    scale: 1.1;
+}
+
+.nothing {
+    place-self: center;
+    font-size: 1vw;
+    font-family: "Press Start 2P", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+li {
+    list-style-type: none;
 }
 
 .navList {
@@ -50,12 +79,12 @@ nav {
     width: fit-content;
     height: fit-content;
     font-family: "Press Start 2P", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 18px; /* Abstand zwischen home und about me */
     text-decoration: none;
     color: rgb(255, 255, 255);
     background-color: var(--header-footer-color);
@@ -82,14 +111,6 @@ nav {
     margin-right: 2vw; /* 36px */
 }
 
-.mainHead {
-    color: rgb(255, 255, 255);
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 4vw;
-    white-space: nowrap;
-    position: relative;
-}
-
 .nameBox {
     align-self: center;
     justify-self: center;
@@ -99,51 +120,42 @@ nav {
     border: 0px solid wheat;
 }
 
-.subHead {
-    color: rgb(255, 255, 255);
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 1vw;
-    font-weight: normal;
-}
-
 .footerBox {
-    height: 100px;
+    height: var(--header-footer-height);
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
     bottom: 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 4px solid var(--border-color);
     background-color: var(--header-footer-color);
 }
 
 .headerBox {
-    height: 100px;
+    height: var(--header-footer-height);
     width: 100vw; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
     top: 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
     background-color: var(--header-footer-color);
 }
 
 .currentPage {
-    color: rgb(190, 190, 190);
+    color: rgb(160, 160, 160);
     /* background-color: rgb(30, 30, 30); */
 }
 
 .homeBox,
-.aboutMeBox,
-.pythonBox,
-.htmlBox {
+.aboutMeBox {
     display: grid;
     text-align: center;
     position: relative;
     width: calc(100% - 120px);
-    height: 80vh; /* calc(100% - ((2 * 90px) + (2 * 2px))); */
+    height: calc(100% - (var(--header-footer-height) + var(--header-footer-height)));
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 80px;
@@ -158,8 +170,9 @@ a:hover {
 .profilePicture {
     width: 40px;
     height: 40px;
-    border:  0px solid white;
-    border-radius: 100px;/*
+    border:  0px solid var(--border-color);
+    border-radius: 100px;
+    position: absolute;/*
     position: absolute;
     right: 60px;
     justify-self: center;*/
@@ -282,8 +295,6 @@ td {
     color: rgb(255, 255, 255);
     font-family: "Press Start 2P", sans-serif;
     font-size: 10px;
-    font-style: italic;
-    font-weight: normal;
     text-align: left;
     position: absolute;
     text-align: left;
@@ -297,8 +308,6 @@ td {
     color: rgb(255, 255, 255);
     font-family: "Press Start 2P", sans-serif;
     font-size: 10px;
-    font-style: normal;
-    font-weight: normal;
     white-space: nowrap;
     text-align: right;
     align-self: self-end;
@@ -313,16 +322,4 @@ td {
 .pythonBox,
 .htmlBox {
     place-items: center;
-}
-
-.nothing {
-    align-self: center;
-    place-self: center;
-    font-size: 1vw;
-    font-family: "Press Start 2P", sans-serif;
-    color: rgb(255, 255, 255);
-}
-
-.test {
-    color: aliceblue;
 }
