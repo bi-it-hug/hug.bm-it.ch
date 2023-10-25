@@ -1,4 +1,14 @@
-   body {
+@import url("https://fonts.googleapis.com/css?family=Press Start 2P");
+
+:root {
+    --font-color: rgb(255, 255, 255);
+    --background: rgb(15, 15, 15);
+    --header-footer-color: rgb(25, 25, 25);
+    --border-color: rgb(40, 40, 40);
+    --hover-color: rgb(170, 170, 170) 
+}
+
+body {
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -17,7 +27,6 @@
     height: 100vh;
     width: 100vw;
     background-color: rgb(10, 10, 10);
-    z-index: 10;
 }
 
 .defaultCursor {
@@ -40,16 +49,16 @@ nav {
 .navigation {
     width: fit-content;
     height: fit-content;
-    font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 24px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(15, 15, 15);
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 20px;
     border-radius: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: var(--header-footer-color);
 }
 
 .gitHubImage {
@@ -75,13 +84,15 @@ nav {
 
 .mainHead {
     color: rgb(255, 255, 255);
-    font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 7vw;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 4vw;
     white-space: nowrap;
     position: relative;
 }
 
 .nameBox {
+    align-self: center;
+    justify-self: center;
     place-self: center;
     width: fit-content;
     height: fit-content;
@@ -90,8 +101,8 @@ nav {
 
 .subHead {
     color: rgb(255, 255, 255);
-    font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 1.8vw;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 1vw;
     font-weight: normal;
 }
 
@@ -103,8 +114,8 @@ nav {
     justify-content: center;
     position: absolute;
     bottom: 0;
-    border-top: 1px solid rgb(40, 40, 40);
-    background-color: rgb(15, 15, 15);
+    border-top: 1px solid var(--border-color);
+    background-color: var(--header-footer-color);
 }
 
 .headerBox {
@@ -115,12 +126,13 @@ nav {
     justify-content: center;
     position: absolute;
     top: 0;
-    border-bottom: 1px solid rgb(40, 40, 40);
-    background-color: rgb(15, 15, 15);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--header-footer-color);
 }
 
 .currentPage {
-    background-color: rgb(30, 30, 30);
+    color: rgb(190, 190, 190);
+    /* background-color: rgb(30, 30, 30); */
 }
 
 .homeBox,
@@ -139,8 +151,8 @@ nav {
 }
 
 a:hover {
-    background-color: rgb(40, 40, 40);
-
+    color: var(--hover-color);
+    /* background-color: rgb(40, 40, 40); */
 }
 
 .profilePicture {
@@ -163,7 +175,7 @@ a:hover {
 }
 
 .pbLink:hover {
-    background-color: rgb(30, 30, 30);
+    background-color: var(--header-footer-color);
 }
 
 .profilePicture:hover {
@@ -173,11 +185,11 @@ a:hover {
 .aboutMeHeading {
     width: 100%;
     height: fit-content;
-    font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 88px;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 68px;
     font-weight: lighter;
     color: rgb(255, 255, 255);
-    border: 1px solid rgb(40, 40, 40);
+    border: 1px solid var(--border-color);
     border-radius: 0.1em;
     text-align: center;
     align-self: baseline;
@@ -189,7 +201,7 @@ a:hover {
 .wTable {
     width: 32%;
     height: 30%;
-    border: 1px solid rgb(40, 40, 40);
+    border: 1px solid var(--border-color);
     border-radius: 0.5em;
     position: absolute;
     left: 0;
@@ -200,19 +212,19 @@ a:hover {
     text-align: center;
     font-weight: lighter;
     color: white;
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-size: 52px;
 }
 
 .wTableText {
     color: white;
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-size: 22px;
     text-align: left;
 }
 
 .wH {
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-size: 22px;
     text-align: right;
     color: rgb(200, 200, 200);
@@ -228,7 +240,7 @@ a:hover {
     table-layout: fixed;
     width: 30%;
     height: 30%;
-    border: 1px solid rgb(40, 40, 40);
+    border: 1px solid var(--border-color);
     border-radius: 0.5em;
     align-self: baseline;
     position: absolute;
@@ -240,7 +252,7 @@ a:hover {
     text-align: left;
     font-weight: lighter;
     color: white;
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-size: 32px; 
 }
 
@@ -252,7 +264,7 @@ a:hover {
 
 .pythonLink,
 .htmlLink {
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-weight: lighter;
     font-style: italic;
     color: rgb(200, 200, 200);
@@ -262,14 +274,14 @@ td {
     margin: 0%;
     width: fit-content;
     color: rgb(255, 255, 255);
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     font-size: 22px;
 }
 
 .directory {
     color: rgb(255, 255, 255);
-    font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 14px;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 10px;
     font-style: italic;
     font-weight: normal;
     text-align: left;
@@ -283,14 +295,13 @@ td {
     width: fit-content;
     height: fit-content;
     color: rgb(255, 255, 255);
-    font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 14px;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 10px;
     font-style: normal;
     font-weight: normal;
     white-space: nowrap;
     text-align: right;
     align-self: self-end;
-
     padding-right: 60px;
 }
 
@@ -308,6 +319,7 @@ td {
     align-self: center;
     place-self: center;
     font-size: 1vw;
-    font-family: "JetBrains Mono", Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif;
     color: rgb(255, 255, 255);
 }
+
