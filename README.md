@@ -1,3 +1,1 @@
-﻿# hug.bm-it.ch
-test
-test 22222
+﻿[# hug.bm-it.ch](https://hug.bm-it.ch/)
