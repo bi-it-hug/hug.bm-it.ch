@@ -103,7 +103,7 @@ nav {
     justify-content: center;
     position: absolute;
     bottom: 0;
-    border-top: 1px solid rgb(15, 15, 15);
+    border-top: 1px solid rgb(40, 40, 40);
     background-color: rgb(15, 15, 15);
 }
 
@@ -115,7 +115,7 @@ nav {
     justify-content: center;
     position: absolute;
     top: 0;
-    border-bottom: 1px solid rgb(15, 15, 15);
+    border-bottom: 1px solid rgb(40, 40, 40);
     background-color: rgb(15, 15, 15);
 }
 
