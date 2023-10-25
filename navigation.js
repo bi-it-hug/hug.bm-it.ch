@@ -1,17 +1,31 @@
 function addMouseEnterLeaveListenersToLinks() {
-    const links = document.querySelectorAll("a, div");
+    var currentPage = window.location.href;
+    const links = document.querySelectorAll("a");
     const pb = document.getElementById("pb");
 
     links.forEach(function(link) {
-        link.addEventListener("mouseenter", function() {
-            link.style.transition = "all 0.2s ease";
-            console.log("Link Hover: true");
-        });
+        if (currentPage.endsWith("index.html")) {
+            link.addEventListener("mouseenter", function() {
+                link.style.transition = "all 0.2s ease";
+                console.log("home | Link Hover: true");
+            });
 
-        link.addEventListener("mouseout", function() {
-            link.style.transition = "all 0.2s ease";
-            console.log("Link Hover: false");
-        });
+            link.addEventListener("mouseout", function() {
+                link.style.transition = "all 0.2s ease";
+                console.log("home | Link Hover: false");
+            });
+        }
+        else if (currentPage.endsWith("about%20me.html")) {
+            link.addEventListener("mouseenter", function() {
+                link.style.transition = "all 0.2s ease";
+                console.log("about me | Link Hover: true");
+            });
+
+            link.addEventListener("mouseout", function() {
+                link.style.transition = "all 0.2s ease";
+                console.log("about me | Link Hover: false");
+            });
+        }
     });
 
     pb.addEventListener("mouseenter", function() {
