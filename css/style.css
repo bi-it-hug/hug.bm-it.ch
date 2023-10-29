@@ -7,60 +7,39 @@
     --header-footer-color: rgb(30, 30, 30);
     --header-footer-height: 100px;
     --border-color: rgb(40, 40, 40);
-    --hover-color: rgb(180, 180, 180) 
+    --hover-color: rgb(180, 180, 180);
+    --ps2p: "Press Start 2P", sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
     background-color: var(--background);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .h1 {
-    font-family: "Press Start 2P", sans-serif;
+    font-family: var(--ps2p);
     font-size: 3.6vw;
     color: var(--font-color);
 }
 
 .h2 {
-    font-family: "Press Start 2P", sans-serif;
+    font-family: var(--ps2p);
     font-size: 0.8vw;
     color: var(--font-color);
-}
-
-.mandoBox {
-    margin: 0;
-    padding: 0;
-    place-self: center;
-    width: fit-content;
-    height: fit-content;
-}
-
-.mando {
-    width: 20%;
-    height: 20%;
 }
 
 .nothing {
     place-self: center;
     font-size: 1vw;
-    font-family: "Press Start 2P", sans-serif;
+    font-family: var(--ps2p);
     color: rgb(255, 255, 255);
 }
 
 li {
     list-style-type: none;
-}
-
-.navList {
-    list-style-type: none;
-    padding-left: 0;
 }
 
 nav {
@@ -71,32 +50,31 @@ nav {
     margin-left: 60px;
 }
 
+.nav-link,
+.navbar-brand {
+    text-decoration: none;
+    font-family: var(--ps2p);
+    color: var(--font-color);
+}
+
+.nav-item {
+    height: 16px;
+}
+
+/*
 .navigation {
     width: fit-content;
     height: fit-content;
-    font-family: "Press Start 2P", sans-serif;
+    font-family: var(--ps2p);
     font-size: 22px;
     border-radius: 100px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
-    padding-right: 18px; /* Abstand zwischen home und about me */
+    padding-right: 18px; /* Abstand zwischen home und about me *//*
     text-decoration: none;
     color: rgb(255, 255, 255);
     background-color: var(--header-footer-color);
-}
-
-.gitHubImage {
-    width: 40px;
-    height: 40px;
-}
-
-.socials {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
 }
 
 .navButton {
@@ -104,16 +82,35 @@ nav {
     width: fit-content;
     font-weight: lighter;
     display: inline-block;
-    margin-right: 2vw; /* 36px */
+    margin-right: 2vw; /* 36px *//*
 }
+*/
 
 .nameBox {
+    display: flex;
+    flex-direction: column;
     align-self: center;
-    justify-self: center;
-    place-self: center;
+    text-align: center;
     width: fit-content;
     height: fit-content;
-    border: 0px solid wheat;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.mandoBox {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.mando {
+    align-self: center;
+    width: 20%;
+    height: 20%;
 }
 
 .footerBox {
@@ -122,8 +119,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
     border-top: 4px solid var(--border-color);
     background-color: var(--header-footer-color);
 }
@@ -134,8 +129,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
+    position: sticky;
     top: 0;
+    z-index: 100;
     border-bottom: 4px solid var(--border-color);
     background-color: var(--header-footer-color);
 }
@@ -145,17 +141,24 @@ nav {
     /* background-color: rgb(30, 30, 30); */
 }
 
-.homeBox,
+.homeBox {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 2000px;
+    margin: 60px;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 10px;
+}
+
 .aboutMeBox {
-    display: grid;
-    text-align: center;
-    position: relative;
-    width: calc(100% - 120px);
-    height: calc(100% - (var(--header-footer-height) + var(--header-footer-height)));
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 400px;
+    margin: 60px;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 10px;
 }
 
 a:hover {
@@ -191,105 +194,9 @@ a:hover {
     transform: scale(1.1);
 }
 
-.aboutMeHeading {
-    width: 100%;
-    height: fit-content;
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 68px;
-    font-weight: lighter;
-    color: rgb(255, 255, 255);
-    border: 1px solid var(--border-color);
-    border-radius: 0.1em;
-    text-align: center;
-    align-self: baseline;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wTable {
-    width: 32%;
-    height: 30%;
-    border: 1px solid var(--border-color);
-    border-radius: 0.5em;
-    position: absolute;
-    left: 0;
-}
-
-.wTableHead,
-.skillsTableHead {
-    text-align: center;
-    font-weight: lighter;
-    color: white;
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 52px;
-}
-
-.wTableText {
-    color: white;
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 22px;
-    text-align: left;
-}
-
-.wH {
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 22px;
-    text-align: right;
-    color: rgb(200, 200, 200);
-    position: relative;
-    right: 2%;
-}
-
-.aboutMeTableRow {
-    margin-left: 10px;
-}
-
-.skillsTable {
-    table-layout: fixed;
-    width: 30%;
-    height: 30%;
-    border: 1px solid var(--border-color);
-    border-radius: 0.5em;
-    align-self: baseline;
-    position: absolute;
-    right: 0;
-    margin-top: 60px;
-}
-
-.skillsTableSubHead {
-    text-align: left;
-    font-weight: lighter;
-    color: white;
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 32px; 
-}
-
-.skillsTableText {
-    font-weight: lighter;
-    color: rgb(200, 200, 200);
-    text-align: left;
-}
-
-.pythonLink,
-.htmlLink {
-    font-family: "Press Start 2P", sans-serif;
-    font-weight: lighter;
-    font-style: italic;
-    color: rgb(200, 200, 200);
-}
-
-td {
-    margin: 0%;
-    width: fit-content;
-    color: rgb(255, 255, 255);
-    font-family: "Press Start 2P", sans-serif;
-    font-size: 22px;
-}
-
 .directory {
     color: rgb(255, 255, 255);
-    font-family: "Press Start 2P", sans-serif;
+    font-family: var(--ps2p);
     font-size: 10px;
     text-align: left;
     position: absolute;
@@ -302,20 +209,10 @@ td {
     width: fit-content;
     height: fit-content;
     color: rgb(255, 255, 255);
-    font-family: "Press Start 2P", sans-serif;
+    font-family: var(--ps2p);
     font-size: 10px;
     white-space: nowrap;
     text-align: right;
     align-self: self-end;
     padding-right: 60px;
-}
-
-.pythonCertificate,
-.htmlCertificate {
-    width: 80%;
-}
-
-.pythonBox,
-.htmlBox {
-    place-items: center;
 }

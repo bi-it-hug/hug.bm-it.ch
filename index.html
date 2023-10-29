@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en, de">
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>home</title>
+    <title>Home</title>
     <link rel="icon" href="/media/icons/ProfilePictureICO.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-grid.min.css">
 </head>
 <body>
     <header class="headerBox">
-        <nav>
-            <ul class="navList">
-                <li class="navButton">
-                    <a class="navigation currentPage" id="homeID" href="/index.html">home</a>
-                </li>
-                <li class="navButton">
-                    <a class="navigation" id="aboutMeID" href="/html/about me.html">about me</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">home</a>
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about%20me">about me</a>
                 </li>
             </ul>
         </nav>
@@ -22,18 +22,25 @@
             <img src="/media/icons/ProfilePicturePNG.png" alt="GitHub Profile Picture" class="profilePicture" id="pb">
         </a>
     </header>
-    <main>
-        <div class="homeBox">
+    <main class="d-flex flex-column justify-content-center mainBox">
+        <div class="homeBox" id="home">
             <div class="nameBox">
                 <span class="h1" id="mainHeadID"></span>
                 <div class="h2" id="subHeadID"></div>
             </div>
         </div>
+        <div class="aboutMeBox" id="about%20me">
+            <div class="mandoBox">
+                <img src="/media/gifs/mando.gif" class="mando">
+                <p class="nothing">nothing here yet ¯\_(ツ)_/¯</p>
+            </div>
+        </div>
     </main>
     <footer class="footerBox">
-        <p class="directory">// home</p>
+        <p class="directory">// Home</p>
         <p class="version">// v1.1.3<br><br>// made using VSCode</p>
     </footer>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/scripts/typingAnimation.js"></script>
     <script src="/scripts/navigation.js"></script>
     <script src="/scripts/esc.js"></script>
