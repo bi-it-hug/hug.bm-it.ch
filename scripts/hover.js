@@ -1,3 +1,22 @@
+/*
+const hover = document.getElementsByClassName("custom-hover-link");
+
+hover.addEventListener("mouseenter", () => {
+    hover.style.transition = "transform 0.2s";
+    hover.style.color = "rgb(170, 170, 170)";
+});
+
+hover.addEventListener("mouseleave", () => {
+    hover.style.transition = "transform 0.2s";
+    hover.style.color = "rgb(255, 255, 255)";
+});
+*/
+
+
+
+//////!!OLD CODE!!//////
+
+/*
 function addMouseEnterLeaveListenersToLinks() {
     var currentPage = window.location.href;
     const links = document.querySelectorAll("a");
@@ -40,3 +59,4 @@ function addMouseEnterLeaveListenersToLinks() {
 }
 
 addMouseEnterLeaveListenersToLinks();
+*/
