@@ -137,7 +137,7 @@ nav {
 }
 
 main {
-    background-color: var(--bg-test);
+    background-color: var(--bg-standard);
     display: flex;
     flex-direction: column;
 }
@@ -208,7 +208,7 @@ main {
 }
 
 .my-skills-box {
-    margin: calc(var(--margin-default) / 2) var(--margin-default);
+    margin: var(--margin-half) var(--margin-default);
     height: 400px;
     width: var(--max-box-width);
     border: 1px solid red;
@@ -219,13 +219,14 @@ main {
 }
 
 .my-skills-head {
+    text-align: center;
     padding: 30px 10px;
     margin: 0;
     height: fit-content;
     font-family: var(--font-ps2p);
     font-size: 50px;
     color: var(--font-color);
-    grid-column: 1 / 4;
+    grid-column: 3 / 5;
 }
 
 .skills-table {
@@ -251,14 +252,18 @@ main {
 .lang {
     padding: 0px; /*10px;*/
     font-size: 14px;
-    width: 12px !important;
+    width: 20%;
+}
+
+.prog {
+    width: 100px;
 }
 
 .progress {
     background-color: var(--border-color);
     font-size: 14px;
     margin: 0;
-    width: 80%;
+    width: 70%;
 }
 /*
 .table>:not(caption)>*>* {
