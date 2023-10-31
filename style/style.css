@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Press Start 2P");
+@import url("https://fonts.googleapis.com/css?family=JetBrains%20Mono");
+
+:root {
+    --border-color: rgb(50, 50, 50);
+    --border-radius: 0;
+
+    --font-color: rgb(240, 240, 240);
+    --font-ps2p: "Press Start 2P", sans-serif;
+
+    --header-footer-color: rgb(30, 30, 30);
+    --header-footer-height: 100px;
+
+    --hover-color: rgb(180, 180, 180);
+
+    --margin-default: 120px;
+    --margin-half: calc(var(--margin-default) / 2);
+    --margin-nav: 50px;
+    
+    --max-box-width: calc(100vw - (var(--margin-default) * 2));
+    --navbar-font-size: 20px;
+    --scrollbar-width: 12px;
+
+    --bg-standard: rgb(20, 20, 20);
+    --bg-test: rgb(150, 150, 150);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: rgb(170, 170, 170);
+}
+
+p,
+td,
+th {
+    font-weight: normal;
+    font-family: var(--font-ps2p);
+    color: var(--font-color);
+}
+
+td {
+    font-size: 12px;
+    padding: 2px 2px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-standard);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.header-box {
+    height: var(--header-footer-height);
+    width: calc(100vw - var(--scrollbar-width)); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 4px solid var(--border-color);
+    background-color: var(--header-footer-color);
+}
+
+nav {
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin-left: var(--margin-default);
+}
+
+.navbar {
+    width: calc(100vw - var(--scrollbar-width) - var(--margin-default));
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-brand {
+    margin: 0px 0px 0px 0px;
+}
+
+.hover-link {
+    color: var(--font-color);
+    transition: all 0.2s;
+    padding: 0px 0px;
+}
+
+.hover-link:hover {
+    color: rgb(170, 170, 170) !important;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.nav-item {
+    height: fit-content;
+    margin-left: var(--margin-nav);
+}
+
+.nav-link,
+.navbar-brand {
+    text-decoration: none;
+    font-family: var(--font-ps2p);
+    font-size: var(--navbar-font-size);
+    word-spacing: -8px;
+    color: var(--font-color);
+}
+
+.pb-link {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: var(--margin-default);
+    border-radius: var(--border-radius);
+}
+
+.profile-picture {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 0.2s;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+}
+
+main {
+    background-color: var(--bg-test);
+    display: flex;
+    flex-direction: column;
+}
+
+.home-box {
+    display: flex;
+    height: 500px;
+    margin: calc(var(--margin-default) / 2) var(--margin-default);
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: var(--border-radius);
+}
+
+.name-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 50px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid red;
+    border-radius: var(--border-radius);
+}
+
+.h1 {
+    margin: 0px;
+    font-family: var(--font-ps2p);
+    font-size: 3.6vw;
+    color: var(--font-color);
+
+}
+
+.h2 {
+    font-family: var(--font-ps2p);
+    font-size: 0.8vw;
+    color: var(--font-color);
+}
+
+.about-me-box {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    margin: calc(var(--margin-default) / 2) var(--margin-default);
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: var(--border-radius);
+}
+
+.mando-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid red;
+    border-radius: var(--border-radius);
+}
+
+.mando {
+    align-self: center;
+    width: 20%;
+    height: 20%;
+}
+
+.nothing {
+    place-self: center;
+    font-size: 1vw;
+    font-family: var(--font-ps2p);
+    color: var(--font-color);
+}
+
+.my-skills-box {
+    margin: calc(var(--margin-default) / 2) var(--margin-default);
+    height: 400px;
+    width: var(--max-box-width);
+    border: 1px solid red;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: max-content;
+}
+
+.my-skills-head {
+    padding: 30px 10px;
+    margin: 0;
+    height: fit-content;
+    font-family: var(--font-ps2p);
+    font-size: 50px;
+    color: var(--font-color);
+    grid-column: 1 / 4;
+}
+
+.skills-table {
+    border-color: var(--bg-standard);
+    width: 100%;
+    height: fit-content;
+    grid-row: 2 / 5;
+    grid-column: 1 / 4;
+}
+
+.skills-table-head {
+    text-align: left;
+    font-size: 30px;
+    padding: 30px 10px;
+    font-weight: normal;
+}
+
+.python-png {
+    width: 30px;
+    height: 30px
+}
+
+.lang {
+    padding: 0px; /*10px;*/
+    font-size: 14px;
+    width: 12px !important;
+}
+
+.progress {
+    background-color: var(--border-color);
+    font-size: 14px;
+    margin: 0;
+    width: 80%;
+}
+/*
+.table>:not(caption)>*>* {
+    padding: 0rem 0rem;
+}
+*/
+.progress-bar {
+    background-color: green;
+    align-items: center;
+}
+
+td {
+    text-align: left;
+    height: 30px;
+}
+
+.footer-box {
+    height: var(--header-footer-height);
+    width: calc(100vw - var(--scrollbar-width));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 4px solid var(--border-color);
+    background-color: var(--header-footer-color);
+    align-content: center;
+}
+
+.japanese {
+    font-size: 14px !important;
+}
+
+.japanese,
+.copyright {
+    color: var(--font-color);
+    font-family: var(--font-ps2p);
+    font-size: 10px;
+    text-align: left;
+    position: relative;
+    align-self: self-start;
+    margin-left: var(--margin-default);
+    margin-bottom: 0;
+}
+
+.made-with,
+.version {
+    color: var(--font-color);
+    font-family: var(--font-ps2p);
+    font-size: 10px;
+    text-align: right;
+    margin: 0px var(--margin-default) 0px 0px;
+}
+
+.version,
+.copyright {
+    margin-top: 6px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(100, 100, 100);
+    border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--border-color);
+}
+
+::-webkit-scrollbar-button {
+    background-color: rgb(60, 60, 60);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: rgb(60, 60, 60);
+}
