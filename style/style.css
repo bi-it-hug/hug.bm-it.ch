@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=JetBrains%20Mono");
 
 :root {
-    --border-color: rgb(50, 50, 50);
+    --border-color: rgb(50, 50, 50); /* 50 */
     --border-radius: 0;
 
     --font-color: rgb(240, 240, 240);
@@ -13,7 +13,7 @@
 
     --hover-color: rgb(180, 180, 180);
 
-    --margin-default: 120px;
+    --margin-default: 60px;
     --margin-half: calc(var(--margin-default) / 2);
     --margin-nav: 50px;
     
@@ -21,7 +21,7 @@
     --navbar-font-size: 20px;
     --scrollbar-width: 12px;
 
-    --bg-standard: rgb(150, 150, 150);
+    --bg-standard: rgb(20, 20, 20);
 }
 
 a {
@@ -143,10 +143,14 @@ main {
 
 .home-box {
     display: flex;
-    height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 600px;
     margin: calc(var(--margin-default) / 2) var(--margin-default);
-    border: 1px solid rgb(50, 50, 50);
-    border-radius: var(--border-radius);
+    /*border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);*/
 }
 
 .name-box {
@@ -156,8 +160,8 @@ main {
     margin: 50px;
     width: fit-content;
     height: fit-content;
-    border: 1px solid red;
-    border-radius: var(--border-radius);
+    /*border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);*/
 }
 
 .h1 {
@@ -177,10 +181,10 @@ main {
 .about-me-box {
     display: flex;
     justify-content: center;
-    height: 400px;
+    height: 600px;
     margin: calc(var(--margin-default) / 2) var(--margin-default);
-    border: 1px solid rgb(50, 50, 50);
-    border-radius: var(--border-radius);
+    /*border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);*/
 }
 
 .mando-box {
@@ -189,8 +193,8 @@ main {
     align-self: center;
     width: fit-content;
     height: fit-content;
-    border: 1px solid red;
-    border-radius: var(--border-radius);
+    /*border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);*/
 }
 
 .mando {
@@ -208,9 +212,9 @@ main {
 
 .my-skills-box {
     margin: var(--margin-half) var(--margin-default);
-    height: 400px;
+    height: 600px;
     width: var(--max-box-width);
-    border: 1px solid red;
+    /*border: 1px solid var(--border-color);*/
     align-self: center;
     display: grid;
     grid-template-columns: repeat(6, 2fr);
