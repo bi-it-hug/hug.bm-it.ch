@@ -20,27 +20,29 @@
     <header class="header-box">
         
         <!-- NAVIGATION MENU -->
-        <nav class="navbar navbar-light navbar-expand-lg"><!--navbar-expand-lg-->
-            <a class="navbar-brand hover-link" href="#" id="home">home</a>
-            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>-->
-            <div class="collapse navbar-collapse" id="navbarNav"><!--collapse navbar-collapse-->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link hover-link" href="#about-me">about me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover-link" href="#my-skills">my skills</a>
-                    </li>
-                </ul>
-            </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#about-me">about me</a>
+                </li>
+                <li>
+                    <a href="#my-skills">my skills</a>
+                </li>
+            </ul>
         </nav>
         <!-- END NAVIGATION MENU -->
 
+        <!-- GitLab Link -->
+        <a class="gitlab-link" href="https://gitlab.com/">
+            <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
+        </a>
+
         <!-- GitHub Link -->
-        <a class="pb-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
-            <img src="/media/icons/ProfilePicturePNG.png" alt="GitHub Profile Picture" class="profile-picture" id="profile-picture">
+        <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
+            <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
         </a>
     </header>
     <!-- END HEADER SECTION -->
@@ -49,82 +51,145 @@
     <main>
 
         <!-- HOME SECTION -->
-        <div class="home-box" id="home">
-            <div class="name-box">
-                <p class="h1">home</p>
-                <p class="h2"><!--first year application developer at ESPAS Zürich--></p>
-                <span class="h1" id="mainHeadID"></span>
-                <div class="h2" id="subHeadID"></div>
+        <section id="home">
+            <div class="home-box">
+                <div class="home-heading">
+                    <p class="h1">Lorenzo Hug</p>
+                    <p class="h2">first year application developer at ESPAS Zürich</p>
+                    <P class="h3">アプリケーション開発者</P>
+                </div>
+                <div class="mando-box">
+                    <img src="/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
+                </div>
+                <div class="test">
+                    <p class="lorem-ipsum"><!--
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales ac mauris at, malesuada
+                        hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac. Pellentesque rhoncus egestas
+                        enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis porttitor. Duis consequat, dui
+                        id tristique semper, dolor neque consectetur justo, sed efficitur arcu enim non erat. Aliquam erat volutpat.
+                        Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim. Pellentesque eu orci massa. Praesent
+                        viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
+                        Aliquam mattis lorem quam, vitae luctus eros auctor eget.
+                    --></p>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- END HOME SECTION -->
 
         <!-- ABOUT ME SECTION -->
-        <div class="about-me-box" id="about-me">
-            <div class="mando-box">
-                <img src="/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
-                <p class="nothing">nothing here yet ¯\_(ツ)_/¯</p>
+        <section id="about-me">
+            <div class="about-me-box">
+                <div class="about-me-heading">
+                    <p class="h4">about me</p>
+                    <p class="h5">my story</p>
+                    <p class="h6">私について</p>
+                </div>
+                <div>
+                    <p>KàSE</p>
+                </div>
+                <div class="test">
+                    <p class="about-me-text"><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
+                        ac mauris at, malesuada hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac.
+                        Pellentesque rhoncus egestas enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis
+                        porttitor. Duis consequat, dui id tristique semper, dolor neque consectetur justo, sed efficitur
+                        arcu enim non erat. Aliquam erat volutpat. Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim.
+                        Pellentesque eu orci massa.
+                        Praesent viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
+                        Aliquam mattis lorem quam, vitae luctus eros auctor eget. Vestibulum ante ipsum primis in faucibus orci
+                        luctus et ultrices posuere cubilia curae; Cras sed aliquet nibh. Quisque turpis dolor, mattis nec tincidunt non,
+                        auctor quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a leo
+                        vitae tortor viverra tempus mollis vitae libero. Praesent viverra, nisl vitae tempus posuere, turpis ligula fringilla
+                        nisi, vitae tincidunt dui ipsum sed enim. Nam aliquam a velit eget interdum. Donec posuere metus eu ante ullamcorper
+                        commodo. Aliquam sed felis ex. Sed at lacus non nunc ultrices convallis.
+                        Vestibulum quis vestibulum nibh. Duis a ex euismod, mattis nibh eget, luctus ex. Nullam non risus elit.
+                        In nisi arcu, scelerisque eu tellus quis, volutpat convallis neque. Proin tincidunt augue dapibus pharetra
+                        malesuada. Duis in erat at lacus suscipit vehicula. In a nisl non nisi volutpat pharetra in id mi. Aenean
+                        sollicitudin mauris id sapien congue, id dapibus quam luctus. Curabitur volutpat mi ac fermentum volutpat.
+                        Praesent ornare lorem vitae felis blandit condimentum. Donec sodales, purus eu vulputate aliquet, magna lectus
+                        convallis velit, vitae feugiat velit sem a nisl. Fusce suscipit diam at elit porttitor placerat. Curabitur id vehicula mi.
+                        Proin dui diam, lacinia tincidunt erat fringilla, facilisis fermentum nisl. Aliquam vitae dolor fringilla eros ultricies cursus.
+                    --></p>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- END ABOUT ME SECTION -->
 
         <!-- MY SKILLS SECTION -->
-        <div class="my-skills-box" id="my-skills">
-            <p class="my-skills-head">my skills</p>
-            <table class="table table-bordered skills-table">
-                <thead>
-                    <tr>
-                        <th class="skills-table-head" colspan="2">Languages</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="lang align-self-xxl-stretch">
-                            <a href="/media/images/certificates/python.png">Python</a>
-                        </td>
-                        <td class="prog">
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 32%;">32%</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lang">Java</td>
-                        <td class="prog">
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 16%;">16%</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lang">
-                            <a href="/media/images/certificates/html.png">HTML</a>
-                        </td>
-                        <td class="prog">
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 26%;">26%</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lang">CSS</td>
-                        <td class="prog">
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 24%;">24%</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="lang">JavaScript</td>
-                        <td class="prog">
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 20%;">20%</div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section id="my-skills">
+            <div class="my-skills-box">
+                <div class="my-skills-heading">
+                    <p class="h1">my skills</p>
+                    <p class="h2">something</p>
+                    <p class="h3">何か</p>
+                </div>
+                <div class="skills-table-box">
+                    <table class="table table-bordered skills-table">
+                        <thead>
+                            <tr>
+                                <th class="skills-table-head" colspan="2">language knowledge</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="lang align-self-xxl-stretch">
+                                    <a href="/media/images/certificates/python.png">Python</a>
+                                </td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 32%;">32%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">Java</td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 16%;">16%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">
+                                    <a href="/media/images/certificates/html.png">HTML</a>
+                                </td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 26%;">26%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">CSS</td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 24%;">24%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">JavaScript</td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 20%;">20%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+                <div class="certificate-box">
+                    <p class="certificates-heading">certificates</p>
+                    <ul>
+                        <li class="python-certificate">
+                            <a href="/media/jpgs/certificates/python.png">python beginner</a>
+                        </li>
+                        <li class="html-certificate">
+                            <a href="/media/jpgs/certificates/html.png">html beginner</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <!-- END MY SKILLS SECTION -->
 
     </main>
@@ -132,17 +197,16 @@
 
     <!-- FOOTER SECTION -->
     <footer class="footer-box">
-        <p class="japanese">大リャツはグ赤いです。</p><!--大きなシューラー-->
+        <p class="japanese">大きなシュグラー</p><!--大きなシューラー-->
         <p class="version">。.. // v2.1.1</p>
-        <p class="copyright">// &copy; 2023 Lorenzo Hug. All rights reserved.</p>
+        <p class="copyright">// &copy; 2023 Lorenzo Hug</p>
         <p class="version">made with VSCode \\</p>
     </footer>
     <!-- END FOOTER SECTION -->
 
-    <!-- Include custom JavaScript -->
-    <script src="/scripts/js/login.js"></script>
-
     <!-- Include Bootstrap JavaScript -->
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/scripts/js/scroll.js"></script>
+    <script src="/scripts/js/test.js"></script>
 </body>
 </html>
