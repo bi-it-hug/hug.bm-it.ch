@@ -6,10 +6,8 @@
     <title>hug.bm-it.ch</title>
     <link rel="icon" href="/media/icons/ProfilePictureICO.ico" type="image/x-icon">
 
-    <!---->
-
     <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">-->
 
     <!-- Include custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="/style/style.css">
@@ -35,15 +33,17 @@
         </nav>
         <!-- END NAVIGATION MENU -->
 
-        <!-- GitLab Link -->
-        <a class="gitlab-link" href="https://gitlab.com/">
-            <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
-        </a>
+        <div id="socials">
+            <!-- GitLab Link -->
+            <a class="gitlab-link" href="https://gitlab.com/">
+                <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
+            </a>
 
-        <!-- GitHub Link -->
-        <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
-            <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
-        </a>
+            <!-- GitHub Link -->
+            <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
+                <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
+            </a>
+        </div>
     </header>
     <!-- END HEADER SECTION -->
 
@@ -52,17 +52,15 @@
 
         <!-- HOME SECTION -->
         <section id="home">
-            <div class="home-box">
+
+            <div class="row-1">
                 <div class="home-heading">
-                    <p class="h1">Lorenzo Hug</p>
+                    <p class="hello-msg">Hi there! My name is<p class="h1">Lorenzo Hug</p></p>
                     <p class="h2">first year application developer at ESPAS Zürich</p>
                     <P class="h3">アプリケーション開発者</P>
                 </div>
-                <div class="mando-box">
-                    <img src="/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
-                </div>
                 <div class="test">
-                    <p class="lorem-ipsum"><!--
+                    <p class="lorem-ipsum">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales ac mauris at, malesuada
                         hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac. Pellentesque rhoncus egestas
                         enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis porttitor. Duis consequat, dui
@@ -70,7 +68,12 @@
                         Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim. Pellentesque eu orci massa. Praesent
                         viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
                         Aliquam mattis lorem quam, vitae luctus eros auctor eget.
-                    --></p>
+                    </p>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="mando-box">
+                    <img src="/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
                 </div>
             </div>
         </section>
@@ -78,17 +81,14 @@
 
         <!-- ABOUT ME SECTION -->
         <section id="about-me">
-            <div class="about-me-box">
+            <div class="row-1">
                 <div class="about-me-heading">
                     <p class="h4">about me</p>
                     <p class="h5">my story</p>
                     <p class="h6">私について</p>
                 </div>
-                <div>
-                    <p>KàSE</p>
-                </div>
                 <div class="test">
-                    <p class="about-me-text"><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
+                    <p class="about-me-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
                         ac mauris at, malesuada hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac.
                         Pellentesque rhoncus egestas enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis
                         porttitor. Duis consequat, dui id tristique semper, dolor neque consectetur justo, sed efficitur
@@ -108,20 +108,32 @@
                         Praesent ornare lorem vitae felis blandit condimentum. Donec sodales, purus eu vulputate aliquet, magna lectus
                         convallis velit, vitae feugiat velit sem a nisl. Fusce suscipit diam at elit porttitor placerat. Curabitur id vehicula mi.
                         Proin dui diam, lacinia tincidunt erat fringilla, facilisis fermentum nisl. Aliquam vitae dolor fringilla eros ultricies cursus.
-                    --></p>
+                    </p>
                 </div>
+            </div>
+
+            <div class="row-2">
+                <p>PEPSI</p>
+            </div>
+
+            <div class="row-3">
+                <p>PANDA</p>
             </div>
         </section>
         <!-- END ABOUT ME SECTION -->
 
         <!-- MY SKILLS SECTION -->
         <section id="my-skills">
-            <div class="my-skills-box">
+
+            <div class="row-1">
                 <div class="my-skills-heading">
                     <p class="h1">my skills</p>
                     <p class="h2">something</p>
                     <p class="h3">何か</p>
                 </div>
+            </div>
+            
+            <div class="row-2">
                 <div class="skills-table-box">
                     <table class="table table-bordered skills-table">
                         <thead>
@@ -131,7 +143,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="lang align-self-xxl-stretch">
+                                <td>
                                     <a href="/media/images/certificates/python.png">Python</a>
                                 </td>
                                 <td class="prog">
@@ -176,7 +188,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div> 
+                </div>
                 <div class="certificate-box">
                     <p class="certificates-heading">certificates</p>
                     <ul>
@@ -197,15 +209,19 @@
 
     <!-- FOOTER SECTION -->
     <footer class="footer-box">
-        <p class="japanese">大きなシュグラー</p><!--大きなシューラー-->
-        <p class="version">。.. // v2.1.1</p>
-        <p class="copyright">// &copy; 2023 Lorenzo Hug</p>
-        <p class="version">made with VSCode \\</p>
+        <div id="left">
+            <p class="japanese">大きなシュグラー</p><!--大きなシューラー-->
+            <p class="copyright">// &copy; 2023 Lorenzo Hug</p>
+        </div>
+        <div id="right">
+            <p class="version">。.. // v2.1.1</p>
+            <p class="version">made with VSCode \\</p>
+        </div>
     </footer>
     <!-- END FOOTER SECTION -->
 
     <!-- Include Bootstrap JavaScript -->
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="/bootstrap/js/bootstrap.min.js"></script>-->
     <script src="/scripts/js/scroll.js"></script>
     <script src="/scripts/js/test.js"></script>
 </body>
