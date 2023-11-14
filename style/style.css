@@ -226,7 +226,8 @@ a {
 }
 
 a:hover {
-    color: rgb(170, 170, 170);
+    color: var(--hover-color);
+    background-color: var(--hover-color);
 }
 
 
@@ -249,7 +250,6 @@ nav {
     width: fit-content;
     height: fit-content;
     align-items: center;
-    margin: 0 0 0 var(--margin-default);
 }
 
 nav ul {
@@ -272,10 +272,10 @@ nav a {
     height: fit-content;
     text-decoration: none;
     color: var(--font-color);
+    border: 5px solid var(--border-color);
     background-color: var(--border-color);
     font-family: var(--font);
     font-size: calc(var(--px40) / 1.4);
-    border: 1px solid var(--border-color);
     border-radius: 1000px;
     padding: 0 var(--text-padding);
     transition: all 0.2s;
@@ -342,10 +342,10 @@ main {
 }
 
 .skills-table-head,
-.certificates-heading {
+.ctfc-heading {
     text-align: left;
     font-size: var(--px30);
-    padding: var(--px30) var(--px10);
+    margin: var(--px10) var(--px10);
     font-weight: normal;
 }
 
@@ -356,7 +356,7 @@ main {
     text-align: left;
     margin: var(--margin-default);
     padding: var(--text-padding);
-    width: fit-content ;
+    width: fit-content;
     height: fit-content;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
@@ -376,7 +376,7 @@ main {
 }
 
 .test,
-.certificate-box {
+.ctfc-box {
     display: block;
     text-align: left;
     align-self: self-start;
@@ -389,20 +389,6 @@ main {
     border-radius: var(--border-radius);
 }
 
-.certificate-box ul {
-    list-style-type: square;
-}
-
-.certificate-box li {
-    color: var(--font-color);
-}
-
-.python-certificate,
-.html-certificate {
-    font-family: var(--font);
-    color: var(--font-color);
-}
-
 .lorem-ipsum {
     font-size: var(--px10);
     margin: 0;
@@ -411,14 +397,14 @@ main {
 .mando {
     /* 560 x 480 */
     align-self: center;
-    width: calc(var(--px560) / 1.5);
-    height: calc(var(--px480) / 1.5);
+    width: calc(var(--px560) / 2);
+    height: calc(var(--px480) / 2);
 }
 
 .h1 {
     margin: 0;
     font-family: var(--font);
-    font-size: var(--px80);
+    font-size: 6vw;/*var(--px80)*/
     color: var(--font-color);
 
 }
@@ -475,6 +461,7 @@ main {
 }
 
 .progress-bar {
+    width: 0 !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -482,6 +469,12 @@ main {
     align-items: center;
     padding: var(--px04);
     border-radius: var(--border-radius);
+    transition: all 0.6s;
+}
+
+.progress-bar:hover {
+    cursor: pointer;
+    width: 400px !important;
 }
 
 td {
@@ -489,36 +482,21 @@ td {
     height: var(--px25);
 }  
 
-.japanese,
-.copyright {
+.left {
     color: var(--font-color);
     font-family: var(--font);
     font-size: calc(var(--px18) / 1.2);
     transition: all 0.2s;
-}
-
-.made-with,
-.version {
-    color: var(--font-color);
-    font-family: var(--font);
-    font-size: calc(var(--px18) / 1.2);
-    transition: all 0.2s;
-}
-
-#left,
-#right {
-    display: flex;
-    flex-direction: column;
-    justify-content:end;
-}
-
-#left {
-    margin: 0 var(--margin-default) 0 ;
+    margin: 0 0 0 var(--margin-default);
     text-align: left;
 }
 
-#right {
-    margin: 0 var(--margin-default) 0 ;
+.right {
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: calc(var(--px18) / 1.2);
+    transition: all 0.2s;
+    margin: 0 var(--margin-default) 0 0;
     text-align: right;
 }
 
@@ -531,7 +509,6 @@ td {
 
 #socials {
     display: flex;
-    margin: 0 var(--margin-default) 0 0;
 }
 
 .col-1,
@@ -587,4 +564,26 @@ td {
 #px8:hover,
 #px9:hover {
     background-color: red;
+}
+
+#img-ctfc {
+    opacity: 0.8;
+    border-radius: 100px;
+    width: 20%;
+    transition: all 0.3s;
+}
+
+#img-ctfc:hover {
+    cursor: pointer;
+    transform: scale(6);
+    border-radius: 0;
+    opacity: 1;
+}
+
+#ctfcs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
 }

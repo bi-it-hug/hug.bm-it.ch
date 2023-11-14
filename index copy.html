@@ -17,36 +17,32 @@
     <!-- HEADER SECTION -->
     <header class="header-box">
         
-        <div class="left">
-          <!-- NAVIGATION MENU -->
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#home">home</a>
-                    </li>
-                    <li>
-                        <a href="#about-me">about me</a>
-                    </li>
-                    <li>
-                        <a href="#my-skills">my skills</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- END NAVIGATION MENU -->
-        </div>
+        <!-- NAVIGATION MENU -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#about-me">about me</a>
+                </li>
+                <li>
+                    <a href="#my-skills">my skills</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- END NAVIGATION MENU -->
 
-        <div class="right">
-            <div id="socials">
-                <!-- GitLab Link -->
-                <a class="gitlab-link" href="https://gitlab.com/">
-                    <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
-                </a>
-    
-                <!-- GitHub Link -->
-                <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
-                    <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
-                </a>
-            </div>   
+        <div id="socials">
+            <!-- GitLab Link -->
+            <a class="gitlab-link" href="https://gitlab.com/">
+                <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
+            </a>
+
+            <!-- GitHub Link -->
+            <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
+                <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
+            </a>
         </div>
     </header>
     <!-- END HEADER SECTION -->
@@ -155,7 +151,7 @@
             
             <div class="col-2">
                 <div class="skills-table-box">
-                    <table class="skills-table">
+                    <table class="table table-bordered skills-table">
                         <thead>
                             <tr>
                                 <th class="skills-table-head" colspan="2">language knowledge</th>
@@ -209,16 +205,16 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="ctfc-box">
-                    <p class="ctfc-heading">certificates</p>
-                    <div id="ctfcs">
-                        <a href="/media/jpgs/certificates/python.png">
-                            <img id="img-ctfc" src="/media/jpgs/certificates/python.png">
-                        </a>
-                        <a href="/media/jpgs/certificates/html.png">
-                            <img id="img-ctfc" src="/media/jpgs/certificates/html.png">
-                        </a>
-                    </div>
+                <div class="certificate-box">
+                    <p class="certificates-heading">certificates</p>
+                    <ul>
+                        <li class="python-certificate">
+                            <a href="/media/jpgs/certificates/python.png">python beginner</a>
+                        </li>
+                        <li class="html-certificate">
+                            <a href="/media/jpgs/certificates/html.png">html beginner</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -229,8 +225,14 @@
 
     <!-- FOOTER SECTION -->
     <footer class="footer-box">
-        <p class="left">大きなシュグラー \\<br>// Copyright &copy; 2023 by Lorenzo Hug</p><!--大きなシューラー-->
-        <p class="right">。.. // v2.1.1<br>made with VSCode \\</p>
+        <div id="left">
+            <p class="japanese">大きなシュグラー \\</p><!--大きなシューラー-->
+            <p class="copyright">// Copyright &copy; 2023 by Lorenzo Hug</p>
+        </div>
+        <div id="right">
+            <p class="version">。.. // v2.1.1</p>
+            <p class="version">made with VSCode \\</p>
+        </div>
     </footer>
     <!-- END FOOTER SECTION -->
 
