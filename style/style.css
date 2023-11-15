@@ -130,20 +130,22 @@ p {
 ::-webkit-scrollbar {
     width: var(--scrollbar-width);
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--light-gray);
-    border-radius: var(--border-radius);
 }
 ::-webkit-scrollbar-track {
     width: calc(var(--scrollbar-width) - var(--px10));
     background-color: var(--stone-gray);
 }
+
 ::-webkit-scrollbar-button {
     background-color: var(--gray);
 }
 ::-webkit-scrollbar-corner {
     background-color: var(--bg-standard);
 }
+
 
 @media (max-width: 1920px) {
     :root {
