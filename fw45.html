@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-de">
+<head>
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" type="text/css" href="/style/fw45.css">
+</head>
+<body>
+    <header>
+        <a href="/index.html">back</a>
+    </header>
+    <main>
+        <section id="task1">
+            <h1>Aufgabe 1</h1>
+            <div id="alert">
+                <h2>Alert</h2>
+                <div id="alert-box">
+                    <button id="alert-button" onclick="alert('ALARM')">click me!</button>
+                </div>
+            </div>
+        </section>
+        <section id="task2">
+            <h1>Aufgabe 2</h1>
+            <div id="date">
+                <h2>Datum</h2>
+                <div id="date-box">
+                    <button id="date-button" onclick="getDate()">click me!</button>
+                </div>
+                <p id="get-date"></p>
+            </div>
+        </section>
+        <section id="task4">
+            <h1>Aufgabe 4</h1>
+            <div id="calculator">
+                <h2>Taschenrechner</h2>
+                <div id="num-box">
+                    <input id="num-1" placeholder=""></input>
+                    <input id="num-2" placeholder=""></input>
+                </div>
+                <div id="operators">
+                    <button id="add">+</button>
+                    <button id="subtract">-</button>
+                    <button id="multiply">*</button>
+                    <button id="divide">/</button>
+                </div>
+                <div id="output">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </section>
+        <section id="task5">
+            <h3>Aufgabe 5</h3>
+            <div id="button-game">
+                <h4>Button-Spiel</h4>
+                <div id="button-game-box">
+                    <button id="start-button" onclick="game()">Start</button>
+                    <div id="timer-display"></div>
+                    <div id="grid">
+                        <div class="row">
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="1" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="2" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="3" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="4" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="5" onclick="game()"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="6" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="7" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="8" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="9" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="10" onclick="game()"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="11" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="12" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="13" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="14" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="15" onclick="game()"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="16" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="17" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="18" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="19" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="20" onclick="game()"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="21" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="22" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="23" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="24" onclick="game()"></input>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="dot" id="25" onclick="game()"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="score-box">
+                        <p>Dein Score:</p>
+                        <div id="score">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/scripts/js/fw45.js"></script>
+</body>
+</html>

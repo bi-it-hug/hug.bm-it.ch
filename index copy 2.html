@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hug.bm-it.ch</title>
     <link rel="icon" href="/media/icons/ProfilePictureICO.ico" type="image/x-icon">
+
+    <!-- Include Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">-->
+
+    <!-- Include custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="/style/style.css">
 </head>
 <body>
@@ -17,18 +22,22 @@
             <nav>
                 <ul>
                     <li>
-                        <a id="homeId" href="#home">home</a>
+                        <a href="#home">home</a>
                     </li>
                     <li>
-                        <a id="aboutMe" href="#about-me">about me</a>
+                        <a href="#about-me">about me</a>
                     </li>
                     <li>
-                        <a id="mySkills" href="#my-skills">my skills</a>
+                        <a href="#my-skills">my skills</a>
+                    </li>
+                    <li>
+                        <a id="test" href="/fw45.html">
+                            <img id="js-png" src="/media/pngs/js.png">
+                        </a>
                     </li>
                 </ul>
             </nav>
             <!-- END NAVIGATION MENU -->
-
         </div>
 
         <div class="right">
@@ -58,9 +67,6 @@
                     <p class="hello-msg">Hi there! My name is<p class="h1">Lorenzo Hug</p></p>
                     <p class="h2">first year application developer at ESPAS Zürich</p>
                     <P class="h3">アプリケーション開発者</P>
-                    <a id="test" href="/fw45.html">
-                        <img id="js-png" src="/media/pngs/js.png">
-                    </a>
                 </div>
                 <div class="test">
                     <p class="lorem-ipsum">
@@ -153,41 +159,70 @@
             </div>
             
             <div class="col-2">
-                <div id="progress-box">
-
-                    <div class="language-box">
-                        <p class="progress-text">Python</p>
-                        <progress id="python" value="0" max="100">TEST</progress>   
-                    </div>
-
-                    <div class="language-box">
-                        <p class="progress-text">Java</p>
-                        <progress id="java" value="16" max="100"></progress>   
-                    </div>
-                    
-                    <div class="language-box">
-                        <p class="progress-text">HTML</p>
-                        <progress id="html" value="26" max="100"></progress>   
-                    </div>
-
-                    <div class="language-box">
-                        <p class="progress-text">CSS</p>
-                        <progress id="css" value="24" max="100"></progress>   
-                    </div>
-                    
-                    <div class="language-box">
-                        <p class="progress-text">JavaScript</p>
-                        <progress id="java-script" value="20" max="100"></progress>   
-                    </div>
-
+                <div class="skills-table-box">
+                    <p for="file">Downloading progress:</p>
+                    <progress id="file" value="32" max="100"> 32% </progress>
+                    <table class="skills-table">
+                        <thead>
+                            <tr>
+                                <th class="skills-table-head" colspan="2">language knowledge</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="/media/images/certificates/python.png">Python</a>
+                                </td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 32%;">32%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">Java</td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 16%;">16%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">
+                                    <a href="/media/images/certificates/html.png">HTML</a>
+                                </td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 26%;">26%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">CSS</td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 24%;">24%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lang">JavaScript</td>
+                                <td class="prog">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 20%;">20%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="ctfc-box">
                     <p class="ctfc-heading">certificates</p>
                     <div id="ctfcs">
-                        <a class="cert" href="/media/jpgs/certificates/python.png">
+                        <a href="/media/jpgs/certificates/python.png">
                             <img id="img-ctfc" src="/media/jpgs/certificates/python.png">
                         </a>
-                        <a class="cert" href="/media/jpgs/certificates/html.png">
+                        <a href="/media/jpgs/certificates/html.png">
                             <img id="img-ctfc" src="/media/jpgs/certificates/html.png">
                         </a>
                     </div>
@@ -206,7 +241,8 @@
     </footer>
     <!-- END FOOTER SECTION -->
 
-    <script src="/scripts/js/onload.js"></script>
+    <!-- Include Bootstrap JavaScript -->
+    <!--<script src="/bootstrap/js/bootstrap.min.js"></script>-->
     <script src="/scripts/js/scroll.js"></script>
     <script src="/scripts/js/color.js"></script>
 </body>

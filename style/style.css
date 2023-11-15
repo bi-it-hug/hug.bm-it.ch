@@ -42,7 +42,7 @@
     --almost-white: rgb(240, 240, 240);
     --yes-another-white: rgb(210, 210, 210);
     --dark-white: rgb(180, 180, 180);
-    --light--gray: rgb(140, 140, 140);
+    --light-gray: rgb(140, 140, 140);
     --gray: rgb(100, 100, 100);
     --dark-gray: rgb(80, 80, 80);
     --stone-gray: rgb(50, 50, 50);
@@ -71,11 +71,14 @@
     --bg-standard: var(--almost-black); /* Default: 20 */
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     background-color: var(--header-footer-color);
     scroll-behavior: smooth !important;
     font-size: var(--html-font-size);
-    transition: all 0.2s;
 }
 
 body,
@@ -125,11 +128,10 @@ p {
 }
 
 ::-webkit-scrollbar {
-    height: 100vh;
     width: var(--scrollbar-width);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--almost-white);
+    background-color: var(--light-gray);
     border-radius: var(--border-radius);
 }
 ::-webkit-scrollbar-track {
@@ -281,24 +283,36 @@ nav a {
     transition: all 0.2s;
 }
 
+nav a:hover {
+    transform: scale(1.01);
+    background-color: var(--dark-gray);
+    border-color: var(--dark-gray);
+    color: var(--font-color);
+}
+
 .navbar-nav {
     display: flex;
     flex-direction: row;
     padding: 0;
 }
 
-.nav-item {
-    height: fit-content;
-    margin: 0 0 0 var(--px40);
+#socials {
+    display: flex;
+    flex-direction: row;
 }
 
-.nav-link,
-.nav-item,
-.navbar-brandon {
-    text-decoration: none;
-    font-family: var(--font);
-    font-size: calc(var(--px30) / 1.5);
-    color: var(--font-color);
+.github-link,
+.gitlab-link {
+    display: flex;
+    flex-direction: row-reverse;
+    width: var(--px35);
+    height: var(--px35);
+    margin: 0 0 0 var(--px50);
+}
+
+.github-link:hover,
+.gitlab-link:hover {
+    background-color: var(--header-footer-color);
 }
 
 .gitlab-png,
@@ -306,10 +320,8 @@ nav a {
     width: var(--px35);
     height: var(--px35);
     transition: all 0.2s;
-    justify-self: center;
 }
 
-.outlook-png:hover,
 .gitlab-png:hover,
 .github-png:hover {
     transform: scale(1.1);
@@ -334,14 +346,6 @@ main {
     border-radius: var(--border-radius);
 }
 
-.skills-table {
-    border-color: var(--bg-standard);
-    width: var(--px700);
-    height: fit-content;
-    margin: 0;
-}
-
-.skills-table-head,
 .ctfc-heading {
     text-align: left;
     font-size: var(--px30);
@@ -354,16 +358,15 @@ main {
 .my-skills-heading {
     display: block;
     text-align: left;
-    margin: var(--margin-default);
     padding: var(--text-padding);
+    margin: 100px;
     width: fit-content;
     height: fit-content;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
 }
 
-.mando-box,
-.skills-table-box {
+.mando-box {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -500,17 +503,6 @@ td {
     text-align: right;
 }
 
-.github-link,
-.gitlab-link {
-    width: var(--px35);
-    height: var(--px35);
-    padding: 0 0 0 var(--px50);
-}
-
-#socials {
-    display: flex;
-}
-
 .col-1,
 .col-2,
 .col-3,
@@ -518,7 +510,7 @@ td {
 .col-5,
 .col-6 {
     width: 100%;
-    height: 100%;
+    height:100%;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
 }
@@ -586,4 +578,70 @@ td {
     width: 100%;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
+}
+
+#test {
+    width: 100%;
+    padding: 0;
+}
+
+#js-png {
+    width: var(--px40);
+    border-radius: 1000px;
+    transition: all 0.2s;
+}
+
+#test:hover {
+    transform: scale(1.05);
+}
+
+#progress-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: var(--px40);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.language-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.progress-text {
+    margin: var(--px04);
+    font-size: var(--px20);
+}
+
+#python,
+#java,
+#html,
+#css,
+#java-script {
+    appearance: unset;
+    width: var(--px400);
+    height: var(--px20);
+    margin: var(--px10);
+}
+
+progress::-webkit-progress-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--stone-gray);
+    border-radius: 100px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--light-gray);
+    border-radius: 100px;
+}
+
+.cert {
+    display: flex;
+    flex-direction: row;
 }
