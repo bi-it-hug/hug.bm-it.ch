@@ -215,3 +215,32 @@ p {
     margin: 10px;
     transition: all 1.5s;
 }
+
+.expand {
+    transform: translateX(100px);
+    transition: all 1s;
+}
+
+.collapse {
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+/*
+@keyframes expand {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes collapse {
+    from {
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

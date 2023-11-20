@@ -8,12 +8,16 @@
     --px750: 75rem;
     --px700: 70rem;
     --px600: 60rem;
+    --px598: 59.8rem;
     --px560: 56rem;
     --px500: 50rem;
     --px480: 48rem;
+    --px420: 42rem;
     --px400: 40rem;
     --px300: 30rem;
+    --px254: 25.4rem;
     --px200: 20rem;
+    --px136: 13.6rem;
     --px100: 10rem;
     --px90: 9rem;
     --px80: 8rem;
@@ -23,6 +27,7 @@
     --px50: 5rem;
     --px45: 4.5rem;
     --px40: 4rem;
+    --px36: 3.6rem;
     --px35: 3.5rem;
     --px30: 3rem;
     --px25: 2.5rem;
@@ -61,9 +66,7 @@
     --hover-color: var(--light-gray);
  
     --margin-default: var(--px60);
-    --margin-half: calc(var(--margin-default) / 2);
-    --margin-nav: var(--px60);
-    
+    --padding-nav: var(--px10);
     --text-padding: var(--px20);
 
     --scrollbar-width: var(--px12);
@@ -73,6 +76,8 @@
 
 * {
     box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--font-color);
 }
 
 html {
@@ -122,9 +127,9 @@ section {
 }
 
 p {
+    font-size: var(--px12);
     padding: 0;
     margin: 0;
-    white-space: normal;
 }
 
 ::-webkit-scrollbar {
@@ -151,7 +156,7 @@ p {
     :root {
         --html-font-size: 10px;
         --header-footer-height: 100px;
-        --margin-nav: var(--px50);
+        --padding-nav: var(--px50);
     }
 }
 
@@ -166,7 +171,7 @@ p {
     :root {
         --html-font-size: 8.77px;
         --header-footer-height: 80px;
-        --margin-nav: var(--px45);
+        --padding-nav: var(--px45);
     }
 }
 
@@ -181,7 +186,7 @@ p {
     :root {
         --html-font-size: 7.55px;
         --header-footer-height: 60px;
-        --margin-nav: var(--px40);
+        --padding-nav: var(--px40);
     }
 }
 
@@ -194,7 +199,7 @@ p {
 @media (max-width: 1024px) {
     :root {
         --html-font-size: 6.33px;
-        --margin-nav: var(--px35);
+        --padding-nav: var(--px35);
     }
     .header-box,
     .footer-box {
@@ -205,7 +210,7 @@ p {
 @media (max-width: 800px) {
     :root {
         --html-font-size: 5.72px;
-        --margin-nav: var(--px30);
+        --padding-nav: var(--px30);
     }
 }
 
@@ -218,7 +223,7 @@ p {
 @media (max-width: 390px) {
     :root {
         --html-font-size: 4.5px;
-        --margin-nav: var(--px25);
+        --padding-nav: var(--px25);
     }
 }
 
@@ -226,26 +231,13 @@ p {
 a {
     text-decoration: none;
     color: var(--font-color);
-    transition: all 0.2s;
 }
 
-a:hover {
+a:hover,
+button:hover {
+    cursor: pointer;
     color: var(--hover-color);
     background-color: var(--hover-color);
-}
-
-
-p,
-td,
-th {
-    font-weight: normal;
-    font-family: var(--font);
-    color: var(--font-color);
-}
-
-td {
-    font-size: var(--px12);
-    padding: var(--px02) var(--px02);
 }
 
 nav {
@@ -260,6 +252,8 @@ nav ul {
     height: fit-content;
     list-style-type: none;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -267,28 +261,57 @@ nav ul {
 nav li {
     display: flex;
     height: fit-content;
-    padding: 0 var(--margin-nav) 0 0;
+    padding: 0 var(--px40) 0 0;
+}
+
+nav button {
+    transition: all 0.2s;
+    width: var(--px36);
+    height: var(--px36);
+    background-color: var(--header-footer-color);
+    border: 0;
+    border-radius: 0;
+    padding: var(--px06);
+    z-index: 100;
+}
+
+#stripeBox {
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.stripes {
+    background-color: var(--font-color);
+    border-radius: var(--border-radius);
+    width: 20%;
+    height: 100%;
 }
 
 nav a {
     display: flex;
+    flex-direction: column;
     align-items: center;
     height: fit-content;
     text-decoration: none;
     color: var(--font-color);
-    border: 5px solid var(--border-color);
-    background-color: var(--border-color);
-    font-family: var(--font);
-    font-size: calc(var(--px40) / 1.4);
-    border-radius: 1000px;
-    padding: 0 var(--text-padding);
-    transition: all 0.2s;
+    /*border: 5px solid var(--border-color);
+    background-color: var(--border-color);*/
+    font-family: var(--font); 
+    font-size: var(--px20);
+    border-radius: 100px;
+    padding: 0 var(--px10);
 }
 
-nav a:hover {
-    transform: scale(1.01);
-    background-color: var(--dark-gray);
-    border-color: var(--dark-gray);
+nav a:hover,
+nav button:hover {
+    transform: scaleY(1.1);
+    background-color: var(--header-footer-color);
+    /*background-color: var(--dark-gray);
+    border-color: var(--dark-gray);*/
     color: var(--font-color);
 }
 
@@ -309,7 +332,7 @@ nav a:hover {
     flex-direction: row-reverse;
     width: var(--px35);
     height: var(--px35);
-    margin: 0 0 0 var(--px50);
+    margin: 0 0 0 var(--px30);
 }
 
 .github-link:hover,
@@ -319,8 +342,8 @@ nav a:hover {
 
 .gitlab-png,
 .github-png {
-    width: var(--px35);
-    height: var(--px35);
+    width: var(--px30);
+    height: var(--px30);
     transition: all 0.2s;
 }
 
@@ -336,9 +359,7 @@ main {
     background-color: var(--bg-standard);
 }
 
-#home,
-#about-me,
-#my-skills {
+section {
     display: flex;
     flex-direction: row;
     transition: all 0.2s;
@@ -378,6 +399,7 @@ main {
     height: fit-content;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
+    transition: all 0.4s;
 }
 
 .test,
@@ -490,8 +512,7 @@ td {
 .left {
     color: var(--font-color);
     font-family: var(--font);
-    font-size: calc(var(--px18) / 1.2);
-    transition: all 0.2s;
+    /*font-size: calc(var(--px18) / 1.2);*/
     margin: 0 0 0 var(--margin-default);
     text-align: left;
 }
@@ -499,8 +520,7 @@ td {
 .right {
     color: var(--font-color);
     font-family: var(--font);
-    font-size: calc(var(--px18) / 1.2);
-    transition: all 0.2s;
+    /*font-size: calc(var(--px18) / 1.2);*/
     margin: 0 var(--margin-default) 0 0;
     text-align: right;
 }
@@ -647,3 +667,99 @@ progress::-webkit-progress-value {
     display: flex;
     flex-direction: row;
 }
+
+#mail-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: var(--border-radius);
+    padding: var(--px40);
+    margin:  var(--px100);
+}
+
+h1 {
+    font-size: var(--px60);
+    margin: var(--px20) var(--px20) var(--px20) 0;
+}
+
+.mail-req {
+    width: 25%;
+    border: 1px solid white;
+    border-radius: var(--border-radius);
+    font-size: var(--px16);
+    color: black;
+    padding: var(--px06);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+form label {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: var(--px04) 0;
+    font-size: var(--px20);
+}
+
+form input {
+    font-size: var(--px18);
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: var(--border-radius);
+    font-size: var(--px16);
+    color: black;
+    padding: var(--px06);
+}
+
+#mail-submit {
+    background-color: var(--bg-standard);
+    border: 1px solid white;
+    border-radius: var(--border-radius);
+    margin: var(--px20) 0 0 0;
+}
+
+.home,
+.aboutMe,
+.mySkills,
+.contact
+
+.home {
+    transform: translateX(calc(var(--margin-default) - var(--px136)));
+    opacity: 0;
+}
+
+.aboutMe {
+    transform: translateX(calc(var(--margin-default) - var(--px254)));
+    opacity: 0;
+}
+
+.mySkills {
+    transform: translateX(calc(var(--margin-default) - var(--px420)));
+    opacity: 0;
+}
+
+.contact {
+    transform: translateX(calc(var(--margin-default) - var(--px598)));
+    opacity: 0;
+}
+
+.navbar-item {
+    transition: all 0.6s;
+}
+
+/*
+
+home: 136
+aboutMe: 254
+mySkills: 420
+contact: 598
+
+*/

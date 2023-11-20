@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () { //Stellt sicher dass, das Script nach den restlichen <body> Elementen im html geladen wird
+document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll("a[href^='#']");
   
   for (const link of links) {

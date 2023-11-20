@@ -17,13 +17,25 @@
             <nav>
                 <ul>
                     <li>
-                        <a id="homeId" href="#home">home</a>
+                        <button id="navButton" onclick="expand()">
+                            <div id="stripeBox">
+                                <div class="stripes"></div>
+                                <div class="stripes"></div>
+                                <div class="stripes"></div>
+                            </div>
+                        </button>
                     </li>
                     <li>
-                        <a id="aboutMe" href="#about-me">about me</a>
+                        <a class="navbar-item home" id="home" href="#home">home</a>
                     </li>
                     <li>
-                        <a id="mySkills" href="#my-skills">my skills</a>
+                        <a class="navbar-item aboutMe" id="aboutMe" href="#about-me">about me</a>
+                    </li>
+                    <li>
+                        <a class="navbar-item mySkills" id="mySkills" href="#my-skills">my skills</a>
+                    </li>
+                    <li>
+                        <a class="navbar-item contact" id="contact" href="#contact">contact</a>
                     </li>
                 </ul>
             </nav>
@@ -51,16 +63,13 @@
     <main>
 
         <!-- HOME SECTION -->
-        <section id="home">
+        <section id="homeSection">
 
             <div class="col-1">
                 <div class="home-heading">
                     <p class="hello-msg">Hi there! My name is<p class="h1">Lorenzo Hug</p></p>
                     <p class="h2">first year application developer at ESPAS Zürich</p>
-                    <P class="h3">アプリケーション開発者</P>
-                    <a id="test" href="/fw45.html">
-                        <img id="js-png" src="/media/pngs/js.png">
-                    </a>
+                    <p class="h3">アプリケーション開発者</p>
                 </div>
                 <div class="test">
                     <p class="lorem-ipsum">
@@ -75,7 +84,7 @@
                 </div>
             </div>
             <div class="col-2">
-                <div class="mando-box">
+                <div id="mandoBox" class="mando-box">
                     <img src="/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
                 </div>
             </div>
@@ -157,7 +166,7 @@
 
                     <div class="language-box">
                         <p class="progress-text">Python</p>
-                        <progress id="python" value="0" max="100">TEST</progress>   
+                        <progress id="python" value="32" max="100">TEST</progress>   
                     </div>
 
                     <div class="language-box">
@@ -196,6 +205,26 @@
         </section>
         <!-- END MY SKILLS SECTION -->
 
+        <section id="contact">
+            <div class="col-1">
+                <div id="mail-box">
+                    <h1>contact</h1>
+                    <form action="/php/mail.php">
+                        <label for="name">name:</label>
+                        <input class="mail-req" type="text" name="name" required><br>
+
+                        <label for="email">e-mail:</label>
+                        <input class="mail-req" type="email" name="email" required><br>
+
+                        <label for="message">message:</label>
+                        <textarea name="message" required></textarea>
+
+                        <input id="mail-submit" type="submit" value="send">
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- END MAIN CONTENT SECTION -->
 
@@ -206,7 +235,7 @@
     </footer>
     <!-- END FOOTER SECTION -->
 
-    <script src="/scripts/js/onload.js"></script>
+    <script src="/scripts/js/expand.js"></script>
     <script src="/scripts/js/scroll.js"></script>
     <script src="/scripts/js/color.js"></script>
 </body>

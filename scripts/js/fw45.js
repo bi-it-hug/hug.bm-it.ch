@@ -129,3 +129,42 @@ function game() {
         }
     });
 }
+
+// test
+var item = document.getElementsByClassName("navbar-item");
+var stripeBox = document.getElementById("stripeBox");
+
+var toggle = false;
+
+function expand() {
+
+    if (!toggle) {
+
+        for (var x = 0; x < item.length; x++) {
+            item[x].classList.add("expand");
+            item[x].classList.remove("collapse");
+        }
+
+        stripeBox.style.transform = "rotate(90deg)";
+        toggle = true;
+
+    } else {
+
+        for (var x = 0; x < item.length; x++) {
+            item[x].classList.add("collapse");
+            item[x].classList.remove("expand");
+        }
+
+        stripeBox.style.transform = "rotate(0deg)";
+        toggle = false;
+    }
+    console.log("nav toggle:", toggle);
+}
+
+
+// test
+function tet() {
+    stripeBox.addEventListener("mouseenter", function () {
+        console.log("lol");
+    });
+}
