@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hug.bm-it.ch</title>
-    <link rel="icon" href="/media/icons/ProfilePictureICO.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <link rel="icon" href="https://localhost/hug.bm-it.ch/media/icons/ProfilePictureICO.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://localhost/hug.bm-it.ch/style/style.css">
 </head>
 <body>
 
@@ -47,12 +47,12 @@
 
                 <!-- GitLab Link -->
                 <a class="gitlab-link" href="https://gitlab.com/">
-                    <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
+                    <img src="https://localhost/hug.bm-it.ch/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
                 </a>
     
                 <!-- GitHub Link -->
                 <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
-                    <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
+                    <img src="https://localhost/hug.bm-it.ch/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
                 </a>
             </div>   
         </div>
@@ -68,10 +68,10 @@
             <div class="col-1">
                 <div class="home-heading">
                     <p class="hello-msg">Hi there! My name is
-                        <h1>Lorenzo</h1>
+                        <h1>Lorenzo Hug</h1>
                     </p>
                     <h2>first year application developer at ESPAS Zürich</h2>
-                    <h3>アプリケーション開発者</h3>
+                    <h3 class="h3">アプリケーション開発者</h3>
                 </div>
                 <div class="test">
                     <p class="lorem-ipsum">
@@ -86,6 +86,9 @@
                 </div>
             </div>
             <div class="col-2">
+                <div id="mandoBox" class="mando-box">
+                    <img src="https://localhost/hug.bm-it.ch/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
+                </div>
             </div>
         </section>
         <!-- END HOME SECTION -->
@@ -192,11 +195,11 @@
                 <div class="ctfc-box">
                     <p class="ctfc-heading">certificates</p>
                     <div id="ctfcs">
-                        <a class="cert" href="/media/jpgs/certificates/python.png">
-                            <img id="img-ctfc" src="/media/jpgs/certificates/python.png">
+                        <a class="cert" href="https://localhost/hug.bm-it.ch/media/jpgs/certificates/python.png">
+                            <img id="img-ctfc" src="https://localhost/hug.bm-it.ch/media/jpgs/certificates/python.png">
                         </a>
-                        <a class="cert" href="/media/jpgs/certificates/html.png">
-                            <img id="img-ctfc" src="/media/jpgs/certificates/html.png">
+                        <a class="cert" href="https://localhost/hug.bm-it.ch/media/jpgs/certificates/html.png">
+                            <img id="img-ctfc" src="https://localhost/hug.bm-it.ch/media/jpgs/certificates/html.png">
                         </a>
                     </div>
                 </div>
@@ -206,6 +209,8 @@
 
         <section id="contact-section">
             <div class="col-1">
+
+                <!-- MAIL -->
                 <div id="mail-box">
                     <h1>contact</h1>
                     <form action="https://localhost/hug.bm-it.ch/scripts/php/mail.php">
@@ -220,7 +225,49 @@
 
                         <input id="mail-submit" type="submit" value="send">
                     </form>
+                    
+                    <!-- PHP -->
+                    <div id="mail">
+                        <?php
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                            // Formularvalidierung
+                            $name = isset($_POST["name"]) ? htmlspecialchars($_POST["name"]) : '';
+                            $email = isset($_POST["email"]) ? filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) : '';
+                            $message = isset($_POST["message"]) ? htmlspecialchars($_POST["message"]) : '';
+
+                            if ($name && $email && $message) {
+
+                                // Empfänger-Email-Adresse
+                                $receiver = "lorenzo.hug@icloud.com";
+
+                                // Betreff der E-Mail
+                                $subject = "Neue Kontaktanfrage von " . $name;
+
+                                // Nachricht
+                                $messageBody = "Name: " . $name . "\n";
+                                $messageBody .= "E-Mail: " . $email . "\n";
+                                $messageBody .= "Nachricht: " . $message;
+
+                                // E-Mail versenden
+                                $headers = "From: " . $email;
+
+                                if (mail($receiver, $subject, $messageBody, $headers)) {
+                                    echo "Thank you! Your contact request has been successfully sent.";
+                                } else {
+                                    echo "There was a problem sending the contact request. Please try again later.";
+                                }
+                            } else {
+                                echo "Please fill out all required fields correctly.";
+                            }
+                        }
+                        ?>
+                    </div>
+                    <!-- PHP END -->
+
                 </div>
+                <!-- MAIL END -->
+                        
             </div>
         </section>
 
@@ -234,9 +281,8 @@
     </footer>
     <!-- END FOOTER SECTION -->
 
-    <script src="/scripts/js/navbar.js"></script>
-    <script src="/scripts/js/color.js"></script>
-    <script src="/scripts/js/hover.js"></script>
-    <script src="/scripts/js/typewriter.js"></script>
+    <script src="https://localhost/hug.bm-it.ch/scripts/js/navbar.js"></script>
+    <script src="https://localhost/hug.bm-it.ch/scripts/js/color.js"></script>
+    <script src="https://localhost/hug.bm-it.ch/scripts/js/hover.js"></script>
 </body>
 </html>

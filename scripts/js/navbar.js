@@ -7,7 +7,7 @@ var item = document.getElementsByClassName("navbar-item");
 var stripeBox = document.getElementById("stripeBox");
 var toggle = false;
 
-function expand() {
+function toggleNavbar() {
 
     // expand
     if (!toggle) {
@@ -28,7 +28,7 @@ function expand() {
         mySkills.classList.add("mySkills");
         contact.classList.add("contact");
 
-        stripeBox.style.transform = "rotate(0deg)";
+        stripeBox.style.transform = "rotate(0)";
         toggle = false;
     }
     console.log("navbar expanded:", toggle);
