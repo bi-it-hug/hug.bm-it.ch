@@ -1,91 +1,90 @@
-count = 0
 string = """
 @keyframes colorLoop {
     0% {
         border-color: rgb(255, 0, 0);
     }
-    1.25% {
+    2% {
         border-color: rgb(255, 25, 0);
     }
-    2.5% {
+    3% {
         border-color: rgb(255, 50, 0);
     }
-    3.75% {
+    5% {
         border-color: rgb(255, 75, 0);
     }
-    5% {
+    7% {
         border-color: rgb(255, 100, 0);
     }
-    6.25% {
+    8% {
         border-color: rgb(255, 125, 0);
     }
-    7.5% {
+    10% {
         border-color: rgb(255, 150, 0);
     }
-    8.75% {
+    12% {
         border-color: rgb(255, 175, 0);
     }
-    10% {
+    13% {
         border-color: rgb(255, 200, 0);
     }
-    11.25% {
+    15% {
         border-color: rgb(255, 225, 0);
     }
-    12.5% {
+    17% {
         border-color: rgb(255, 255, 0);
     }
-    13.75% {
+    18% {
         border-color: rgb(225, 255, 0);
     }
-    15.0% {
+    20% {
         border-color: rgb(200, 255, 0);
     }
-    16.25% {
+    22% {
         border-color: rgb(175, 255, 0);
     }
-    17.5% {
+    23% {
         border-color: rgb(150, 255, 0);
     }
-    18.75% {
+    25% {
         border-color: rgb(125, 255, 0);
     }
-    20% {
+    27% {
         border-color: rgb(100, 255, 0);
     }
-    21.25% {
+    28% {
         border-color: rgb(75, 255, 0);
     }
-    22.5% {
+    30% {
         border-color: rgb(50, 255, 0);
     }
-    23.75% {
+    32% {
         border-color: rgb(25, 255, 0);
     }
-    25.0% {
+    33% {
         border-color: rgb(0, 255, 0);
     }
-    26.25% {
+    35% {
         border-color: rgb(0, 255, 25);
     }
-    27.5% {
+    37% {
         border-color: rgb(0, 255, 50);
     }
-    28.75% {
+    38% {
         border-color: rgb(0, 255, 75);
     }
-    30% {
+    40% {
         border-color: rgb(0, 255, 100);
     }
-    31.25% {
+    42% {
         border-color: rgb(0, 255, 125);
     }
-    32.5% {
+    43% {
         border-color: rgb(0, 255, 150);
     }
-    33.75% {
+    45% {
         border-color: rgb(0, 255, 175);
     }
-    35% {
+    47% {
         border-color: rgb(0, 255, 200);
     }
     36.25% {
@@ -187,17 +186,17 @@ string = """
 }
 """
 
-amount = []
-
+count = 0
 for x in string:
-    if x == "%":
+    if x == "{":
+        print(f"{count}. {x}")
         count += 1
-        amount.append("x")
 
-print(count, len(amount))
+perc = 0
+lol = []
+while perc < 100:
+    print(f"|||{round(perc)}")
+    perc += 1.6
+    lol.append("x")
 
-count = []
-
-while len(count) <= 100:
-    print(len(count))
-    count.append("x")
+print(len(lol))
