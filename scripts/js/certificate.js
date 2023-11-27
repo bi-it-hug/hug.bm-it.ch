@@ -1,11 +1,18 @@
-var ctfc = document.getElementsByClassName("img-ctfc");
+var pythonC = document.getElementById("pythonC");
+var htmlC = document.getElementById("htmlC");
 
-for (var x = 0; x < ctfc.length; x++) {
-    ctfc[x].addEventListener("mouseenter", function() {
-        ctfc[x].setAttribute('src', '/media/jpgs/certificates/html.png');
-    });
+pythonC.addEventListener("mouseenter", function() {
+    pythonC.src = "/media/images/certificates/python.png";
+});
 
-    ctfc[x].addEventListener("mouseleave", function() {
-        ctfc[x].setAttribute('src', '/media/pngs/PythonPNG.png');
-    });
-}
+pythonC.addEventListener("mouseleave", function() {
+    pythonC.src = "/media/pngs/PythonPNG.png";
+});
+
+htmlC.addEventListener("mouseenter", function() {
+    htmlC.src = "/media/images/certificates/html.png";
+});
+
+htmlC.addEventListener("mouseleave", function() {
+    htmlC.src = "/media/pngs/htmlPNG.png";
+});

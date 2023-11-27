@@ -2,140 +2,183 @@
 @import url("https://fonts.googleapis.com/css?family=JetBrains%20Mono");
 
 :root {
-    --html-font-size: 10px;
 
-    --px800: 80rem;
-    --px750: 75rem;
-    --px700: 70rem;
-    --px600: 60rem;
-    --px598: 59.8rem;
-    --px560: 56rem;
-    --px500: 50rem;
-    --px480: 48rem;
-    --px420: 42rem;
-    --px400: 40rem;
-    --px300: 30rem;
-    --px254: 25.4rem;
-    --px200: 20rem;
-    --px136: 13.6rem;
-    --px100: 10rem;
-    --px90: 9rem;
-    --px80: 8rem;
-    --px70: 7rem;
-    --px60: 6rem;
-    --px55: 5.5rem;
-    --px50: 5rem;
-    --px45: 4.5rem;
-    --px40: 4rem;
-    --px36: 3.6rem;
-    --px35: 3.5rem;
-    --px30: 3rem;
-    --px25: 2.5rem;
-    --px22: 2.2rem;
-    --px20: 2rem;
-    --px18: 1.8rem;
-    --px16: 1.6rem;
-    --px14: 1.4rem;
-    --px12: 1.2rem;
-    --px10: 1rem;
-    --px08: 0.8rem;
-    --px06: 0.6rem;
-    --px04: 0.4rem;
-    --px02: 0.2rem;
-    --px005: 0.05rem;
-    --pxNeg10: -1rem;
+    --body-font-size: 10px;
+
+    /* sizes */
     --pxNeg30: -3rem;
-    
-    --pure-white: rgb(255, 255, 255);
-    --almost-white: rgb(240, 240, 240);
-    --yes-another-white: rgb(210, 210, 210);
-    --dark-white: rgb(180, 180, 180);
-    --light-gray: rgb(140, 140, 140);
-    --gray: rgb(100, 100, 100);
-    --dark-gray: rgb(80, 80, 80);
-    --stone-gray: rgb(50, 50, 50);
-    --another-gray: rgb(40, 40, 40);
-    --lol-black: rgb(35, 35, 35);
-    --coal-black: rgb(30, 30, 30);
-    --sas-black: rgb(25, 25, 25);
-    --almost-black: rgb(20, 20, 20);
+    --pxNeg10: -1rem;
+    --px005: 0.05rem;
+    --px02: 0.2rem;  
+    --px04: 0.4rem;  
+    --px06: 0.6rem;  
+    --px08: 0.8rem;  
+    --px10: 1rem;    
+    --px12: 1.2rem;  
+    --px14: 1.4rem;  
+    --px16: 1.6rem;  
+    --px18: 1.8rem;  
+    --px20: 2rem;    
+    --px22: 2.2rem;
+    --px25: 2.5rem;
+    --px30: 3rem;
+    --px35: 3.5rem;
+    --px36: 3.6rem;
+    --px40: 4rem;
+    --px45: 4.5rem;
+    --px50: 5rem;
+    --px55: 5.5rem;
+    --px60: 6rem;
+    --px70: 7rem;
+    --px80: 8rem;
+    --px90: 9rem;
+    --px100: 10rem;
+    --px136: 13.6rem;
+    --px200: 20rem;
+    --px254: 25.4rem;
+    --px300: 30rem;
+    --px400: 40rem;
+    --px420: 42rem;
+    --px480: 48rem;
+    --px500: 50rem;
+    --px560: 56rem;
+    --px598: 59.8rem;
+    --px600: 60rem;
+    --px700: 70rem;
+    --px750: 75rem;
+    --px800: 80rem;
 
-    --border-color: 0;
-    --border-radius: 1rem;
+    /* colors */
+    --rgb-000: rgb(0, 0, 0);
+    --rgb-005: rgb(5, 5, 5);
+    --rgb-010: rgb(10, 10, 10);
+    --rgb-015: rgb(15, 15, 15);
+    --rgb-020: rgb(20, 20, 20);
+    --rgb-025: rgb(25, 25, 25);
+    --rgb-030: rgb(30, 30, 30);
+    --rgb-035: rgb(35, 35, 35);
+    --rgb-040: rgb(40, 40, 40);
+    --rgb-045: rgb(45, 45, 45);
+    --rgb-050: rgb(50, 50, 50);
+    --rgb-055: rgb(55, 55, 55);
+    --rgb-060: rgb(60, 60, 60);
+    --rgb-065: rgb(65, 65, 65);
+    --rgb-070: rgb(70, 70, 70);
+    --rgb-075: rgb(75, 75, 75);
+    --rgb-080: rgb(80, 80, 80);
+    --rgb-085: rgb(85, 85, 85);
+    --rgb-090: rgb(90, 90, 90);
+    --rgb-095: rgb(95, 95, 95);
+    --rgb-100: rgb(100, 100, 100);
+    --rgb-105: rgb(105, 105, 105);
+    --rgb-110: rgb(110, 110, 110);
+    --rgb-115: rgb(115, 115, 115);
+    --rgb-120: rgb(120, 120, 120);
+    --rgb-125: rgb(125, 125, 125);
+    --rgb-130: rgb(130, 130, 130);
+    --rgb-135: rgb(135, 135, 135);
+    --rgb-140: rgb(140, 140, 140);
+    --rgb-145: rgb(145, 145, 145);
+    --rgb-150: rgb(150, 150, 150);
+    --rgb-155: rgb(155, 155, 155);
+    --rgb-160: rgb(160, 160, 160);
+    --rgb-165: rgb(165, 165, 165);
+    --rgb-170: rgb(170, 170, 170);
+    --rgb-175: rgb(175, 175, 175);
+    --rgb-180: rgb(180, 180, 180);
+    --rgb-185: rgb(185, 185, 185);
+    --rgb-190: rgb(190, 190, 190);
+    --rgb-195: rgb(195, 195, 195);
+    --rgb-200: rgb(200, 200, 200);
+    --rgb-205: rgb(205, 205, 205);
+    --rgb-210: rgb(210, 210, 210);
+    --rgb-215: rgb(215, 215, 215);
+    --rgb-220: rgb(220, 220, 220);
+    --rgb-225: rgb(225, 225, 225);
+    --rgb-230: rgb(230, 230, 230);
+    --rgb-235: rgb(235, 235, 235);
+    --rgb-240: rgb(240, 240, 240);
+    --rgb-245: rgb(245, 245, 245);
+    --rgb-250: rgb(250, 250, 250);
+    --rgb-255: rgb(255, 255, 255);
 
-    --font-color: var(--almost-white);
+    /* work-in-progress border */
+    --wip-border: /*1px solid var(--rgb-255)*/none;
+    --wip-border-color: /*var(--rgb-255)*/0;
+    --wip-border-radius: 1rem;
+
+    /* font */
     --font: "JetBrains Mono";
+    --font-color: var(--rgb-240);
 
-    --header-footer-color: var(--sas-black);
-    --header-footer-height: var(--px100);
+    --header-and-footer-color: var(--rgb-025);
+    --header-and-footer-height: var(--px100);
 
-    --hover-color: var(--light-gray);
+    --hover-color: var(--rgb-140);
  
     --margin-default: var(--px60);
     --padding-nav: var(--px005);
-    --text-padding: var(--px20);
+    --padding-text: var(--px20);
 
     --scrollbar-width: var(--px12);
 
-    --bg-standard: var(--sas-black);
+    --bg-standard: var(--rgb-025);
 
     --table-width: var(--px500);
 }
 
 * {
     word-spacing: 0;
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: var(--font);
     color: var(--font-color);
-    /*animation: colorLoop 10s infinite;*/
+    border: none;
 }
 
 html {
-    background-color: var(--header-footer-color);
-    font-size: var(--html-font-size);
-
+    font-size: var(--body-font-size);
 }
 
 body {
     background-image: url("/media/bg/istockphoto-1414981473-170667a.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
 }
 
 body,
 html {
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - var(--scrollbar-width));
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--bg-standard);
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 header {
     width: calc(100vw - var(--scrollbar-width)); 
-    height: var(--header-footer-height);
+    height: var(--header-and-footer-height);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: sticky !important;
     top: 0 !important;
-    z-index: 5 !important;
-    border-bottom: var(--px04) solid var(--header-footer-color);
-    background-color: var(--header-footer-color);
+    z-index: 3;
+    border-bottom: var(--px04) solid var(--header-and-footer-color);
+    background-color: var(--header-and-footer-color);
 }
 
 footer {
     display: flex;
     flex-direction: row;
-    height: var(--header-footer-height);
+    height: var(--header-and-footer-height);
     width: calc(100vw - var(--scrollbar-width));
-    border-top: var(--px04) solid var(--header-footer-color);
-    background-color: var(--header-footer-color);
+    border-top: var(--px04) solid var(--header-and-footer-color);
+    background-color: var(--header-and-footer-color);
     justify-content: space-between;
     align-items: center;
     z-index: 2;
@@ -149,75 +192,73 @@ p {
 
 @media (max-width: 1920px) {
     :root {
-        --html-font-size: 10px;
-        --header-footer-height: 100px;
+        --body-font-size: 10px;
+        --header-and-footer-height: 100px;
         --padding-nav: var(--px40);
     }
 }
 
 @media (max-width: 1680px) {
     :root {
-        --html-font-size: 9.38px;
-        --header-footer-height: 90px;
+        --body-font-size: 9.38px;
+        --header-and-footer-height: 90px;
     }
 }
 
 @media (max-width: 1600px) {
     :root {
-        --html-font-size: 8.77px;
-        --header-footer-height: 80px;
+        --body-font-size: 8.77px;
+        --header-and-footer-height: 80px;
         --padding-nav: var(--px35);
     }
 }
 
 @media (max-width: 1440px) {
     :root {
-        --html-font-size: 8.16px;
-        --header-footer-height: 70px;
+        --body-font-size: 8.16px;
+        --header-and-footer-height: 70px;
     }
 }
 
 @media (max-width: 1366px) {
     :root {
-        --html-font-size: 7.55px;
-        --header-footer-height: 60px;
+        --body-font-size: 7.55px;
+        --header-and-footer-height: 60px;
         --padding-nav: var(--px30);
     }
 }
 
 @media (max-width: 1280px) {
     :root {
-        --html-font-size: 6.94px;
+        --body-font-size: 6.94px;
+        --header-and-footer-height: 55px;
     }
 }
 
 @media (max-width: 1024px) {
     :root {
-        --html-font-size: 6.33px;
+        --body-font-size: 6.33px;
+        --header-and-footer-height: 50px;
         --padding-nav: var(--px25);
-    }
-    header,
-    footer {
-        width: 100vw;
     }
 }
 
 @media (max-width: 800px) {
     :root {
-        --html-font-size: 5.72px;
+        --body-font-size: 5.72px;
         --padding-nav: var(--px20);
     }
 }
 
 @media (max-width: 640px) {
     :root {
-        --html-font-size: 5.11px;
+        --body-font-size: 5.11px;
     }
 }
 
 @media (max-width: 380px) {
     :root {
-        --html-font-size: 4.5px;
+        --body-font-size: 4.5px;
         --padding-nav: var(--px15);
     }
 }
@@ -227,18 +268,23 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--light-gray);
+    background-color: var(--rgb-070);
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--rgb-090);
+}
+
 ::-webkit-scrollbar-track {
-    width: calc(var(--scrollbar-width) - var(--px10));
-    background-color: var(--stone-gray);
+    background-color: var(--rgb-050);
 }
 
 ::-webkit-scrollbar-button {
-    background-color: var(--gray);
+    background-color: var(--rgb-070);
 }
+
 ::-webkit-scrollbar-corner {
-    background-color: var(--bg-standard);
+    background-color: var(--rgb-255);
 }
 
 a {
@@ -278,7 +324,7 @@ nav Button {
     transition: all 0.2s;
     width: var(--px36);
     height: var(--px36);
-    background-color: var(--header-footer-color);
+    background-color: var(--header-and-footer-color);
     border: 0;
     border-radius: 0;
     padding: var(--px06);
@@ -297,7 +343,7 @@ nav Button {
 .stripes {
     transition: all 0.2s;
     background-color: var(--font-color);
-    border-radius: var(--border-radius);
+    border-radius: var(--wip-border-radius);
     width: 20%;
     height: 100%;
 }
@@ -318,12 +364,12 @@ nav a {
 
 nav a:hover {
     cursor: pointer;
-    color: var(--dark-white);
+    color: var(--rgb-180);
 }
 
 nav Button:hover {
     cursor: pointer;
-    background-color: var(--header-footer-color);
+    background-color: none;
 }
 
 #socials {
@@ -334,7 +380,8 @@ nav Button:hover {
 .github-link,
 .gitlab-link {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
     width: var(--px35);
     height: var(--px35);
     margin: 0 0 0 var(--px30);
@@ -342,7 +389,7 @@ nav Button:hover {
 
 .github-link:hover,
 .gitlab-link:hover {
-    background-color: var(--header-footer-color);
+    background-color: var(--header-and-footer-color);
 }
 
 .gitlab-png,
@@ -370,7 +417,7 @@ section {
     transition: all 0.2s;
     height: fit-content;
     margin: calc(var(--margin-default) / 2) var(--margin-default);
-    border: 1px solid var(--border-color);
+    border: var(--wip-border);
     border-radius: 1rem;
     background-color: var(--bg-standard);
 }
@@ -391,11 +438,11 @@ section {
 
 .heading {
     display: block;
-    width: 70em;
+    width: fit-content;
     height: fit-content;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: var(--text-padding);
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
+    padding: var(--padding-text);
     margin: calc(var(--padding-nav) + 2%);
     text-align: left;
 }
@@ -405,25 +452,12 @@ section {
     flex-direction: column;
     align-self: center;
     margin: var(--margin-default);
-    padding: var(--text-padding);
+    padding: var(--padding-text);
     width: fit-content;
     height: fit-content;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
     transition: all 0.4s;
-}
-
-.ctfc-box {
-    display: block;
-    text-align: left;
-    align-self: self-start;
-    justify-self: center;
-    margin: calc(var(--padding-nav) + 2%);
-    padding: var(--text-padding);
-    width: fit-content;
-    height: fit-content;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
 }
 
 .ptext {
@@ -438,7 +472,7 @@ section {
 h1 {
     margin: var(--pxNeg30) var(--pxNeg10);
     font-family: var(--font);
-    font-size: 14em;
+    font-size: 10em;
     color: var(--font-color);
     font-weight: normal;
     white-space: nowrap;
@@ -449,7 +483,7 @@ h2 {
     margin: 0;
     font-family: var(--font);
     font-size: 4em;
-    color: var(--yes-another-white);
+    color: var(--rgb-210);
     font-weight: normal;
 }
 
@@ -458,69 +492,26 @@ h3 {
     margin: 0;
     font-family: var(--font);
     font-size: 2em;
-    color: var(--yes-another-white);
+    color: var(--rgb-210);
     font-weight: normal;
 }
 
 h4 {
     margin: 0;
     font-family: var(--font);
-    font-size: var(--px60);
+    font-size: var(--px50);
     color: var(--font-color);
     font-weight: normal;
+    padding: 5px 0;
 }
 
 h5 {
     margin: 0;
     font-family: var(--font);
-    font-size: var(--px30);
+    font-size: var(--px40);
     color: var(--font-color);
     font-weight: normal;
-    margin: 50px 0 10px;
-}
-
-.nothing {
-    text-align: center;
-    font-size: var(--px10);
-    font-family: var(--font);
-    color: var(--font-color);
-    margin: var(--px10) 0 0 0 !important;
-}
-
-.lang {
-    padding: 0 0 0 0;
-    font-size: var(--px14);
-    width: var(--px02);
-}
-
-.prog {
-    width: var(--px400);
-}
-
-.progress {
-    background-color: var(--border-color);
-    font-size: var(--px14);
-    margin: 0;
-    width: 100%;
-    height: fit-content;
-    border-radius: var(--border-radius);
-}
-
-.progress-bar {
-    width: 0 !important;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgb(150, 150, 150);
-    align-items: center;
-    padding: var(--px04);
-    border-radius: var(--border-radius);
-    transition: all 0.6s;
-}
-
-.progress-bar:hover {
-    cursor: pointer;
-    width: 400px !important;
+    padding: 4% 0 0 5px;
 }
 
 .left {
@@ -542,64 +533,73 @@ h5 {
 .table {
     display: flex;
     flex-direction: column;
-    width: calc(100% - calc(4em * 2));
+    width: calc(100% - calc(var(--margin-default) * 2));
     height: var(--px600);
-    margin: var(--px50);
-    border-radius: yellow;
+    margin: var(--margin-default);
     white-space: nowrap;
-}
-
-.td {
-    font-size: var(--px20);
-}
-
-.row {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: fit-content;
-    border: 1px solid var(--border-color);
 }
 
 .col {
     display: flex;
     flex-direction: row;
-    width: calc(100% - var(--px10));
+    justify-content: space-around !important;
+    width: 100%;
     height: fit-content;
-    border: 1px solid var(--border-color);
+    border: var(--wip-border);
 }
 
-.row-1 {
-    width: 40%;
-    text-align: right;
+.row {
+    width: 100%;
+    height: fit-content;
+    border: var(--wip-border);
 }
 
-.row-2 {
-    text-align: left;
+.row-1-about-me {
+    width: 200%;
 }
 
-.row-empty {
-    width: var(--px100);
+.row-1-timeline {
+    width: 60%;
 }
 
-.img-ctfc {
-    border-radius: 100px;
-    width: var(--px50);
-    transition: all 0.3s;
+.th {
+    font-size: var(--px60);
+    border: var(--wip-border);
+    width: 100%;
+    padding: 0.4em 5px;
 }
 
-.img-ctfc:hover {
-    cursor: pointer;
-    transform: scale(6);
-    border-radius: 0;
+.td-head {
+    font-size: var(--px40);
+    border: var(--wip-border);
+    padding: 0.4em 5px;
 }
 
-#ctfcs {
+.td {
+    font-size: var(--px20);
+    border: var(--wip-border);
+    padding: 0.4em 5px;
+}
+
+.certificate-box {
     display: flex;
     flex-direction: column;
+    margin: calc(var(--margin-default) /2) var(--margin-default) var(--margin-default);
+    padding: var(--padding-text);
     width: fit-content;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    height: fit-content;
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
+}
+
+.certificate-heading {
+    font-size: var(--px20);
+}
+
+.certificate-list {
+    font-size: var(--px16);
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 0;
 }
 
 #js-png {
@@ -612,53 +612,121 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: var(--px40);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    align-self: flex-end;
+    width: fit-content;
+    height: fit-content;
+    margin: var(--margin-default);
+    padding: calc(var(--margin-default) / 2);
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
 }
 
-.language-box {
+.legend-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bg-standard);
+    width: var(--px400);
+    height: fit-content;
+    padding: var(--px10);
+}
+
+.legend-text-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.legend-text {
+    text-align: center;
+}
+
+.legend-stripe {
+    display: flex;
+    width: 100%;
+    height: var(--px04);
+    margin: var(--px10);
+}
+
+.language {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0;
     width: fit-content;
     height: fit-content;
 }
 
-.progress-text {
-    margin: var(--px04);
+.progress-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--rgb-080);
+    width: var(--px400);
+    height: var(--px20);
+    margin: var(--px10);
+    border-radius: var(--wip-border-radius);
+}
+
+.progress-label { 
+    padding: var(--px04);
     font-size: var(--px20);
+}
+
+.progress-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: var(--px16);
+    background-color: var(--rgb-070);
+    border-radius: 1rem 0 0 1rem;
+    z-index: 0;
+}
+
+.beginner,
+.intermediate,
+.advanced,
+.expert {
+    width: 25%;
+    height: 100%;
+}
+
+.beginner {
+    background-color: rgb(225, 228, 92);
+}
+
+.intermediate {
+    background-color: rgb(92, 228, 133);
+}
+
+.advanced {
+    background-color: rgb(92, 106, 228);
+}
+
+.expert {
+    background-color: rgb(228, 92, 92);
+    border-radius:0 1rem 1rem 0;
 }
 
 #python,
 #java,
 #html,
 #css,
-#java-script {
-    appearance: unset;
-    width: var(--px400);
-    height: var(--px20);
-    margin: var(--px10);
-}
-
-progress::-webkit-progress-bar {
+#javaScript {
     display: flex;
     flex-direction: row;
-    background-color: var(--stone-gray);
-    border-radius: 100px;
-}
-
-progress::-webkit-progress-value {
-    background-color: var(--light-gray);
-    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--rgb-040);
 }
 
 #mail-box {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 1px solid var(--border-color);
+    border: var(--wip-border);
     border-radius: 1rem;
     padding: var(--px40);
     margin:  var(--px100);
@@ -666,8 +734,8 @@ progress::-webkit-progress-value {
 
 .mail-req {
     width: 25%;
-    border: 1px solid white;
-    border-radius: var(--border-radius);
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
     font-size: var(--px16);
     color: black;
     padding: var(--px06);
@@ -693,8 +761,8 @@ form input {
 
 textarea {
     width: 100%;
-    border: 1px solid white;
-    border-radius: var(--border-radius);
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
     font-size: var(--px16);
     color: black;
     padding: var(--px06);
@@ -702,7 +770,7 @@ textarea {
 
 #mail-submit {
     background-color: var(--bg-standard);
-    border: 1px solid white;
+    border: var(--wip-border);
     border-radius: 1rem;
     margin: var(--px20) 0 0 0;
 }
@@ -739,195 +807,195 @@ span {
     border-right: .05em solid;
     animation: caret 1s steps(1) infinite;
 }
-  
+
 @keyframes caret {
     50% {
-        border-color: transparent;
+        wip-border-color: transparent;
     }
 }
 
 @keyframes colorLoop {
     0% {
-        border-color: rgb(255, 0, 0);
+        wip-border-color: rgb(255, 0, 0);
     }
     2% {
-        border-color: rgb(255, 25, 0);
+        wip-border-color: rgb(255, 25, 0);
     }
     3% {
-        border-color: rgb(255, 50, 0);
+        wip-border-color: rgb(255, 50, 0);
     }
     5% {
-        border-color: rgb(255, 75, 0);
+        wip-border-color: rgb(255, 75, 0);
     }
     6% {
-        border-color: rgb(255, 100, 0);
+        wip-border-color: rgb(255, 100, 0);
     }
     8% {
-        border-color: rgb(255, 125, 0);
+        wip-border-color: rgb(255, 125, 0);
     }
     10% {
-        border-color: rgb(255, 150, 0);
+        wip-border-color: rgb(255, 150, 0);
     }
     11% {
-        border-color: rgb(255, 175, 0);
+        wip-border-color: rgb(255, 175, 0);
     }
     13% {
-        border-color: rgb(255, 200, 0);
+        wip-border-color: rgb(255, 200, 0);
     }
     14% {
-        border-color: rgb(255, 225, 0);
+        wip-border-color: rgb(255, 225, 0);
     }
     16% {
-        border-color: rgb(255, 255, 0);
+        wip-border-color: rgb(255, 255, 0);
     }
     18% {
-        border-color: rgb(225, 255, 0);
+        wip-border-color: rgb(225, 255, 0);
     }
     19% {
-        border-color: rgb(200, 255, 0);
+        wip-border-color: rgb(200, 255, 0);
     }
     21% {
-        border-color: rgb(175, 255, 0);
+        wip-border-color: rgb(175, 255, 0);
     }
     22% {
-        border-color: rgb(150, 255, 0);
+        wip-border-color: rgb(150, 255, 0);
     }
     24% {
-        border-color: rgb(125, 255, 0);
+        wip-border-color: rgb(125, 255, 0);
     }
     26% {
-        border-color: rgb(100, 255, 0);
+        wip-border-color: rgb(100, 255, 0);
     }
     27% {
-        border-color: rgb(75, 255, 0);
+        wip-border-color: rgb(75, 255, 0);
     }
     29% {
-        border-color: rgb(50, 255, 0);
+        wip-border-color: rgb(50, 255, 0);
     }
     30% {
-        border-color: rgb(25, 255, 0);
+        wip-border-color: rgb(25, 255, 0);
     }
     32% {
-        border-color: rgb(0, 255, 0);
+        wip-border-color: rgb(0, 255, 0);
     }
     34% {
-        border-color: rgb(0, 255, 25);
+        wip-border-color: rgb(0, 255, 25);
     }
     35% {
-        border-color: rgb(0, 255, 50);
+        wip-border-color: rgb(0, 255, 50);
     }
     37% {
-        border-color: rgb(0, 255, 75);
+        wip-border-color: rgb(0, 255, 75);
     }
     38% {
-        border-color: rgb(0, 255, 100);
+        wip-border-color: rgb(0, 255, 100);
     }
     40% {
-        border-color: rgb(0, 255, 125);
+        wip-border-color: rgb(0, 255, 125);
     }
     42% {
-        border-color: rgb(0, 255, 150);
+        wip-border-color: rgb(0, 255, 150);
     }
     43% {
-        border-color: rgb(0, 255, 175);
+        wip-border-color: rgb(0, 255, 175);
     }
     45% {
-        border-color: rgb(0, 255, 200);
+        wip-border-color: rgb(0, 255, 200);
     }
     46% {
-        border-color: rgb(0, 255, 225);
+        wip-border-color: rgb(0, 255, 225);
     }
     48% {
-        border-color: rgb(0, 255, 255);
+        wip-border-color: rgb(0, 255, 255);
     }
     50% {
-        border-color: rgb(0, 225, 255);
+        wip-border-color: rgb(0, 225, 255);
     }
     51% {
-        border-color: rgb(0, 200, 255);
+        wip-border-color: rgb(0, 200, 255);
     }
     53% {
-        border-color: rgb(0, 175, 255);
+        wip-border-color: rgb(0, 175, 255);
     }
     54% {
-        border-color: rgb(0, 150, 255);
+        wip-border-color: rgb(0, 150, 255);
     }
     56% {
-        border-color: rgb(0, 125, 255);
+        wip-border-color: rgb(0, 125, 255);
     }
     58% {
-        border-color: rgb(0, 100, 255);
+        wip-border-color: rgb(0, 100, 255);
     }
     59% {
-        border-color: rgb(0, 75, 255);
+        wip-border-color: rgb(0, 75, 255);
     }
     61% {
-        border-color: rgb(0, 50, 255);
+        wip-border-color: rgb(0, 50, 255);
     }
     62% {
-        border-color: rgb(0, 25, 255);
+        wip-border-color: rgb(0, 25, 255);
     }
     64% {
-        border-color: rgb(0, 0, 255);
+        wip-border-color: rgb(0, 0, 255);
     }
     66% {
-        border-color: rgb(25, 0, 255);
+        wip-border-color: rgb(25, 0, 255);
     }
     67% {
-        border-color: rgb(50, 0, 255);
+        wip-border-color: rgb(50, 0, 255);
     }
     69% {
-        border-color: rgb(75, 0, 255);
+        wip-border-color: rgb(75, 0, 255);
     }
     70% {
-        border-color: rgb(100, 0, 255);
+        wip-border-color: rgb(100, 0, 255);
     }
     72% {
-        border-color: rgb(125, 0, 255);
+        wip-border-color: rgb(125, 0, 255);
     }
     74% {
-        border-color: rgb(150, 0, 255);
+        wip-border-color: rgb(150, 0, 255);
     }
     75% {
-        border-color: rgb(175, 0, 255);
+        wip-border-color: rgb(175, 0, 255);
     }
     77% {
-        border-color: rgb(200, 0, 255);
+        wip-border-color: rgb(200, 0, 255);
     }
     78% {
-        border-color: rgb(225, 0, 255);
+        wip-border-color: rgb(225, 0, 255);
     }
     80% {
-        border-color: rgb(255, 0, 255);
+        wip-border-color: rgb(255, 0, 255);
     }
     82% {
-        border-color: rgb(255, 0, 225);
+        wip-border-color: rgb(255, 0, 225);
     }
     83% {
-        border-color: rgb(255, 0, 200);
+        wip-border-color: rgb(255, 0, 200);
     }
     85% {
-        border-color: rgb(255, 0, 175);
+        wip-border-color: rgb(255, 0, 175);
     }
     88% {
-        border-color: rgb(255, 0, 150);
+        wip-border-color: rgb(255, 0, 150);
     }
     90% {
-        border-color: rgb(255, 0, 125);
+        wip-border-color: rgb(255, 0, 125);
     }
     92% {
-        border-color: rgb(255, 0, 100);
+        wip-border-color: rgb(255, 0, 100);
     }
     94% {
-        border-color: rgb(255, 0, 75);
+        wip-border-color: rgb(255, 0, 75);
     }
     96% {
-        border-color: rgb(255, 0, 50);
+        wip-border-color: rgb(255, 0, 50);
     }
     98% {
-        border-color: rgb(255, 0, 25);
+        wip-border-color: rgb(255, 0, 25);
     }
     100% {
-        border-color: rgb(255, 0, 0);
+        wip-border-color: rgb(255, 0, 0);
     }
 }

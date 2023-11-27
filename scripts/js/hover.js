@@ -3,7 +3,7 @@ var stripes = document.getElementsByClassName("stripes");
 
 navButton.addEventListener("mouseenter", function () {
     for (var x = 0; x < stripes.length; x++) {
-        stripes[x].style.backgroundColor = "var(--dark-white)";
+        stripes[x].style.backgroundColor = "var(--hover-color)";
     }
 });
 

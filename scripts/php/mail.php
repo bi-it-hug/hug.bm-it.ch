@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hug.bm-it.ch</title>
-    <link rel="icon" href="https://localhost/hug.bm-it.ch/media/icons/ProfilePictureICO.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="https://localhost/hug.bm-it.ch/style/style.css">
+    <link rel="icon" href="/media/icons/ProfilePictureICO.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://localhost/hug.bm-it.ch/style">
 </head>
 <body>
 
     <!-- HEADER SECTION -->
-    <header class="header-box">
+    <header>
         <div class="left">
 
           <!-- NAVIGATION MENU -->
@@ -47,12 +47,12 @@
 
                 <!-- GitLab Link -->
                 <a class="gitlab-link" href="https://gitlab.com/">
-                    <img src="https://localhost/hug.bm-it.ch/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
+                    <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
                 </a>
     
                 <!-- GitHub Link -->
                 <a class="github-link" href="https://github.com/bmit-hug/hug.bm-it.ch/tree/main">
-                    <img src="https://localhost/hug.bm-it.ch/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
+                    <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="github-png">
                 </a>
             </div>   
         </div>
@@ -65,16 +65,16 @@
         <!-- HOME SECTION -->
         <section id="home-section">
 
-            <div class="col-1">
-                <div class="home-heading">
+            <div class="row">
+                <div class="heading">
                     <p class="hello-msg">Hi there! My name is
-                        <h1>Lorenzo Hug</h1>
+                        <h1>Lorenzo</h1>
                     </p>
                     <h2>first year application developer at ESPAS Zürich</h2>
-                    <h3 class="h3">アプリケーション開発者</h3>
+                    <h3>アプリケーション開発者</h3>
                 </div>
                 <div class="test">
-                    <p class="lorem-ipsum">
+                    <p class="ptext">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales ac mauris at, malesuada
                         hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac. Pellentesque rhoncus egestas
                         enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis porttitor. Duis consequat, dui
@@ -85,85 +85,90 @@
                     </p>
                 </div>
             </div>
-            <div class="col-2">
-                <div id="mandoBox" class="mando-box">
-                    <img src="https://localhost/hug.bm-it.ch/media/gifs/mando.gif" class="mando img-fluid" alt="MandoGif">
-                </div>
+            <div class="row">
             </div>
         </section>
         <!-- END HOME SECTION -->
 
         <!-- ABOUT ME SECTION -->
         <section id="about-me-section">
-            <div class="col-1">
-                <div class="about-me-heading">
-                    <p class="h4">about me</p>
-                    <p class="h5">my story</p>
-                    <p class="h6">私について</p>
+
+            <div class="row">
+                <div class="heading">
+                    <h1>about me</h1>
+                    <h2>my story</h2>
+                    <h3>私について</h3>
                 </div>
-                <div class="test">
-                    <p class="about-me-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
-                        ac mauris at, malesuada hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac.
-                        Pellentesque rhoncus egestas enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis
-                        porttitor. Duis consequat, dui id tristique semper, dolor neque consectetur justo, sed efficitur
-                        arcu enim non erat. Aliquam erat volutpat. Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim.
-                        Pellentesque eu orci massa.
-                        Praesent viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
-                        Aliquam mattis lorem quam, vitae luctus eros auctor eget. Vestibulum ante ipsum primis in faucibus orci
-                        luctus et ultrices posuere cubilia curae; Cras sed aliquet nibh. Quisque turpis dolor, mattis nec tincidunt non,
-                        auctor quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a leo
-                        vitae tortor viverra tempus mollis vitae libero. Praesent viverra, nisl vitae tempus posuere, turpis ligula fringilla
-                        nisi, vitae tincidunt dui ipsum sed enim. Nam aliquam a velit eget interdum. Donec posuere metus eu ante ullamcorper
-                        commodo. Aliquam sed felis ex. Sed at lacus non nunc ultrices convallis.
-                        Vestibulum quis vestibulum nibh. Duis a ex euismod, mattis nibh eget, luctus ex. Nullam non risus elit.
-                        In nisi arcu, scelerisque eu tellus quis, volutpat convallis neque. Proin tincidunt augue dapibus pharetra
-                        malesuada. Duis in erat at lacus suscipit vehicula. In a nisl non nisi volutpat pharetra in id mi. Aenean
-                        sollicitudin mauris id sapien congue, id dapibus quam luctus. Curabitur volutpat mi ac fermentum volutpat.
-                        Praesent ornare lorem vitae felis blandit condimentum. Donec sodales, purus eu vulputate aliquet, magna lectus
-                        convallis velit, vitae feugiat velit sem a nisl. Fusce suscipit diam at elit porttitor placerat. Curabitur id vehicula mi.
-                        Proin dui diam, lacinia tincidunt erat fringilla, facilisis fermentum nisl. Aliquam vitae dolor fringilla eros ultricies cursus.
-                    </p>
+                <p class="ptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
+                    ac mauris at, malesuada hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac.
+                    Pellentesque rhoncus egestas enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis
+                    porttitor. Duis consequat, dui id tristique semper, dolor neque consectetur justo, sed efficitur
+                    arcu enim non erat. Aliquam erat volutpat. Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim.
+                    Pellentesque eu orci massa.
+                    Praesent viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
+                    Aliquam mattis lorem quam, vitae luctus eros auctor eget. Vestibulum ante ipsum primis in faucibus orci
+                    luctus et ultrices posuere cubilia curae; Cras sed aliquet nibh. Quisque turpis dolor, mattis nec tincidunt non,
+                    auctor quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a leo
+                    vitae tortor viverra tempus mollis vitae libero. Praesent viverra, nisl vitae tempus posuere, turpis ligula fringilla
+                    nisi, vitae tincidunt dui ipsum sed enim. Nam aliquam a velit eget interdum. Donec posuere metus eu ante ullamcorper
+                    commodo. Aliquam sed felis ex. Sed at lacus non nunc ultrices convallis.
+                    Vestibulum quis vestibulum nibh. Duis a ex euismod, mattis nibh eget, luctus ex. Nullam non risus elit.
+                    In nisi arcu, scelerisque eu tellus quis, volutpat convallis neque. Proin tincidunt augue dapibus pharetra
+                    malesuada. Duis in erat at lacus suscipit vehicula. In a nisl non nisi volutpat pharetra in id mi. Aenean
+                    sollicitudin mauris id sapien congue, id dapibus quam luctus. Curabitur volutpat mi ac fermentum volutpat.
+                    Praesent ornare lorem vitae felis blandit condimentum. Donec sodales, purus eu vulputate aliquet, magna lectus
+                    convallis velit, vitae feugiat velit sem a nisl. Fusce suscipit diam at elit porttitor placerat. Curabitur id vehicula mi.
+                    Proin dui diam, lacinia tincidunt erat fringilla, facilisis fermentum nisl. Aliquam vitae dolor fringilla eros ultricies cursus.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="table">
+                    <h4 class="col">timeline</h4>
+                    <h5 class="col">school</h5>
+                    <div class="col">
+                        <div class="row row-1">
+                            <p class="td">2010 - 2016</p>
+                            <p class="td">2016 - 2019</p>
+                        </div>
+                        <div class="row row-empty"></div>
+                        <div class="row row-2">
+                            <p class="td">Primarschule Margeläcker</p>
+                            <p class="td">Realschule Sereal</p>
+                        </div>
+                    </div>
+                    <h5 class="col">work</h5>
+                    <div class="col">
+                        <div class="row row-1">
+                            <p class="td">2019 - 2022</p>
+                            <p class="td">2022 - 2023</p>
+                            <p class="td">2023 - today</p>
+                        </div>
+                        <div class="row row-empty"></div>
+                        <div class="row row-2">
+                            <p class="td">IF Automobile AG</p>
+                            <p class="td">Verein Lernwerk</p>
+                            <p class="td">ESPAS</p>
+                        </div>
+                    </div>   
                 </div>
             </div>
 
-            <div class="col-2">
-                <div id="test-box">
-                    <div id="row-1">
-                        <div id="px1"></div>
-                        <div id="px2"></div>
-                        <div id="px3"></div>
-                    </div>
-                    <div id="row-2">
-                        <div id="px4"></div>
-                        <div id="px5"></div>
-                        <div id="px6"></div>
-                    </div>
-                    <div id="row-3">
-                        <div id="px7"></div>
-                        <div id="px8"></div>
-                        <div id="px9"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row-3">
-                <p>PANDA</p>
-            </div>
         </section>
         <!-- END ABOUT ME SECTION -->
 
         <!-- MY SKILLS SECTION -->
         <section id="my-skills-section">
 
-            <div class="col-1">
-                <div class="my-skills-heading">
-                    <p class="h1">my skills</p>
-                    <p class="h2">something</p>
-                    <p class="h3">何か</p>
+            <div class="row">
+                <div class="heading">
+                    <h1>my skills</h1>
+                    <h2">something</h2> 
+                    <h3>何か</h3>
                 </div>
             </div>
             
-            <div class="col-2">
+            <div class="row">
                 <div id="progress-box">
 
                     <div class="language-box">
@@ -195,22 +200,17 @@
                 <div class="ctfc-box">
                     <p class="ctfc-heading">certificates</p>
                     <div id="ctfcs">
-                        <a class="cert" href="https://localhost/hug.bm-it.ch/media/jpgs/certificates/python.png">
-                            <img id="img-ctfc" src="https://localhost/hug.bm-it.ch/media/jpgs/certificates/python.png">
-                        </a>
-                        <a class="cert" href="https://localhost/hug.bm-it.ch/media/jpgs/certificates/html.png">
-                            <img id="img-ctfc" src="https://localhost/hug.bm-it.ch/media/jpgs/certificates/html.png">
-                        </a>
+                        <img class="img-ctfc" src="/media/pngs/PythonPNG.png">
+                        <img class="img-ctfc" src="/media/jpgs/certificates/html.png">
                     </div>
                 </div>
             </div>
         </section>
         <!-- END MY SKILLS SECTION -->
 
+        <!-- CONTACT SECTION -->
         <section id="contact-section">
-            <div class="col-1">
-
-                <!-- MAIL -->
+            <div class="row">
                 <div id="mail-box">
                     <h1>contact</h1>
                     <form action="https://localhost/hug.bm-it.ch/scripts/php/mail.php">
@@ -281,8 +281,8 @@
     </footer>
     <!-- END FOOTER SECTION -->
 
-    <script src="https://localhost/hug.bm-it.ch/scripts/js/navbar.js"></script>
-    <script src="https://localhost/hug.bm-it.ch/scripts/js/color.js"></script>
-    <script src="https://localhost/hug.bm-it.ch/scripts/js/hover.js"></script>
+    <script src="/scripts/js/navbar.js"></script>
+    <script src="/scripts/js/hover.js"></script>
+    <script src="/scripts/js/typewriter.js"></script>
 </body>
 </html>

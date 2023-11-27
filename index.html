@@ -45,6 +45,8 @@
         <div class="right">
             <div id="socials">
 
+                <!--<button style="background-color: var(--header-and-footer-color);" onclick="toggleBorder()">X</button>-->
+
                 <!-- GitLab Link -->
                 <a class="gitlab-link" href="https://gitlab.com/">
                     <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="gitlab-png">
@@ -93,12 +95,44 @@
         <!-- ABOUT ME SECTION -->
         <section id="about-me-section">
 
-            <div class="row">
+            <div class="row row-1-about-me">
                 <div class="heading">
                     <h1>about me</h1>
                     <h2>my story</h2>
                     <h3>私について</h3>
                 </div>
+                <div class="table">
+                    <h4 class="th">timeline</h4>
+                    <div class="col">
+                        <div class="row row-1-timeline">
+                            <h5 class="td-head">when</h5>
+                            <p class="td">2010 - 2016</p>
+                            <p class="td">2016 - 2019</p>
+                            <p class="td">2019 - 2022</p>
+                            <p class="td">2022 - 2023</p>
+                            <p class="td">2023 - today</p>
+                        </div>
+                        <div class="row">
+                            <h5 class="td-head">where</h5>
+                            <p class="td">Primarschule Margeläcker</p>
+                            <p class="td">Realschule Sereal</p>
+                            <p class="td">IF Automobile AG</p>
+                            <p class="td">Verein Lernwerk</p>
+                            <p class="td">ESPAS</p>
+                        </div>
+                        <div class="row">
+                            <h5 class="td-head">what</h5>
+                            <p class="td">Primarschüler</p>
+                            <p class="td">Realschüler</p>
+                            <p class="td">Automobilfachmann</p>
+                            <p class="td">Fahrradmechaniker</p> 
+                            <p class="td">Applikationsentwickler</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="row">
                 <p class="ptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
                     ac mauris at, malesuada hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac.
                     Pellentesque rhoncus egestas enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis
@@ -122,38 +156,6 @@
                 </p>
             </div>
 
-            <div class="row">
-                <div class="table">
-                    <h4 class="col">timeline</h4>
-                    <h5 class="col">school</h5>
-                    <div class="col">
-                        <div class="row row-1">
-                            <p class="td">2010 - 2016</p>
-                            <p class="td">2016 - 2019</p>
-                        </div>
-                        <div class="row row-empty"></div>
-                        <div class="row row-2">
-                            <p class="td">Primarschule Margeläcker</p>
-                            <p class="td">Realschule Sereal</p>
-                        </div>
-                    </div>
-                    <h5 class="col">work</h5>
-                    <div class="col">
-                        <div class="row row-1">
-                            <p class="td">2019 - 2022</p>
-                            <p class="td">2022 - 2023</p>
-                            <p class="td">2023 - today</p>
-                        </div>
-                        <div class="row row-empty"></div>
-                        <div class="row row-2">
-                            <p class="td">IF Automobile AG</p>
-                            <p class="td">Verein Lernwerk</p>
-                            <p class="td">ESPAS</p>
-                        </div>
-                    </div>   
-                </div>
-            </div>
-
         </section>
         <!-- END ABOUT ME SECTION -->
 
@@ -169,40 +171,100 @@
             </div>
             
             <div class="row">
-                <div id="progress-box">
+                <div class="col">
+                    <div id="progress-box">
 
-                    <div class="language-box">
-                        <p class="progress-text">Python</p>
-                        <progress id="python" value="32" max="100">TEST</progress>   
-                    </div>
+                        <div class="legend-box">
+                            <div class="legend-text-box">
+                                <p class="legend-text">Beginner<br>0 - 25%</p>
+                                <p class="legend-text">Intermediate<br>25 - 50%</p>
+                                <p class="legend-text">Advanced<br>50 - 75%</p>
+                                <p class="legend-text">Expert<br>75 - 100%</p>
+                            </div>
+                            <div class="legend-stripe">
+                                <div class="beginner" style="border-radius: 1rem 0 0 1rem;"></div>
+                                <div class="intermediate"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div>
+                        </div>
 
-                    <div class="language-box">
-                        <p class="progress-text">Java</p>
-                        <progress id="java" value="16" max="100"></progress>   
-                    </div>
-                    
-                    <div class="language-box">
-                        <p class="progress-text">HTML</p>
-                        <progress id="html" value="26" max="100"></progress>   
-                    </div>
+                        <div class="language">
+                            <p class="progress-label">Python</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 32%;">32%</div>
+                                <div class="intermediate" style="width: 18%;"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div>   
+                        </div>
 
-                    <div class="language-box">
-                        <p class="progress-text">CSS</p>
-                        <progress id="css" value="24" max="100"></progress>   
-                    </div>
-                    
-                    <div class="language-box">
-                        <p class="progress-text">JavaScript</p>
-                        <progress id="java-script" value="20" max="100"></progress>   
-                    </div>
+                        <div class="language">
+                            <p class="progress-label">Java</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 20%;">20%</div>
+                                <div class="beginner" style="width: 5%;"></div>
+                                <div class="intermediate"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div> 
+                        </div>
 
+                        <div class="language">
+                            <p class="progress-label">HTML</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 24%;">24%</div>
+                                <div class="beginner" style="width: 1%;"></div>
+                                <div class="intermediate"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div> 
+                        </div>
+
+                        <div class="language">
+                            <p class="progress-label">CSS</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 28%;">28%</div>
+                                <div class="intermediate" style="width: 22%;"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div>   
+                        </div>
+
+                        <div class="language">
+                            <p class="progress-label">JavaScript</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 26%;">26%</div>
+                                <div class="intermediate" style="width: 24%;"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div>   
+                        </div>
+
+                        <div class="language">
+                            <p class="progress-label">PHP</p>
+                            <div class="progress-bar">
+                                <div class="progress-value" style="width: 16%;">16%</div>
+                                <div class="beginner" style="width: 9%;"></div>
+                                <div class="intermediate"></div>
+                                <div class="advanced"></div>
+                                <div class="expert"></div>
+                            </div>   
+                        </div>
+
+                    </div>
                 </div>
-                <div class="ctfc-box">
-                    <p class="ctfc-heading">certificates</p>
-                    <div id="ctfcs">
-                        <img class="img-ctfc" src="/media/pngs/PythonPNG.png">
-                        <img class="img-ctfc" src="/media/jpgs/certificates/html.png">
-                    </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="certificate-box">
+                        <p class="certificate-heading">certificates</p>
+                        <ul class="certificate-list">
+                            <li><a href="/media/images/certificates/python.png">Python Beginner</a></li>
+                            <li><a href="/media/images/certificates/html.png">HTML Beginner</a></li>
+                        </ul>
+                    </div>    
                 </div>
             </div>
         </section>

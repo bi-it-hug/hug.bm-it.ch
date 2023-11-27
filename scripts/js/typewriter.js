@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     var dataText = [
-        "Ziegelstein",
-        "Blauwal",
-        "Ketchup",
-        "Regenschirm"
+        "developer",
+        "guitarist",
+        "scientist",
+        "dentist"
     ];
 
     var currentIndex = 0;

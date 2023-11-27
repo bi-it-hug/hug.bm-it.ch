@@ -25,7 +25,6 @@ function toggleNavbar() {
         }, 10);
 
         stripeBox.style.transform = "rotate(90deg)";
-        toggle = true;
 
         home.style.display = "initial";
         aboutMe.style.display = "initial";
@@ -41,7 +40,6 @@ function toggleNavbar() {
         contact.classList.add("contact");
 
         stripeBox.style.transform = "rotate(0)";
-        toggle = false;
 
         setTimeout(function() {
             home.style.display = "none";
@@ -50,5 +48,6 @@ function toggleNavbar() {
             contact.style.display = "none";
         }, 400);
     }
+    toggle = !toggle;
     console.log("navbar expanded:", toggle);
 }
