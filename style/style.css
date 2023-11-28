@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Press Start 2P");
 @import url("https://fonts.googleapis.com/css?family=JetBrains%20Mono");
+@import url("https://fonts.googleapis.com/css?family=UnifrakturMaguntia");
+@import url("https://fonts.googleapis.com/css?family=Crimson Text");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 
 :root {
 
@@ -103,12 +106,12 @@
     --rgb-255: rgb(255, 255, 255);
 
     /* work-in-progress border */
-    --wip-border: /*1px solid var(--rgb-255)*/none;
-    --wip-border-color: /*var(--rgb-255)*/0;
-    --wip-border-radius: 1rem;
+    --wip-border: 1px solid var(--rgb-255);
+    --wip-border-color: 0;
+    --wip-border-radius: /*0.8rem*/none;
 
     /* font */
-    --font: "JetBrains Mono";
+    --font: "Crimson Text";
     --font-color: var(--rgb-240);
 
     --header-and-footer-color: var(--rgb-025);
@@ -125,15 +128,14 @@
     --bg-standard: var(--rgb-025);
 
     --table-width: var(--px500);
+    --table-border: 1px solid var(--rgb-045);
 }
 
 * {
-    word-spacing: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: var(--font);
     color: var(--font-color);
-    border: none;
 }
 
 html {
@@ -150,16 +152,14 @@ body {
 
 body,
 html {
-    width: calc(100vw - var(--scrollbar-width));
-    height: 100%;
+    width: 100%;
+    background-color: var(--bg-standard);
     margin: 0;
     padding: 0;
-    background-color: var(--bg-standard);
-    overflow-x: hidden;
 }
 
 header {
-    width: calc(100vw - var(--scrollbar-width)); 
+    width: 100%; 
     height: var(--header-and-footer-height);
     display: flex;
     flex-direction: row;
@@ -176,7 +176,7 @@ footer {
     display: flex;
     flex-direction: row;
     height: var(--header-and-footer-height);
-    width: calc(100vw - var(--scrollbar-width));
+    width: 100%;
     border-top: var(--px04) solid var(--header-and-footer-color);
     background-color: var(--header-and-footer-color);
     justify-content: space-between;
@@ -268,28 +268,25 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--rgb-070);
+    background-color: var(--rgb-200);
+    border-radius: var(--wip-border-radius);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--rgb-090);
+    background-color: var(--rgb-220);
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--rgb-050);
-}
-
-::-webkit-scrollbar-button {
-    background-color: var(--rgb-070);
-}
-
-::-webkit-scrollbar-corner {
-    background-color: var(--rgb-255);
+    background-color: var(--header-and-footer-color);
 }
 
 a {
     text-decoration: none;
     color: var(--font-color);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 nav {
@@ -326,7 +323,6 @@ nav Button {
     height: var(--px36);
     background-color: var(--header-and-footer-color);
     border: 0;
-    border-radius: 0;
     padding: var(--px06);
     z-index: 100;
 }
@@ -349,20 +345,14 @@ nav Button {
 }
 
 nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: fit-content;
     height: fit-content;
-    text-decoration: none;
-    color: var(--font-color);
-    font-family: var(--font); 
-    font-size: var(--px22);
-    word-spacing:-4px;
-    border-radius: 100px;
     padding: 0 var(--px10);
+    transition: all 0.4s;
 }
 
 nav a:hover {
+    text-decoration: underline;
     cursor: pointer;
     color: var(--rgb-180);
 }
@@ -377,30 +367,33 @@ nav Button:hover {
     flex-direction: row;
 }
 
-.github-link,
-.gitlab-link {
+.socials-list {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.socials-list-item {
+    margin: 0 0 0 calc(var(--margin-default) / 2);
+}
+
+.socials-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: var(--px35);
     height: var(--px35);
-    margin: 0 0 0 var(--px30);
-}
-
-.github-link:hover,
-.gitlab-link:hover {
-    background-color: var(--header-and-footer-color);
-}
-
-.gitlab-png,
-.github-png {
-    width: var(--px30);
-    height: var(--px30);
     transition: all 0.2s;
 }
 
-.gitlab-png:hover,
-.github-png:hover {
+.socials-img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.socials-link:hover {
     transform: scale(1.1);
 }
 
@@ -418,15 +411,8 @@ section {
     height: fit-content;
     margin: calc(var(--margin-default) / 2) var(--margin-default);
     border: var(--wip-border);
-    border-radius: 1rem;
+    border-radius: var(--wip-border-radius);
     background-color: var(--bg-standard);
-}
-
-#bg {
-    width: fit-content;
-    height: auto;
-    position: absolute;
-    z-index: 0;
 }
 
 .ctfc-heading {
@@ -438,31 +424,25 @@ section {
 
 .heading {
     display: block;
-    width: fit-content;
-    height: fit-content;
     border: var(--wip-border);
     border-radius: var(--wip-border-radius);
+    background-color: var(--bg-standard);
     padding: var(--padding-text);
-    margin: calc(var(--padding-nav) + 2%);
+    margin: var(--margin-default) var(--margin-default) calc(var(--margin-default) / 2);
     text-align: left;
 }
 
-.mando-box {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+.ptext {
     margin: var(--margin-default);
-    padding: var(--padding-text);
-    width: fit-content;
-    height: fit-content;
+    padding: 1em;
+    font-size: 1.8em;
     border: var(--wip-border);
     border-radius: var(--wip-border-radius);
-    transition: all 0.4s;
+    background-color: var(--bg-standard);
 }
 
-.ptext {
-    margin: 3em;
-    font-size: 1.8em;
+.name {
+    font-size: 20em;
 }
 
 .hello-msg {
@@ -470,13 +450,11 @@ section {
 }
 
 h1 {
-    margin: var(--pxNeg30) var(--pxNeg10);
-    font-family: var(--font);
+    margin: 0; 
     font-size: 10em;
     color: var(--font-color);
     font-weight: normal;
     white-space: nowrap;
-    word-spacing: var(--pxNeg30);
 }
 
 h2 {
@@ -533,29 +511,34 @@ h5 {
 .table {
     display: flex;
     flex-direction: column;
-    width: calc(100% - calc(var(--margin-default) * 2));
-    height: var(--px600);
-    margin: var(--margin-default);
+    width: 90%;
+    height: fit-content;
+    margin: calc(var(--margin-default) / 2) var(--margin-default) var(--margin-default);
     white-space: nowrap;
 }
 
 .col {
     display: flex;
     flex-direction: row;
-    justify-content: space-around !important;
+    justify-content: space-around;
     width: 100%;
     height: fit-content;
-    border: var(--wip-border);
+}
+
+.col-1-timeline {
+    justify-content: flex-start;
 }
 
 .row {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: fit-content;
-    border: var(--wip-border);
 }
 
-.row-1-about-me {
-    width: 200%;
+.row-1-timeline,
+.row-2-timeline,
+.row-3-timeline {
+    border: none;
 }
 
 .row-1-timeline {
@@ -563,22 +546,33 @@ h5 {
 }
 
 .th {
-    font-size: var(--px60);
-    border: var(--wip-border);
     width: 100%;
-    padding: 0.4em 5px;
+    font-size: var(--px50);
+    border: var(--table-border);
+    border-radius: 1rem 1rem 0 0;
+    padding: 5px;
 }
 
 .td-head {
-    font-size: var(--px40);
-    border: var(--wip-border);
-    padding: 0.4em 5px;
+    width: 100%;
+    font-size: var(--px30);
+    border: var(--table-border);
+    padding: 5px;
 }
 
 .td {
-    font-size: var(--px20);
-    border: var(--wip-border);
-    padding: 0.4em 5px;
+    width: 100%;
+    font-size: var(--px18);
+    border: var(--table-border);
+    padding: 5px;
+}
+
+.td-bl {
+    border-radius: 0 0 0 1rem;
+}
+
+.td-br {
+    border-radius: 0 0 1rem;
 }
 
 .certificate-box {
@@ -627,7 +621,7 @@ h5 {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--bg-standard);
-    width: var(--px400);
+    width: var(--px420);
     height: fit-content;
     padding: var(--px10);
 }
@@ -680,7 +674,7 @@ h5 {
     height: 100%;
     font-size: var(--px16);
     background-color: var(--rgb-070);
-    border-radius: 1rem 0 0 1rem;
+    /*border-radius: 1rem 0 0 1rem;*/
     z-index: 0;
 }
 
@@ -706,7 +700,7 @@ h5 {
 
 .expert {
     background-color: rgb(228, 92, 92);
-    border-radius:0 1rem 1rem 0;
+    /*border-radius:0 1rem 1rem 0;*/
 }
 
 #python,
@@ -777,30 +771,35 @@ textarea {
 
 .home {
     transform: translateX(calc(var(--margin-default) - var(--px136)));
-    transition: all 0.2s;
+    transition: all 0.4s;
     opacity: 0;
 }
 
 .aboutMe {
     transform: translateX(calc(var(--margin-default) - var(--px254)));
-    transition: all 0.2s;
+    transition: all 0.4s;
     opacity: 0;
 }
 
 .mySkills {
     transform: translateX(calc(var(--margin-default) - var(--px420)));
-    transition: all 0.2s;
+    transition: all 0.4s;
     opacity: 0;
 }
 
 .contact {
     transform: translateX(calc(var(--margin-default) - var(--px598)));
-    transition: all 0.2s;
+    transition: all 0.4s;
     opacity: 0;
 }
 
 .navbar-item {
-    transition: all 0.4s;
+    font-size: 2.7rem;
+}
+
+.navbar-item:hover {
+    transition: all 0.2s;
+    text-decoration: underline;
 }
 
 span {
@@ -814,188 +813,21 @@ span {
     }
 }
 
-@keyframes colorLoop {
-    0% {
-        wip-border-color: rgb(255, 0, 0);
-    }
-    2% {
-        wip-border-color: rgb(255, 25, 0);
-    }
-    3% {
-        wip-border-color: rgb(255, 50, 0);
-    }
-    5% {
-        wip-border-color: rgb(255, 75, 0);
-    }
-    6% {
-        wip-border-color: rgb(255, 100, 0);
-    }
-    8% {
-        wip-border-color: rgb(255, 125, 0);
-    }
-    10% {
-        wip-border-color: rgb(255, 150, 0);
-    }
-    11% {
-        wip-border-color: rgb(255, 175, 0);
-    }
-    13% {
-        wip-border-color: rgb(255, 200, 0);
-    }
-    14% {
-        wip-border-color: rgb(255, 225, 0);
-    }
-    16% {
-        wip-border-color: rgb(255, 255, 0);
-    }
-    18% {
-        wip-border-color: rgb(225, 255, 0);
-    }
-    19% {
-        wip-border-color: rgb(200, 255, 0);
-    }
-    21% {
-        wip-border-color: rgb(175, 255, 0);
-    }
-    22% {
-        wip-border-color: rgb(150, 255, 0);
-    }
-    24% {
-        wip-border-color: rgb(125, 255, 0);
-    }
-    26% {
-        wip-border-color: rgb(100, 255, 0);
-    }
-    27% {
-        wip-border-color: rgb(75, 255, 0);
-    }
-    29% {
-        wip-border-color: rgb(50, 255, 0);
-    }
-    30% {
-        wip-border-color: rgb(25, 255, 0);
-    }
-    32% {
-        wip-border-color: rgb(0, 255, 0);
-    }
-    34% {
-        wip-border-color: rgb(0, 255, 25);
-    }
-    35% {
-        wip-border-color: rgb(0, 255, 50);
-    }
-    37% {
-        wip-border-color: rgb(0, 255, 75);
-    }
-    38% {
-        wip-border-color: rgb(0, 255, 100);
-    }
-    40% {
-        wip-border-color: rgb(0, 255, 125);
-    }
-    42% {
-        wip-border-color: rgb(0, 255, 150);
-    }
-    43% {
-        wip-border-color: rgb(0, 255, 175);
-    }
-    45% {
-        wip-border-color: rgb(0, 255, 200);
-    }
-    46% {
-        wip-border-color: rgb(0, 255, 225);
-    }
-    48% {
-        wip-border-color: rgb(0, 255, 255);
-    }
-    50% {
-        wip-border-color: rgb(0, 225, 255);
-    }
-    51% {
-        wip-border-color: rgb(0, 200, 255);
-    }
-    53% {
-        wip-border-color: rgb(0, 175, 255);
-    }
-    54% {
-        wip-border-color: rgb(0, 150, 255);
-    }
-    56% {
-        wip-border-color: rgb(0, 125, 255);
-    }
-    58% {
-        wip-border-color: rgb(0, 100, 255);
-    }
-    59% {
-        wip-border-color: rgb(0, 75, 255);
-    }
-    61% {
-        wip-border-color: rgb(0, 50, 255);
-    }
-    62% {
-        wip-border-color: rgb(0, 25, 255);
-    }
-    64% {
-        wip-border-color: rgb(0, 0, 255);
-    }
-    66% {
-        wip-border-color: rgb(25, 0, 255);
-    }
-    67% {
-        wip-border-color: rgb(50, 0, 255);
-    }
-    69% {
-        wip-border-color: rgb(75, 0, 255);
-    }
-    70% {
-        wip-border-color: rgb(100, 0, 255);
-    }
-    72% {
-        wip-border-color: rgb(125, 0, 255);
-    }
-    74% {
-        wip-border-color: rgb(150, 0, 255);
-    }
-    75% {
-        wip-border-color: rgb(175, 0, 255);
-    }
-    77% {
-        wip-border-color: rgb(200, 0, 255);
-    }
-    78% {
-        wip-border-color: rgb(225, 0, 255);
-    }
-    80% {
-        wip-border-color: rgb(255, 0, 255);
-    }
-    82% {
-        wip-border-color: rgb(255, 0, 225);
-    }
-    83% {
-        wip-border-color: rgb(255, 0, 200);
-    }
-    85% {
-        wip-border-color: rgb(255, 0, 175);
-    }
-    88% {
-        wip-border-color: rgb(255, 0, 150);
-    }
-    90% {
-        wip-border-color: rgb(255, 0, 125);
-    }
-    92% {
-        wip-border-color: rgb(255, 0, 100);
-    }
-    94% {
-        wip-border-color: rgb(255, 0, 75);
-    }
-    96% {
-        wip-border-color: rgb(255, 0, 50);
-    }
-    98% {
-        wip-border-color: rgb(255, 0, 25);
-    }
-    100% {
-        wip-border-color: rgb(255, 0, 0);
-    }
+#player {
+
+    --player-width: 50px;
+    --player-height: 50px;
+
+    width: var(--player-width);
+    height: var(--player-height);
+
+    background-color: rgb(69, 185, 114);
+    border-radius: 100px;
+
+    position: absolute;
+    top: calc(calc(100vh / 2) - calc(var(--player-height) / 2));
+    left: calc(calc(100vw / 2) - calc(var(--player-width) / 2));
+
+    z-index: 5;
+
 }
