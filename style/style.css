@@ -106,7 +106,7 @@
     --rgb-255: rgb(255, 255, 255);
 
     /* work-in-progress border */
-    --wip-border: 1px solid var(--rgb-255);
+    --wip-border: /*1px solid var(--rgb-255)*/;
     --wip-border-color: 0;
     --wip-border-radius: /*0.8rem*/none;
 
@@ -184,6 +184,18 @@ footer {
     z-index: 2;
 }
 
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: all 0.2s;
+    height: fit-content;
+    margin: calc(var(--margin-default) / 2) var(--margin-default);
+    border: var(--wip-border);
+    border-radius: var(--wip-border-radius);
+    background-color: var(--bg-standard);
+}
+
 p {
     font-size: var(--px12);
     padding: 0;
@@ -247,6 +259,9 @@ p {
     :root {
         --body-font-size: 5.72px;
         --padding-nav: var(--px20);
+    }
+    section {
+        flex-wrap: wrap;
     }
 }
 
@@ -404,16 +419,7 @@ main {
     z-index: 1;
 }
 
-section {
-    display: flex;
-    flex-direction: row;
-    transition: all 0.2s;
-    height: fit-content;
-    margin: calc(var(--margin-default) / 2) var(--margin-default);
-    border: var(--wip-border);
-    border-radius: var(--wip-border-radius);
-    background-color: var(--bg-standard);
-}
+
 
 .ctfc-heading {
     text-align: left;
@@ -442,7 +448,7 @@ section {
 }
 
 .name {
-    font-size: 20em;
+    font-size: 15em;
 }
 
 .hello-msg {
@@ -576,14 +582,12 @@ h5 {
 }
 
 .certificate-box {
-    display: flex;
-    flex-direction: column;
-    margin: calc(var(--margin-default) /2) var(--margin-default) var(--margin-default);
-    padding: var(--padding-text);
-    width: fit-content;
-    height: fit-content;
+    margin: var(--margin-default);
+    padding: 1em;
+    font-size: 1.8em;
     border: var(--wip-border);
     border-radius: var(--wip-border-radius);
+    background-color: var(--bg-standard);
 }
 
 .certificate-heading {
@@ -621,7 +625,7 @@ h5 {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--bg-standard);
-    width: var(--px420);
+    width: 42rem;
     height: fit-content;
     padding: var(--px10);
 }
@@ -656,9 +660,9 @@ h5 {
     display: flex;
     align-items: center;
     background-color: var(--rgb-080);
-    width: var(--px400);
-    height: var(--px20);
-    margin: var(--px10);
+    width: 40rem;
+    height: 2rem;
+    margin: 1rem;
     border-radius: var(--wip-border-radius);
 }
 

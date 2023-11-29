@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var dataText = [
         "developer",
-        "guitarist",
-        "scientist",
-        "dentist"
+        "lorem",
+        "ipsum",
+        "dolor"
     ];
 
     var currentIndex = 0;
