@@ -1,309 +1,50 @@
 <!DOCTYPE html>
-<html lang="en-de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hug.bm-it.ch</title>
-    <link rel="icon" href="/media/icons/ProfilePictureICO.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="switchColorScheme.js" defer></script>
+    <script src="iconSpin.js" defer></script>
+    <title>title</title>
 </head>
 <body>
-
-    <!--<div id="player"></div>-->
-
-    <!-- HEADER SECTION -->
     <header>
-        <div class="left">
-
-          <!-- NAVIGATION MENU -->
-            <nav>
-                <ul>
-                    <li>
-                        <button id="navButton" onclick="toggleNavbar()">
-                            <div id="stripeBox">
-                                <div class="stripes"></div>
-                                <div class="stripes"></div>
-                                <div class="stripes"></div>
-                            </div>
-                        </button>
-                    </li>
-                    <li>
-                        <a class="navbar-item home" id="home" href="#home-section" style="display: none;">home</a>
-                    </li>
-                    <li>
-                        <a class="navbar-item aboutMe" id="aboutMe" href="#about-me-section"  style="display: none;">about me</a>
-                    </li>
-                    <li>
-                        <a class="navbar-item mySkills" id="mySkills" href="#my-skills-section"  style="display: none;">my skills</a>
-                    </li>
-                    <li>
-                        <a class="navbar-item contact" id="contact" href="#contact-section"  style="display: none;">contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- END NAVIGATION MENU -->
-
-        </div>
-        <div class="right">
-            <div id="socials">
-                <ul class="socials-list">
-                    <li class="socials-list-item">
-                        <a class="socials-link" href="https://github.com/bmit-hug/hug.bm-it.ch">
-                            <img src="/media/pngs/GitHubPNG.png" alt="GitHub PNG" class="socials-img">
-                        </a>
-                    </li>
-                    <li class="socials-list-item">
-                        <a class="socials-link" href="https://gitlab.com">
-                            <img src="/media/pngs/GitLabOrange.png" alt="GitLab PNG" class="socials-img">
-                        </a>
-                    </li>
-                </ul>
-            </div>   
-        </div>
+        <nav>
+            <img src="images/wind.svg" id="wind" class="navItem">
+            <a href="#welcome" id="wel" class="navItem">welcome</a>
+            <a href="#about" id="abo" class="navItem">about</a>
+            <a href="#skills" id="ski" class="navItem">skills</a>
+            <a href="#contact" id="con" class="navItem">contact</a>
+        </nav>
+        <div class="spacer"></div>
+        <img src="images/sun.svg" id="switchColorScheme" class="navItem">
     </header>
-    <!-- END HEADER SECTION -->
-
-    <!-- MAIN CONTENT SECTION -->
     <main>
-
-        <!-- HOME SECTION -->
-        <section id="home-section">
-
-            <div class="row">
-                <div class="heading">
-                    <p class="hello-msg">Hi there! My name is
-                        <h1 class="name">Lorenzo</h1>
-                    </p>
-                    <h2>first year application developer at ESPAS Zürich</h2>
-                    <h3>アプリケーション開発者</h3>
-                </div>
-                <p class="ptext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales ac mauris at, malesuada
-                    hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac. Pellentesque rhoncus egestas
-                    enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis porttitor. Duis consequat, dui
-                    id tristique semper, dolor neque consectetur justo, sed efficitur arcu enim non erat. Aliquam erat volutpat.
-                    Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim. Pellentesque eu orci massa. Praesent
-                    viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
-                    Aliquam mattis lorem quam, vitae luctus eros auctor eget.
-                </p>
-            </div>
-            <div class="row">
-            </div>
-        </section>
-        <!-- END HOME SECTION -->
-
-        <!-- ABOUT ME SECTION -->
-        <section id="about-me-section">
-
-            <div class="row row-1-about-me">
-                <div class="heading">
-                    <h1>about me</h1>
-                    <h2>my story</h2>
-                    <h3>私について</h3>
-                </div>
-                <div class="table">
-                    <h4 class="th">timeline</h4>
-                    <div class="col col-1-timeline">
-                        <div class="row row-1-timeline">
-                            <h5 class="td-head">when</h5>
-                            <p class="td">2010 - 2016</p>
-                            <p class="td">2016 - 2019</p>
-                            <p class="td">2019 - 2022</p>
-                            <p class="td">2022 - 2023</p>
-                            <p class="td td-bl">2023 - today</p>
-                        </div>
-                        <div class="row row-2-timeline">
-                            <h5 class="td-head">where</h5>
-                            <p class="td"><a href="https://primarschule-margelaecker.schule-wettingen.ch">Primarschule Margeläcker</a></p>
-                            <p class="td" href="https://sereal.schule-wettingen.ch">Realschule Sereal</a>
-                            <p class="td">IF Automobile AG</p>
-                            <p class="td">Verein Lernwerk</p>
-                            <p class="td">ESPAS</p>
-                        </div>
-                        <div class="row row-3-timeline">
-                            <h5 class="td-head">what</h5>
-                            <p class="td">Primarschüler</p>
-                            <p class="td">Realschüler</p>
-                            <p class="td">Automobilfachmann</p>
-                            <p class="td">Fahrradmechaniker</p> 
-                            <p class="td td-br">Applikationsentwickler</p>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-
-            <div class="row">
-                <p class="ptext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien nibh, sodales
-                    ac mauris at, malesuada hendrerit orci. Phasellus semper nisi purus, nec ullamcorper mi mollis ac.
-                    Pellentesque rhoncus egestas enim et dignissim. Nam in tempor odio. Nullam vitae libero a dui mollis
-                    porttitor. Duis consequat, dui id tristique semper, dolor neque consectetur justo, sed efficitur
-                    arcu enim non erat. Aliquam erat volutpat. Etiam lacus augue, lacinia vitae dictum in, fermentum quis enim.
-                    Pellentesque eu orci massa.
-                    Praesent viverra dui augue, ac faucibus est efficitur a. In in aliquam arcu. Nullam sit amet neque augue.
-                    Aliquam mattis lorem quam, vitae luctus eros auctor eget. Vestibulum ante ipsum primis in faucibus orci
-                    luctus et ultrices posuere cubilia curae; Cras sed aliquet nibh. Quisque turpis dolor, mattis nec tincidunt non,
-                    auctor quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a leo
-                    vitae tortor viverra tempus mollis vitae libero. Praesent viverra, nisl vitae tempus posuere, turpis ligula fringilla
-                    nisi, vitae tincidunt dui ipsum sed enim. Nam aliquam a velit eget interdum. Donec posuere metus eu ante ullamcorper
-                    commodo. Aliquam sed felis ex. Sed at lacus non nunc ultrices convallis.
-                    Vestibulum quis vestibulum nibh. Duis a ex euismod, mattis nibh eget, luctus ex. Nullam non risus elit.
-                    In nisi arcu, scelerisque eu tellus quis, volutpat convallis neque. Proin tincidunt augue dapibus pharetra
-                    malesuada. Duis in erat at lacus suscipit vehicula. In a nisl non nisi volutpat pharetra in id mi. Aenean
-                    sollicitudin mauris id sapien congue, id dapibus quam luctus. Curabitur volutpat mi ac fermentum volutpat.
-                    Praesent ornare lorem vitae felis blandit condimentum. Donec sodales, purus eu vulputate aliquet, magna lectus
-                    convallis velit, vitae feugiat velit sem a nisl. Fusce suscipit diam at elit porttitor placerat. Curabitur id vehicula mi.
-                    Proin dui diam, lacinia tincidunt erat fringilla, facilisis fermentum nisl. Aliquam vitae dolor fringilla eros ultricies cursus.
-                </p>
-            </div>
-
-        </section>
-        <!-- END ABOUT ME SECTION -->
-
-        <!-- MY SKILLS SECTION -->
-        <section id="my-skills-section">
-
-            <div class="row">
-                <div class="heading">
-                    <h1>my skills</h1>
-                    <h2>my shit</h2>
-                    <h3>私について</h3>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div id="progress-box">
-                    <div class="legend-box">
-                        <div class="legend-text-box">
-                            <p class="legend-text">Beginner<br>0 - 25%</p>
-                            <p class="legend-text">Intermediate<br>25 - 50%</p>
-                            <p class="legend-text">Advanced<br>50 - 75%</p>
-                            <p class="legend-text">Expert<br>75 - 100%</p>
-                        </div>
-                        <div class="legend-stripe">
-                            <div class="beginner" ></div>
-                            <div class="intermediate"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div>
-                    </div>
-
-                    <div class="language">
-                        <p class="progress-label">Python</p>
-                        <div class="progress-bar">
-                            <div class="progress-value" style="width: 32%;">32%</div>
-                            <div class="intermediate" style="width: 18%;"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div>   
-                    </div>
-
-                    <div class="language">
-                        <p class="progress-label">Java</p>
-                        <div class="progress-bar">
-                            <div class="progress-value" style="width: 20%;">20%</div>
-                            <div class="beginner" style="width: 5%;"></div>
-                            <div class="intermediate"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div> 
-                    </div>
-
-                    <div class="language">
-                        <p class="progress-label">HTML</p>
-                        <div class="progress-bar">
-                            <div class="progress-value" style="width: 24%;">24%</div>
-                            <div class="beginner" style="width: 1%;"></div>
-                            <div class="intermediate"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div> 
-                    </div>
-
-                    <div class="language">
-                        <p class="progress-label">CSS</p>
-                        <div class="progress-bar">
-                            <div class="progress-value" style="width: 28%;">28%</div>
-                            <div class="intermediate" style="width: 22%;"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div>   
-                    </div>
-
-                    <div class="language">
-                        <p class="progress-label">JavaScript</p>
-                        <div class="progress-bar">
-                            <div class="progress-value" style="width: 26%;">26%</div>
-                            <div class="intermediate" style="width: 24%;"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div>   
-                    </div>
-
-                    <div class="language">
-                        <p class="progress-label">PHP</p>
-                        <div class="progress-bar">
-                            <div class="progress-value" style="width: 16%;">16%</div>
-                            <div class="beginner" style="width: 9%;"></div>
-                            <div class="intermediate"></div>
-                            <div class="advanced"></div>
-                            <div class="expert"></div>
-                        </div>   
-                    </div>
-
-                </div>
-            </div>
-            
-            <!--<div class="row">
-                <div class="certificate-box">
-                    <p class="certificate-heading">certificates</p>
-                    <ul class="certificate-list">
-                        <li><a href="/media/images/certificates/python.png">Python Beginner</a></li>
-                        <li><a href="/media/images/certificates/html.png">HTML Beginner</a></li>
-                    </ul>
-                </div>
-            </div>-->
-        </section>
-        <!-- END MY SKILLS SECTION -->
-
-        <!-- CONTACT SECTION -->
-        <section id="contact-section">
-            <div class="row">
-                <div id="mail-box">
-                    <h1>contact</h1>
-                    <form action="/scripts/php/mail.php" >
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br>
-                    
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br>
-                    
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" required><br>
-                    
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-                    
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- END CONTACT SECTION -->
-
+        <section id="welcome">
+        <div id="welcomeText">
+            <h1 id="greeting">Welcome</h1>
+            <h2 id="subGreeting">to my website</h2>
+        </div>
+    </section>
+    <section id="about">
+        <div id="nameText">
+            <h2>My name is</h2>
+            <h1>Lorenzo</h1>
+            <h2>and I am a learning application developer at ESAPS Zürich</h2>
+        </div>
+    </section>
+    <section id="skills">
+    </section>
     </main>
-    <!-- END MAIN CONTENT SECTION -->
-
-    <!-- FOOTER SECTION -->
     <footer>
-        <p class="left">大きなシュグラー \\<br>// Copyright &copy; 2023 by Lorenzo Hug</p><!--大きなシューラー-->
-        <p class="right">。.. // v2.1.1<br>made with VSCode \\</p>
+        <div>
+            <p>// Copyright &copy; 2024 by Lorenzo Hug //</p>
+        </div>
+        <p>WORK IN PROGRESS</p>
+        <div>
+            <p>\\ v3.0 \\</p>
+        </div>
     </footer>
-    <!-- END FOOTER SECTION -->
-
-    <script src="/scripts/js/navbar.js"></script>
-    <script src="/scripts/js/hover.js"></script>
-    <script src="/scripts/js/typewriter.js"></script>
-    <script src="/scripts/js/toggleBorder.js"></script>
-    <script src="/scripts/js/player.js"></script>
 </body>
 </html>

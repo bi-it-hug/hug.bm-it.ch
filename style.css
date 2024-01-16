@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=UnifrakturMaguntia");
+@import url("https://fonts.googleapis.com/css?family=Bellefair");
+
+:root {
+    --bg-01: rgb(20, 20, 20);
+    --text: rgb(240, 240, 240);
+    --borderColor: rgb(54, 54, 54);
+    --boxBg: rgb(32, 32, 32);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Quicksand";
+    font-weight: normal;
+    color: var(--text);
+    scroll-behavior: smooth;
+    transition: 0.2s;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(images/bg/glitch-medium.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 8rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-01);
+    z-index: 2;
+    animation: moveDown 1.5s 0.5s ease-in-out 1 forwards;
+}
+
+nav {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+    align-items: center;
+    width: 40rem;
+    font-size: 1.4em;
+    transition: all 0.2s;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+main  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 20rem;
+    padding: 5rem 8rem;
+    background-color: var(--bg-01);
+}
+
+#wind {
+    display: flex;
+    width: 2.2rem;
+    height: 2.2rem;
+    animation: headerFlash 0.2s 2s ease-in-out 1 forwards;
+}
+
+.navItem {
+    transform: translateY(-120px);
+}
+
+.navItem:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#switchColorScheme {
+    animation: headerFlash 0.2s 2.5s ease-in-out 1 forwards;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.spacer {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+h1 {
+    width: fit-content;
+    height: fit-content;
+    font-family: "UnifrakturMaguntia";
+    font-size: 14rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+#welcome {
+    width: 100%;
+}
+
+#welcomeText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 0;
+}
+
+#nameText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10rem 0;
+    padding: 0 10rem;
+}
+
+#greeting {
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s 0.2s ease-in-out 1 forwards;
+}
+
+#subGreeting {
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s 0.4s ease-in-out 1 forwards;
+}
+
+#about {
+    width: 100%;
+    background-color: var(--bg-01);
+    transform: translateY(600px);
+    animation: moveUp 1.5s 0.4s ease-in-out 1 forwards;
+}
+
+#nameText {
+    text-align: center;
+}
+
+#wel {
+    animation: headerFlash 0.2s 2.1s ease-in-out 1 forwards;
+}
+
+#abo {
+    animation: headerFlash 0.2s 2.2s ease-in-out 1 forwards;
+}
+
+#ski {
+    animation: headerFlash 0.2s 2.3s ease-in-out 1 forwards;
+}
+
+#con {
+    animation: headerFlash 0.2s 2.4s ease-in-out 1 forwards;
+}
+
+@keyframes headerFlash {
+    0% {
+        transform: translateY(-120px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(600px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-600px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
