@@ -24,11 +24,23 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
+    /*
     background-image: url(images/bg/glitch-medium.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 header {
@@ -39,9 +51,10 @@ header {
     padding: 5rem 8rem;
     position: sticky;
     top: 0;
+    transform: translateY(-600px);
     background-color: var(--bg-01);
     z-index: 2;
-    animation: moveDown 1.5s 0.5s ease-in-out 1 forwards;
+    animation: moveDown 1.5s 0.9s ease-in-out 1 forwards;
 }
 
 nav {
@@ -85,7 +98,7 @@ footer {
     display: flex;
     width: 2.2rem;
     height: 2.2rem;
-    animation: headerFlash 0.2s 2s ease-in-out 1 forwards;
+    animation: headerFlash 0.2s 2.4s ease-in-out 1 forwards;
 }
 
 .navItem {
@@ -98,7 +111,7 @@ footer {
 }
 
 #switchColorScheme {
-    animation: headerFlash 0.2s 2.5s ease-in-out 1 forwards;
+    animation: headerFlash 0.2s 3s ease-in-out 1 forwards;
     width: 2.2rem;
     height: 2.2rem;
 }
@@ -153,14 +166,14 @@ h2 {
     text-align: center;
     margin: 0;
     opacity: 0;
-    animation: fadeIn 1.5s 0.4s ease-in-out 1 forwards;
+    animation: fadeIn 1.5s 0.8s ease-in-out 1 forwards;
 }
 
 #about {
     width: 100%;
     background-color: var(--bg-01);
     transform: translateY(600px);
-    animation: moveUp 1.5s 0.4s ease-in-out 1 forwards;
+    animation: moveUp 1.5s 0.9s ease-in-out 1 forwards;
 }
 
 #nameText {
@@ -168,19 +181,19 @@ h2 {
 }
 
 #wel {
-    animation: headerFlash 0.2s 2.1s ease-in-out 1 forwards;
+    animation: headerFlash 0.2s 2.5s ease-in-out 1 forwards;
 }
 
 #abo {
-    animation: headerFlash 0.2s 2.2s ease-in-out 1 forwards;
+    animation: headerFlash 0.2s 2.6s ease-in-out 1 forwards;
 }
 
 #ski {
-    animation: headerFlash 0.2s 2.3s ease-in-out 1 forwards;
+    animation: headerFlash 0.2s 2.7s ease-in-out 1 forwards;
 }
 
 #con {
-    animation: headerFlash 0.2s 2.4s ease-in-out 1 forwards;
+    animation: headerFlash 0.2s 2.8s ease-in-out 1 forwards;
 }
 
 @keyframes headerFlash {
