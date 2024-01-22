@@ -1,54 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="switchColorScheme.js" defer></script>
-    <script src="iconSpin.js" defer></script>
-    <title>title</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/js/switchColorScheme.js" defer></script>
+    <script src="scripts/js/scrollToTop.js" defer></script>
+    <script src="scripts/js/toggleBorders.js" defer></script>
+    <title id="title">hug.bm-it.ch | welcome</title>
 </head>
 <body>
-
     <video autoplay muted loop>
-        <source src="images/bg/Sequence 01.mp4" type="video/mp4">
+        <source src="images/bg/Sequence 02.mp4" type="video/mp4">
     </video>
-
     <header>
         <nav>
-            <img src="images/wind.svg" id="wind" class="navItem">
-            <a href="#welcome" id="wel" class="navItem">welcome</a>
+            <img src="images/wind.svg" id="borderButton">
+            <a id="wel" class="navItem">welcome</a>
             <a href="#about" id="abo" class="navItem">about</a>
             <a href="#skills" id="ski" class="navItem">skills</a>
             <a href="#contact" id="con" class="navItem">contact</a>
         </nav>
         <div class="spacer"></div>
-        <img src="images/sun.svg" id="switchColorScheme" class="navItem">
+        <img src="images/sun.svg" id="switchColorScheme">
     </header>
     <main>
-        <section>
-        <div id="welcomeText">
-            <h1 id="greeting">Welcome</h1>
-            <h2 id="subGreeting">to my website</h2>
-        </div>
-    </section>
-    <section id="about">
-        <div id="nameText">
-            <h2>My name is</h2>
-            <h1>Lorenzo</h1>
-            <h2>and I am a learning application developer at ESAPS Zürich</h2>
-        </div>
-    </section>
-    <section id="skills">
-    </section>
+        <section id="welcome">
+            <div>
+                <h1>Welcome</h1>
+                <h4>to my website</h4>
+            </div>
+        </section>
+        <section id="about">
+            <div class="left">
+                <h2>about</h2>
+                <h4>My name is Lorenzo and I am a learning application developer</h4>
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="left">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="right">
+                <h2>skills</h2>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="left">
+                <h2>contact</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+            <form action="scripts/php/mail.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="placeholder">
+            <div>
+                <h1>placeholder</h1>
+            </div>
+        </section>
     </main>
     <footer>
-        <div>
-            <p>// Copyright &copy; 2024 by Lorenzo Hug //</p>
+        <div id="footerLeft">
+            <p>大きなシュグラー \\</p>
+            <p>// Copyright &copy; 2024 by Lorenzo Hug</p>
         </div>
-        <p>WORK IN PROGRESS</p>
-        <div>
-            <p>\\ v3.0 \\</p>
+        <div id="footerRight">
+            <p>// v3.0</p>
+            <p>大きなシュグラー \\</p>
         </div>
     </footer>
 </body>

@@ -1,1 +1,0 @@
-var wind = document.getElementById("wind");
