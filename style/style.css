@@ -38,7 +38,7 @@ video {
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 header {
@@ -47,6 +47,7 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
+    height: 12rem;
     padding: 5rem 8rem;
     position: sticky;
     top: 0;
@@ -104,20 +105,30 @@ footer {
     background-color: var(--box-bg-color);
 }
 
+nav {
+    width: fit-content;
+}
+
 #borderButton {
     display: flex;
     width: 2.2rem;
     height: 2.2rem;
+    margin: 0 2.4rem 0 0;
 }
 
 .navItem {
+    margin: 0 1.4em;
     transform: translateY(-120px);
 }
 
-button:hover,
-.navItem:hover {
+a {
+    transition: all 0.1s !important;
+}
+
+a:hover,
+button:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 #switchColorScheme {
@@ -125,10 +136,12 @@ button:hover,
     height: 2.2rem;
 }
 
+/*
 .spacer {
     width: 2.2rem;
     height: 2.2rem;
 }
+*/
 
 h1,
 h2,
@@ -155,38 +168,41 @@ h4 {
     font-size: 1.2rem;
 }
 
-#welcome div,
-#about div {
+#welcomeSection div,
+#aboutSection div {
     display: inherit;
     flex-direction: column;
 }
 
-#welcome div {
+#welcomeSection div {
     padding: 12rem;
 }
 
-#welcome div h1,
-#welcome div h4 {
+#welcomeSection div h1,
+#welcomeSection div h4 {
     text-align: center;
     opacity: 0;
 }
 
-#welcome div h1 {
+#welcomeSection div h1 {
     animation: fadeIn 1.5s 0.2s ease-in-out 1 forwards;
 }
 
-#welcome div h4 {
+#welcomeSection div h4 {
     animation: fadeIn 1.5s 0.8s ease-in-out 1 forwards;
 }
 
-#about {
+#aboutSection {
     width: 100%;
     background-color: var(--box-bg-color);
-    transform: translateY(600px);
-    animation: moveUp 1.5s 0.9s ease-in-out 1 forwards;
 }
 
-#skills .right {
+section:not(#welcomeSection) {
+    animation: moveUp 1.5s 0.9s ease-in-out 1 forwards;
+    transform: translateY(600px);
+}
+
+#skillsSection .right {
     text-align: right;
 }
 
@@ -197,28 +213,27 @@ h4 {
 
 .left {
     width: fit-content;
-    padding: 6rem  6rem 6rem 12rem;
+    padding: 6rem  2rem 6rem 12rem;
 }
 
 .right {
-    padding: 6rem  12rem 6rem 6rem;
+    padding: 6rem  12rem 6rem 2rem;
 }
 
 #footerRight {
     text-align: right;
 }
 
-#contact {
+#contactSection {
     background-color: var(--box-bg-color);
 }
 
 form {
     display: inherit;
     flex-direction: column;
-    width: 20rem;
+    width: 50%;
     margin: 6rem  12rem 6rem 6rem;
     padding: 1.8rem;
-    background-color: var(--border-color);
     border-radius: var(--br-small);
 }
 
@@ -228,6 +243,7 @@ form label {
 
 form input {
     height: 1.5rem;
+    padding: 1em 1em 1em 0.5em;
 }
 
 form input,
@@ -235,8 +251,9 @@ form textarea {
     border: 0;
     border-radius: var(--br-small);
     margin: 0.3rem 0 1rem;
+    padding: 0.5em;
     resize: none;
-    background-color: var(--box-bg-color);
+    background-color: var(--border-color);
 }
 
 form button {
@@ -247,19 +264,83 @@ form button {
     border-radius: var(--br-small);
 }
 
-#wel {
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    color: inherit !important;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    height: fit-content;
+    margin: 2em 0;
+}
+
+#socials a {
+    display: inherit;
+    width: fit-content;
+    height: fit-content;
+}
+
+#lethargica {
+    align-self: flex-end;
+    width: 50%;
+    margin: 1em 0 0;
+}
+
+#codingSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 10em;
+}
+
+.language {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0 0;
+}
+
+.language img,
+.language div,
+.language p {
+    margin: 0 1em 0 0;
+}
+
+.language div {
+    width: 0%;
+    height: 60%;
+    background-color: var(--text-color);
+}
+
+#codingSkills img {
+    width: 3em;
+}
+
+#socials img {
+    width: 2em;
+}
+
+#welcomeButton {
     animation: headerFlash 0.2s 2.4s ease-in-out 1 forwards;
 }
 
-#abo {
+#aboutButton {
     animation: headerFlash 0.2s 2.5s ease-in-out 1 forwards;
 }
 
-#ski {
+#skillsButton {
     animation: headerFlash 0.2s 2.6s ease-in-out 1 forwards;
 }
 
-#con {
+#contactButton {
     animation: headerFlash 0.2s 2.7s ease-in-out 1 forwards;
 }
 
@@ -308,6 +389,54 @@ form button {
     }
 }
 
+@media screen and (max-width: 1880px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1760px) {
+    html {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 1640px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    html {
+        font-size: 17px;
+    }
+}
+
 @media screen and (max-width: 1920px) {
     html {
         font-size: 16px;
@@ -316,13 +445,13 @@ form button {
 
 @media screen and (max-width: 1800px) {
     html {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 1680px) {
     html {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -389,23 +518,5 @@ form button {
 @media screen and (max-width: 360px) {
     html {
         font-size: 4px;
-    }
-}
-
-@media screen and (max-width: 240px) {
-    html {
-        font-size: 3px;
-    }
-}
-
-@media screen and (max-width: 120px) {
-    html {
-        font-size: 2px;
-    }
-}
-
-@media screen and (max-width: 0px) {
-    html {
-        font-size: 1px;
     }
 }
