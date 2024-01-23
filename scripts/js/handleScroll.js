@@ -1,33 +1,46 @@
-let body = document.body
-let title = document.getElementById("title")
-let header = document.getElementById("header")
-let headerHeight = parseFloat(window.getComputedStyle(header).height)
+var body = document.body
+var title = document.getElementById("title")
+var header = document.getElementById("header")
+var headerHeight = parseFloat(window.getComputedStyle(header).height)
 
-let welcomeButton = document.getElementById("welcomeButton")
-let aboutButton = document.getElementById("aboutButton")
-let skillsButton = document.getElementById("skillsButton")
-let contactButton = document.getElementById("contactButton")
+var welcomeButton = document.getElementById("welcomeButton")
+var aboutButton = document.getElementById("aboutButton")
+var skillsButton = document.getElementById("skillsButton")
+var contactButton = document.getElementById("contactButton")
 
-let welcomeSection = document.getElementById("welcomeSection")
-let aboutSection = document.getElementById("aboutSection")
-let skillsSection = document.getElementById("skillsSection")
-let contactSection = document.getElementById("contactSection")
+var welcomeSection = document.getElementById("welcomeSection")
+var aboutSection = document.getElementById("aboutSection")
+var skillsSection = document.getElementById("skillsSection")
+var contactSection = document.getElementById("contactSection")
 
-let welcomeSectionPos = welcomeSection.getBoundingClientRect().y
-let aboutSectionPos = aboutSection.getBoundingClientRect().y
-let skillsSectionPos = skillsSection.getBoundingClientRect().y
-let contactSectionPos = contactSection.getBoundingClientRect().y
+var welcomeSectionPos = welcomeSection.getBoundingClientRect().y
+var aboutSectionPos = aboutSection.getBoundingClientRect().y
+var skillsSectionPos = skillsSection.getBoundingClientRect().y
+var contactSectionPos = contactSection.getBoundingClientRect().y
+
+window.addEventListener("scroll", () => {
+    getBodyPos()
+})
+
+/*
+var counter = 1.1
+var videoBackground = document.getElementById("videoBackground")
+videoBackground.style.position =  "absolute"
+videoBackground.style.top = "0px"
+*/
 
 function getBodyPos() {
-    let bodyPos = body.getBoundingClientRect().y
+    var bodyPos = body.getBoundingClientRect().y
+    /*videoBackground.style.top = `${(Math.abs(bodyPos)) * counter}px`*/
+    console.log(videoBackground.style.top)
     return bodyPos
 }
 
-welcomeButton.addEventListener("click", function() {
+welcomeButton.addEventListener("click", () => {
 
-    let headerHeight = parseFloat(window.getComputedStyle(header).height)
-    let welcomeSectionPos = welcomeSection.getBoundingClientRect().y
-    let bodyPos = getBodyPos()
+    var headerHeight = parseFloat(window.getComputedStyle(header).height)
+    var welcomeSectionPos = welcomeSection.getBoundingClientRect().y
+    var bodyPos = getBodyPos()
     title.innerHTML = "hug.bm-it.ch | welcome"
 
     window.scrollTo({
@@ -36,11 +49,11 @@ welcomeButton.addEventListener("click", function() {
     })
 })
 
-aboutButton.addEventListener("click", function() {
+aboutButton.addEventListener("click", () => {
 
-    let headerHeight = parseFloat(window.getComputedStyle(header).height)
-    let aboutSectionPos = aboutSection.getBoundingClientRect().y
-    let bodyPos = getBodyPos()
+    var headerHeight = parseFloat(window.getComputedStyle(header).height)
+    var aboutSectionPos = aboutSection.getBoundingClientRect().y
+    var bodyPos = getBodyPos()
     title.innerHTML = "hug.bm-it.ch | about"
 
     window.scrollTo({
@@ -49,11 +62,11 @@ aboutButton.addEventListener("click", function() {
     })
 })
 
-skillsButton.addEventListener("click", function() {
+skillsButton.addEventListener("click", () => {
 
-    let headerHeight = parseFloat(window.getComputedStyle(header).height)
-    let skillsSectionPos = skillsSection.getBoundingClientRect().y
-    let bodyPos = getBodyPos()
+    var headerHeight = parseFloat(window.getComputedStyle(header).height)
+    var skillsSectionPos = skillsSection.getBoundingClientRect().y
+    var bodyPos = getBodyPos()
     title.innerHTML = "hug.bm-it.ch | skills"
     
     window.scrollTo({
@@ -62,10 +75,10 @@ skillsButton.addEventListener("click", function() {
     })
 })
 
-contactButton.addEventListener("click", function() {
-    let headerHeight = parseFloat(window.getComputedStyle(header).height)
-    let contactSectionPos = contactSection.getBoundingClientRect().y
-    let bodyPos = getBodyPos()
+contactButton.addEventListener("click", () => {
+    var headerHeight = parseFloat(window.getComputedStyle(header).height)
+    var contactSectionPos = contactSection.getBoundingClientRect().y
+    var bodyPos = getBodyPos()
     title.innerHTML = "hug.bm-it.ch | contact"
 
     window.scrollTo({

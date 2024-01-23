@@ -1,1 +1,1 @@
-# hug.bm-it.ch
+# [hug.bm-it.ch](https://hug.bm-it.ch)

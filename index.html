@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/js/switchColorScheme.js" defer></script>
-    <script src="scripts/js/toggleBorders.js" defer></script>
     <script src="scripts/js/handleScroll.js" defer></script>
+    <script src="scripts/js/handleResize.js" defer></script>
     <title id="title">hug.bm-it.ch | welcome</title>
 </head>
-<body onscroll="getBodyPos()">
+<body>
     <video autoplay muted loop src="images/bg/Sequence 01.mp4" id="videoBackground"></video>
     <header id="header">
         <nav>
@@ -19,20 +18,18 @@
             <a id="skillsButton" class="navItem">skills</a>
             <a id="contactButton" class="navItem">contact</a>
         </nav>
-        <!--<div class="spacer"></div>-->
-        <img src="images/header/sun.svg" id="switchColorScheme">
+        <!--<img src="images/header/sun.svg" id="switchColorScheme">-->
     </header>
     <main>
         <section id="welcomeSection">
             <div>
                 <h1>Welcome</h1>
-                <!--<h4>to my website</h4>-->
             </div>
         </section>
         <section id="aboutSection">
             <div class="left">
                 <h2>About</h2>
-                <h4>Hi! My name is Lorenzo<br>and I am a learning application developer</h4>
+                <h4>Hello! I'm Lorenzo, currently 20 years old, and I'm an aspiring application developer.</h4>
             </div>
             <div class="right">
                 <p>
@@ -48,7 +45,7 @@
                     Stet clita kasd gubergren, no sea takimata sanctus est
                     Lorem ipsum dolor sit amet.
                 </p>
-                <img src="images/about/lethargica.jpg" id="lethargica">
+                <!--<img src="images/about/lethargica.jpg" id="lethargica">-->
             </div>
         </section>
         <section id="skillsSection">
@@ -66,13 +63,18 @@
                     Stet clita kasd gubergren, no sea takimata sanctus est
                     Lorem ipsum dolor sit amet.
                 </p>
-                <div id="codingSkills">
+                <!--<div id="codingSkills">
                     <div class="language">
-                        <img id="pythonImage" src="images/skills/python-white.png">
-                        <div id="pythonBar"></div>
-                        <p id="pythonPercentage">0%</p>
+                        <img src="images/skills/python-white.png">
+                        <div></div>
+                        <p>0%</p>
                     </div>
-                </div>
+                    <div class="language">
+                        <img src="images/skills/python-white.png">
+                        <div></div>
+                        <p>0%</p>
+                    </div>
+                </div>-->
             </div>
             <div class="right">
                 <h2>Skills</h2>
@@ -106,18 +108,20 @@
                     </a>
                 </div>
             </div>
-            <form action="scripts/php/mail.php" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" required>
-            
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            
-                <button type="submit">Submit</button>
-            </form>
+            <div class="right">
+            <!--<form action="scripts/php/mail.php" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                
+                    <button type="submit">Submit</button>
+                </form>-->
+            </div>
         </section>
         <section id="placeholder">
             <div>
