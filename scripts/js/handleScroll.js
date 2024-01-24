@@ -22,17 +22,8 @@ window.addEventListener("scroll", () => {
     getBodyPos()
 })
 
-/*
-var counter = 1.1
-var videoBackground = document.getElementById("videoBackground")
-videoBackground.style.position =  "absolute"
-videoBackground.style.top = "0px"
-*/
-
 function getBodyPos() {
     var bodyPos = body.getBoundingClientRect().y
-    /*videoBackground.style.top = `${(Math.abs(bodyPos)) * counter}px`*/
-    console.log(videoBackground.style.top)
     return bodyPos
 }
 
