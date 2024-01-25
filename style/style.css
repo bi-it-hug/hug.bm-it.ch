@@ -168,6 +168,24 @@ h4 {
     font-size: 1.2rem;
 }
 
+#timeline {
+    flex-direction: row !important;
+}
+
+#events {
+    float: none;
+}
+
+#events div {
+    height: 0.2em;
+    width: 100%;
+}
+
+#timeline .left,
+#timeline .right {
+    flex-direction: column;
+}
+
 #welcomeSection div,
 #aboutSection div {
     display: inherit;
