@@ -152,6 +152,11 @@ h6 {
     margin: 0;
 }
 
+h5 {
+    font-size: 2rem;
+    padding: 0 0 0 0.5rem;
+}
+
 h1,
 h2,
 h3 {
@@ -169,21 +174,48 @@ h4 {
 }
 
 #timeline {
-    flex-direction: row !important;
-}
-
-#events {
-    float: none;
-}
-
-#events div {
-    height: 0.2em;
-    width: 100%;
-}
-
-#timeline .left,
-#timeline .right {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.row {
+    display: inherit;
+    flex-direction: row !important;
+    width: 100%;
+    height: 8rem;
+}
+
+.row div {
+    flex-direction: row !important;
+    width: 200%;
+    /*border: 1px dashed gray;*/
+}
+
+#spine {
+    height: 1px !important;
+    background-color: var(--text-color);
+}
+
+.timestamp {
+    height: 100% !important;
+    width: 1px !important;
+    background-color: var(--text-color);
+}
+
+.top-row div {
+    position: relative;
+    bottom: 0;
+    align-items: flex-start;
+}
+
+.bottom-row div {
+    align-items: flex-end;
+}
+
+.timeline-content a {
+    font-size: 1.1rem;
 }
 
 #welcomeSection div,
@@ -211,8 +243,17 @@ h4 {
 }
 
 #aboutSection {
+    flex-direction: column !important;
     width: 100%;
     background-color: var(--box-bg-color);
+}
+
+.top-content {
+    flex-direction: row !important;
+}
+
+.bottom-content {
+    padding: 0 12rem 6rem;
 }
 
 section:not(#welcomeSection),
@@ -364,6 +405,30 @@ select:-webkit-autofill {
 #socials img {
     width: 2em;
 }
+
+/*
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: magenta;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: green;
+}
+
+::-webkit-scrollbar-button {
+    background-color: green;
+}
+
+*/
 
 #welcomeButton {
     animation: headerFlash 0.2s 2.4s ease-in-out 1 forwards;
