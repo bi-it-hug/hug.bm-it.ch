@@ -1,5 +1,4 @@
 var body = document.body
-var title = document.getElementById("title")
 var header = document.getElementById("header")
 var headerHeight = parseFloat(window.getComputedStyle(header).height)
 
