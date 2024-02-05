@@ -13,9 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     mail($to, $subject, $messageBody, $headers);
 
-    echo $to;
-
-    header("Location: ../index.html");
+    header("Location: /index.html");
     exit();
 }
 

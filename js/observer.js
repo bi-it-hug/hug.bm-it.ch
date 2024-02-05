@@ -1,6 +1,5 @@
 var timeline = document.getElementById("timeline")
 var sectionDiv = document.querySelectorAll("section div")
-var title = document.getElementById("title")
 
 var options = {
     root: null,
@@ -26,7 +25,3 @@ var observer = new IntersectionObserver(callback, options)
 sectionDiv.forEach(function(element) {
     observer.observe(element)
 })
-
-/*
-observer.observe(timeline)
-*/

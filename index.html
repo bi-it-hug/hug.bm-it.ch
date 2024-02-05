@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icon/icon.ico" type="image/x-icon">
-    <script src="scripts/js/handleScroll.js" defer></script>
-    <script src="scripts/js/handleResize.js" defer></script>
-    <script src="scripts/js/parallax.js" defer></script>
-    <script src="scripts/js/observer.js" defer></script>
+    <script src="js/handleScroll.js" defer></script>
+    <script src="js/handleResize.js" defer></script>
+    <script src="js/parallax.js" defer></script>
+    <script src="js/observer.js" defer></script>
     <title id="title">hug.bm-it.ch | welcome</title>
 </head>
 <body>
     <div class="parallax">
         <div class="content">
-            <video autoplay muted loop controls="false" allowfullscreen="false" src="images/bg/Sequence 01.mp4"  id="videoBackground"></video>
+            <!--<video autoplay muted loop controls="false" allowfullscreen="false" src="images/bg/sansui.mp4"  id="videoBackground"></video>-->
+            <div id="backgroundGif"></div>
             <header id="header">
                 <nav>
-                    <img id="borderButton" src="images/header/wind.svg">
+                    <img id="borderButton" src="images/header/wind.svg" alt="Icon">
                     <a id="welcomeButton" class="navItem">welcome</a>
                     <a id="aboutButton" class="navItem">about</a>
                     <a id="skillsButton" class="navItem">skills</a>
                     <a id="contactButton" class="navItem">contact</a>
                 </nav>
-                <!--<img src="images/header/sun.svg" id="switchColorScheme">-->
             </header>
             <main>
                 <section id="welcomeSection">
@@ -32,178 +32,117 @@
                     </div>
                 </section>
                 <section id="aboutSection">
-                    <div class="top-content">
-                        <div class="left">
-                            <h2>About</h2>
-                            <h4>Hi! I'm Lorenzo, currently 20 years old, and I'm an aspiring application developer.</h4>
-                        </div>
-
-                        <div class="right">
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd
-                                gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                                elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                                et dolore magna aliquyam erat, sed diam voluptua.
-                                At vero eos et accusam et justo duo dolores et ea rebum.
-                                Stet clita kasd gubergren, no sea takimata sanctus est
-                                Lorem ipsum dolor sit amet.
-                            </p>
-                            <!--<img src="images/about/lethargica.jpg" id="lethargica">-->
-                        </div>
+                    <div class="sectionHeader">
+                        <h2>About</h2>
+                        <h4>Hi! I'm Lorenzo, currently 20 years old, and I'm an aspiring application developer.</h4>
                     </div>
-                    <div class="bottom-content">
-                        <div id="timeline">
+                    <p class="sectionText">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                        elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                        et dolore magna aliquyam erat, sed diam voluptua.
+                        At vero eos et accusam et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <div id="timeline">
 
-                            <div class="row top-row">
-
-                                <div></div>
-
-                                <div class="timeline-content">
-                                    <div class="timestamp" id="primary"></div>
-                                    <h5>2010 - 2016
-                                        <p>Primarschule<br>
-                                            <a href="https://primarschule-margelaecker.schule-wettingen.ch">Margeläcker</a>
-                                        </p>
-                                    </h5>
-                                </div>
-
-                                <div></div>
-
-                                <div class="timeline-content">
-                                    <div class="timestamp" id="car"></div>
-                                    <h5>2019 - 2022
-                                        <p>Automobilfachmann<br>
-                                            <a href="https://if-automobile.ch">IF Automobile AG</a>
-                                        </p>
-                                    </h5>
-                                </div>
-
-                                <div></div>
-
-                                <div class="timeline-content">
-                                    <div class="timestamp" id="espas"></div>
-                                    <h5>2023 - now
-                                        <p>Informatiker<br>
-                                            <a href="https://www.espas.ch">ESPAS Zürich</a>
-                                        </p>
-                                    </h5>
-                                </div>
-
-                                <div></div>
-
-                            </div>
-
-                            <div class="row" id="spine"></div>
-
-                            <div class="row bottom-row">
-
-                                <div></div>
-                                <div></div>
-
-                                <div class="timeline-content">
-                                    <div class="timestamp" id="secondary"></div>
-                                    <h5>2016 - 2019
-                                        <p>Realschule<br>
-                                            <a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a>
-                                        </p>
-                                    </h5>
-                                </div>
-
-                                <div></div>
-                                <div class="timeline-content">
-                                    <div class="timestamp"></div>
-                                    <h5>2022 - 2023
-                                        <p>Fahrradmechaniker<br>
-                                            <a href="https://www.lernwerk.ch">Verein Lernwerk</a>
-                                        </p>
-                                    </h5>
-                                </div>
-
-                                <div></div>
-                                <div></div>
-
-                            </div>
+                        <div class="timeline-frame" id="primar">
+                            <div></div>
+                            <h5>2010 - 2016</h5>
+                            <p>Primarschule</p>
+                            <a href="https://primarschule-margelaecker.schule-wettingen.ch" class="timeline-top">Margeläcker</a>
                         </div>
+
+                        <div class="timeline-frame" id="real">
+                            <div></div>
+                            <h5 class="timeline-bottom">2016 - 2019</h5>
+                            <p>Realschule</p>
+                            <a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a>
+                        </div>
+
+                        <div class="timeline-frame" id="ifauto">
+                            <div></div>
+                            <h5>2019 - 2022</h5>
+                            <p>Automobilfachmann</p>
+                            <a href="https://if-automobile.ch" class="timeline-top">IF Automobile AG</a>
+                        </div>
+
+                        <div class="timeline-frame" id="lern">
+                            <div></div>
+                            <h5 class="timeline-bottom">2022 - 2023</h5>
+                            <p>Fahrradmechaniker</p>
+                            <a href="https://www.lernwerk.ch">Verein Lernwerk</a>
+                        </div>
+
+                        <div class="timeline-frame" id="espas">
+                            <div></div>
+                            <h5>2023 - now</h5>
+                            <p>Informatiker</p>
+                            <a href="https://www.espas.ch" class="timeline-top">ESPAS Zürich</a>
+                        </div>
+
+                        <div class="middle-border"></div>
                     </div>
                 </section>
                 <section id="skillsSection">
-                    <div class="left">
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                            sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                            magna aliquyam erat, sed diam voluptua. At vero eos et
-                            accusam et justo duo dolores et ea rebum. Stet clita kasd
-                            gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                            sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                            et dolore magna aliquyam erat, sed diam voluptua.
-                            At vero eos et accusam et justo duo dolores et ea rebum.
-                            Stet clita kasd gubergren, no sea takimata sanctus est
-                            Lorem ipsum dolor sit amet.
-                        </p>
-                        <!--<div id="codingSkills">
-                            <div class="language">
-                                <img src="images/skills/python-white.png">
-                                <div></div>
-                                <p>0%</p>
-                            </div>
-                            <div class="language">
-                                <img src="images/skills/python-white.png">
-                                <div></div>
-                                <p>0%</p>
-                            </div>
-                        </div>-->
-                    </div>
-                    <div class="right">
-                        <h2>Skills</h2>
-                    </div>
+                    <p class="sectionText">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                        elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                        et dolore magna aliquyam erat, sed diam voluptua.
+                        At vero eos et accusam et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <h2 class="sectionHeader">Skills</h2>
                 </section>
                 <section id="contactSection">
-                    <div class="left">
-                        <h2>Contact</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                            sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                            magna aliquyam erat, sed diam voluptua. At vero eos et
-                            accusam et justo duo dolores et ea rebum. Stet clita kasd
-                            gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                            sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                            et dolore magna aliquyam erat, sed diam voluptua.
-                            At vero eos et accusam et justo duo dolores et ea rebum.
-                            Stet clita kasd gubergren, no sea takimata sanctus est
-                            Lorem ipsum dolor sit amet.
-                        </p>
-                        <div id="socials">
-                            <a href="https://github.com/bmit-hug/hug.bm-it.ch">
-                                <img src="images/contact/github-mark-white.svg">
-                            </a>
-                            <a href="https://gitlab.com/hellboyReturns">
-                                <img src="images/contact/gitlab-white.svg">
-                            </a>
-                            <a href="https://www.linkedin.com/in/lorenzo-hug-0931b72b0">
-                                <img src="images/contact/linkedin-white.svg">
-                            </a>
-                        </div>
+                    <h2 class="sectionHeader">Contact</h2>
+                    <p class="sectionText">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                        elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                        et dolore magna aliquyam erat, sed diam voluptua.
+                        At vero eos et accusam et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <div id="socials">
+                        <a href="https://github.com/bmit-hug/hug.bm-it.ch">
+                            <img src="images/contact/github-mark-white.svg" alt="GitHub Link">
+                        </a>
+                        <a href="https://gitlab.com/hellboyReturns">
+                            <img src="images/contact/gitlab-white.svg" alt="GitLab Link">
+                        </a>
+                        <a href="https://www.linkedin.com/in/lorenzo-hug-0931b72b0">
+                            <img src="images/contact/linkedin-white.svg" alt="LinkedIn Link">
+                        </a>
                     </div>
-                    <div class="right">
-                    <!--<form action="scripts/php/mail.php" method="post">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        
-                            <label for="email">E-Mail</label>
-                            <input type="email" id="email" name="email" required>
-                        
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        
-                            <button type="submit">Submit</button>
-                        </form>-->
-                    </div>
+                    <form action="mail.php" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                        <button type="submit">Submit</button>
+                    </form>
                 </section>
                 <section id="placeholder">
                     <div>

@@ -16,6 +16,7 @@ var welcomeSectionPos = welcomeSection.getBoundingClientRect().y
 var aboutSectionPos = aboutSection.getBoundingClientRect().y
 var skillsSectionPos = skillsSection.getBoundingClientRect().y
 var contactSectionPos = contactSection.getBoundingClientRect().y
+var title = document.getElementById("title")
 
 window.addEventListener("scroll", () => {
     getBodyPos()
