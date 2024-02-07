@@ -1,3 +1,4 @@
+/*
 var everything = document.querySelectorAll("*")
 
 window.addEventListener("resize", () => {
@@ -5,3 +6,4 @@ window.addEventListener("resize", () => {
         element.style.transition = "none"
     })
 })
+*/

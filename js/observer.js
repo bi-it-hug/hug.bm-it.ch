@@ -1,5 +1,5 @@
 var timeline = document.getElementById("timeline")
-var sectionDiv = document.querySelectorAll("section div")
+var sectionDiv = document.querySelectorAll("section *")
 
 var options = {
     root: null,

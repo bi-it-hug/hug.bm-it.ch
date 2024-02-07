@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hug.bm-it.ch | welcome</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icon/icon.ico" type="image/x-icon">
     <script src="js/handleScroll.js" defer></script>
-    <script src="js/handleResize.js" defer></script>
     <script src="js/parallax.js" defer></script>
     <script src="js/observer.js" defer></script>
-    <title id="title">hug.bm-it.ch | welcome</title>
+    <script src="js/date.js" defer></script>
+    <script src="js/handleAnimations.js" defer></script>
+    <script src="js/handleSkills.js" defer></script>
+    <script src="js/test.js" defer></script>
 </head>
 <body>
     <div class="parallax">
         <div class="content">
-            <!--<video autoplay muted loop controls="false" allowfullscreen="false" src="images/bg/sansui.mp4"  id="videoBackground"></video>-->
             <div id="backgroundGif"></div>
             <header id="header">
                 <nav>
                     <img id="borderButton" src="images/header/wind.svg" alt="Icon">
-                    <a id="welcomeButton" class="navItem">welcome</a>
-                    <a id="aboutButton" class="navItem">about</a>
-                    <a id="skillsButton" class="navItem">skills</a>
-                    <a id="contactButton" class="navItem">contact</a>
+                    <a id="welcomeButton">welcome</a>
+                    <a id="aboutButton">about</a>
+                    <a id="skillsButton">skills</a>
+                    <a id="contactButton">contact</a>
                 </nav>
             </header>
             <main>
@@ -34,7 +36,7 @@
                 <section id="aboutSection">
                     <div class="sectionHeader">
                         <h2>About</h2>
-                        <h4>Hi! I'm Lorenzo, currently 20 years old, and I'm an aspiring application developer.</h4>
+                        <h4>Hi! I'm Lorenzo, currently <span id="age"></span> years old, and I'm an aspiring application developer.</h4>
                     </div>
                     <p class="sectionText">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
@@ -104,6 +106,49 @@
                         Lorem ipsum dolor sit amet.
                     </p>
                     <h2 class="sectionHeader">Skills</h2>
+
+                    <div id="skills">
+                        
+                        <div class="stages">
+                            <h5>Rookie</h5>
+                            <p>0% - 25%</p>
+                        </div>
+
+                        <div class="stages">
+                            <h5>Journeyman</h5>
+                            <p>25% - 50%</p>
+                        </div>
+
+                        <div class="stages">
+                            <h5>Experienced</h5>
+                            <p>50% - 75%</p>
+                        </div>
+
+                        <div class="stages">
+                            <h5>Master</h5>
+                            <p>75% - 100%</p>
+                        </div>
+
+                        <img class="lang" id="pythonIcon" src="images/skills/python-icon.svg" alt="Python Icon">
+                        <img class="lang" id="javaIcon" src="images/skills/java-icon.svg" alt="Java Icon">
+                        <img class="lang" id="phpIcon" src="images/skills/php-icon.svg" alt="PHP Icon">
+                        <img class="lang" id="htmlIcon" src="images/skills/html-icon.svg" alt="HTML Icon">
+                        <img class="lang" id="cssIcon" src="images/skills//css-icon.svg" alt="CSS Icon">
+                        <img class="lang" id="javaScriptIcon" src="images/skills/javaScript-icon.svg" alt="JavaScript Icon">
+
+                        <div class="parting-line"></div>
+                        <div class="parting-line"></div>
+                        <div class="parting-line"></div>
+
+                        <div class="progression-bar" id="pythonBar">38%</div>
+                        <div class="progression-bar" id="javaBar">22%</div>
+                        <div class="progression-bar" id="phpBar">18%</div>
+                        <div class="progression-bar" id="htmlBar">44%</div>
+                        <div class="progression-bar" id="cssBar">56%</div>
+                        <div class="progression-bar" id="javaScriptBar">32%</div>
+
+                    </div>
+
                 </section>
                 <section id="contactSection">
                     <h2 class="sectionHeader">Contact</h2>
@@ -144,9 +189,9 @@
                         <button type="submit">Submit</button>
                     </form>
                 </section>
-                <section id="placeholder">
+                <section id="placeholderSection">
                     <div>
-                        <h1>Placeholder</h1>
+                        <h1 id="placeholder">Placeholder</h1>
                     </div>
                 </section>
             </main>

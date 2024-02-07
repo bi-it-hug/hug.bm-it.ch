@@ -1,5 +1,6 @@
 var body = document.body
-var header = document.getElementById("header")
+var title = document.getElementsByTagName("title")[0]
+var header = document.getElementsByTagName("header")[0]
 var headerHeight = parseFloat(window.getComputedStyle(header).height)
 
 var welcomeButton = document.getElementById("welcomeButton")
@@ -16,7 +17,6 @@ var welcomeSectionPos = welcomeSection.getBoundingClientRect().y
 var aboutSectionPos = aboutSection.getBoundingClientRect().y
 var skillsSectionPos = skillsSection.getBoundingClientRect().y
 var contactSectionPos = contactSection.getBoundingClientRect().y
-var title = document.getElementById("title")
 
 window.addEventListener("scroll", () => {
     getBodyPos()
