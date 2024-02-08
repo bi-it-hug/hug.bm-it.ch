@@ -1,79 +1,80 @@
-var body = document.body
-var title = document.getElementsByTagName("title")[0]
-var header = document.getElementsByTagName("header")[0]
-var headerHeight = parseFloat(window.getComputedStyle(header).height)
+var title = document.getElementsByTagName("title")[0];
+var header = document.getElementsByTagName("header")[0];
+var headerHeight = header.offsetHeight;
 
-var welcomeButton = document.getElementById("welcomeButton")
-var aboutButton = document.getElementById("aboutButton")
-var skillsButton = document.getElementById("skillsButton")
-var contactButton = document.getElementById("contactButton")
+var welcomeButton = document.getElementById("welcomeButton");
+var aboutButton = document.getElementById("aboutButton");
+var skillsButton = document.getElementById("skillsButton");
+var contactButton = document.getElementById("contactButton");
 
-var welcomeSection = document.getElementById("welcomeSection")
-var aboutSection = document.getElementById("aboutSection")
-var skillsSection = document.getElementById("skillsSection")
-var contactSection = document.getElementById("contactSection")
+var welcomeSection = document.getElementById("welcomeSection");
+var aboutSection = document.getElementById("aboutSection");
+var skillsSection = document.getElementById("skillsSection");
+var contactSection = document.getElementById("contactSection");
 
-var welcomeSectionPos = welcomeSection.getBoundingClientRect().y
-var aboutSectionPos = aboutSection.getBoundingClientRect().y
-var skillsSectionPos = skillsSection.getBoundingClientRect().y
-var contactSectionPos = contactSection.getBoundingClientRect().y
+// Function to update the title based on the currently active section
+function updateTitle(section) {
+    if (section === welcomeSection) {
+        title.innerHTML = "hug.bm-it.ch | welcome";
 
-window.addEventListener("scroll", () => {
-    getBodyPos()
-})
+    } else if (section === aboutSection) {
+        title.innerHTML = "hug.bm-it.ch | about";
 
-function getBodyPos() {
-    var bodyPos = body.getBoundingClientRect().y
-    return bodyPos
+    } else if (section === skillsSection) {
+        title.innerHTML = "hug.bm-it.ch | skills";
+
+    } else if (section === contactSection) {
+        title.innerHTML = "hug.bm-it.ch | contact";
+    }
 }
 
+// Function to check which section is currently in view and update the title
+function checkCurrentSection() {
+    var sections = [welcomeSection, aboutSection, skillsSection, contactSection];
+    var scrollPos = window.scrollY + headerHeight;
+
+    for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        var rect = section.getBoundingClientRect();
+
+        if (rect.top <= headerHeight && rect.bottom >= headerHeight) {
+            updateTitle(section);
+            break;
+        }
+    }
+}
+
+// Listen for scroll events and update the title accordingly
+window.addEventListener("scroll", checkCurrentSection);
+
+// Event listeners for button clicks to scroll to corresponding sections
 welcomeButton.addEventListener("click", () => {
-
-    var headerHeight = parseFloat(window.getComputedStyle(header).height)
-    var welcomeSectionPos = welcomeSection.getBoundingClientRect().y
-    var bodyPos = getBodyPos()
-    title.innerHTML = "hug.bm-it.ch | welcome"
-
     window.scrollTo({
-        top: welcomeSectionPos - headerHeight - bodyPos,
+        top: welcomeSection.offsetTop - headerHeight,
         behavior: "smooth"
-    })
-})
+    });
+});
 
 aboutButton.addEventListener("click", () => {
-
-    var headerHeight = parseFloat(window.getComputedStyle(header).height)
-    var aboutSectionPos = aboutSection.getBoundingClientRect().y
-    var bodyPos = getBodyPos()
-    title.innerHTML = "hug.bm-it.ch | about"
-
     window.scrollTo({
-        top: aboutSectionPos - headerHeight - bodyPos,
+        top: aboutSection.offsetTop - headerHeight,
         behavior: "smooth"
-    })
-})
+    });
+});
 
 skillsButton.addEventListener("click", () => {
-
-    var headerHeight = parseFloat(window.getComputedStyle(header).height)
-    var skillsSectionPos = skillsSection.getBoundingClientRect().y
-    var bodyPos = getBodyPos()
-    title.innerHTML = "hug.bm-it.ch | skills"
-    
     window.scrollTo({
-        top: skillsSectionPos - headerHeight - bodyPos,
+        top: skillsSection.offsetTop - headerHeight,
         behavior: "smooth"
-    })
-})
+    });
+});
 
 contactButton.addEventListener("click", () => {
-    var headerHeight = parseFloat(window.getComputedStyle(header).height)
-    var contactSectionPos = contactSection.getBoundingClientRect().y
-    var bodyPos = getBodyPos()
-    title.innerHTML = "hug.bm-it.ch | contact"
-
     window.scrollTo({
-        top: contactSectionPos - headerHeight - bodyPos,
+        top: contactSection.offsetTop - headerHeight,
         behavior: "smooth"
-    })
-})
+    });
+});
+
+// Initial check to set the title when the page loads
+checkCurrentSection();

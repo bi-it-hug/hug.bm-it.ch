@@ -3,9 +3,9 @@ var lang = document.getElementsByClassName("lang")
 var partingLine = document.getElementsByClassName("parting-line")
 var progressionBar = document.getElementsByClassName("progression-bar")
 
-var stagePos = 2
-var langPos = 2
-var linePos = 3
+var stagePos = 3
+var langPos = 3
+var linePos = 2
 
 for (var x = 0; x < stages.length; x++) {
     stages[x].style.gridColumn = stagePos

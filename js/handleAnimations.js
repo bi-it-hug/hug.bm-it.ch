@@ -1,17 +1,13 @@
-/*
-var navElements = document.getElementsByTagName("nav *");
-var index = 0;
+var borderButton = document.getElementById("borderButton")
+var duration = 1000
 
-var logElement = function() {
+borderButton.addEventListener("click", function() {
+    borderButton.classList.remove("fadeInDown")
+    borderButton.classList.add("headShake")
 
-    if(index < navElements.length) {
-        navElements[index].style.animation = ""
-        index++;
+    setTimeout(function() {
+        borderButton.classList.remove("headShake")
+        borderButton.classList.add("fadeInDown")
 
-    } else {
-        clearInterval(intervalId);
-    }
-};
-
-var intervalId = setInterval(logElement, 1000);
-*/
+    }, duration)
+})

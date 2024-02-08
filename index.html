@@ -12,7 +12,8 @@
     <script src="js/date.js" defer></script>
     <script src="js/handleAnimations.js" defer></script>
     <script src="js/handleSkills.js" defer></script>
-    <script src="js/test.js" defer></script>
+    <script src="js/dynamicHeader.js" defer></script>
+    <script src="js/omg.js" defer></script>
 </head>
 <body>
     <div class="parallax">
@@ -20,11 +21,11 @@
             <div id="backgroundGif"></div>
             <header id="header">
                 <nav>
-                    <img id="borderButton" src="images/header/wind.svg" alt="Icon">
-                    <a id="welcomeButton">welcome</a>
-                    <a id="aboutButton">about</a>
-                    <a id="skillsButton">skills</a>
-                    <a id="contactButton">contact</a>
+                    <img class="fadeInDown" id="borderButton" src="images/header/wind.svg" alt="Icon">
+                    <a class="fadeInDown" id="welcomeButton">welcome</a>
+                    <a class="fadeInDown" id="aboutButton">about</a>
+                    <a class="fadeInDown" id="skillsButton">skills</a>
+                    <a class="fadeInDown" id="contactButton">contact</a>
                 </nav>
             </header>
             <main>
@@ -35,7 +36,7 @@
                 </section>
                 <section id="aboutSection">
                     <div class="sectionHeader">
-                        <h2>About</h2>
+                        <h2 class="headShake">About</h2>
                         <h4>Hi! I'm Lorenzo, currently <span id="age"></span> years old, and I'm an aspiring application developer.</h4>
                     </div>
                     <p class="sectionText">
@@ -136,16 +137,36 @@
                         <img class="lang" id="cssIcon" src="images/skills//css-icon.svg" alt="CSS Icon">
                         <img class="lang" id="javaScriptIcon" src="images/skills/javaScript-icon.svg" alt="JavaScript Icon">
 
+                        <div class="parting-line-hor"></div>
+
+                        <div class="parting-line"></div>
                         <div class="parting-line"></div>
                         <div class="parting-line"></div>
                         <div class="parting-line"></div>
 
-                        <div class="progression-bar" id="pythonBar">38%</div>
-                        <div class="progression-bar" id="javaBar">22%</div>
-                        <div class="progression-bar" id="phpBar">18%</div>
-                        <div class="progression-bar" id="htmlBar">44%</div>
-                        <div class="progression-bar" id="cssBar">56%</div>
-                        <div class="progression-bar" id="javaScriptBar">32%</div>
+                        <div class="progression-bar" id="pythonBar">
+                            <p>38%</p>
+                        </div>
+
+                        <div class="progression-bar" id="javaBar">
+                            <p>22%</p>
+                        </div>
+
+                        <div class="progression-bar" id="phpBar">
+                            <p>18%</p>
+                        </div>
+
+                        <div class="progression-bar" id="htmlBar">
+                            <p>44%</p>
+                        </div>
+
+                        <div class="progression-bar" id="cssBar">
+                            <p>56%</p>
+                        </div>
+
+                        <div class="progression-bar" id="javaScriptBar">
+                            <p>32%</p>
+                        </div>
 
                     </div>
 
@@ -196,14 +217,10 @@
                 </section>
             </main>
             <footer>
-                <div id="footerLeft">
-                    <p>大きなシュグラー \\</p>
-                    <p>// Copyright &copy; 2024 by Lorenzo Hug</p>
-                </div>
-                <div id="footerRight">
-                    <p>// v3.0</p>
-                    <p>大きなシュグラー \\</p>
-                </div>
+                <p id="deco1">大きなシュグラー \\</p>
+                <p id="copyright">// Copyright &copy; 2024 by Lorenzo Hug</p>
+                <p id="version">// v3.0</p>
+                <p id="deco2">大きなシュグラー \\</p>
             </footer>
         </div>
     </div>
