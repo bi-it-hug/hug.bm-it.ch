@@ -11,7 +11,6 @@ var callback = (entries, observer) => {
     entries.forEach(entry => {
 
         if (entry.isIntersecting) {
-            entry.target.style.transition = "all 0.5s"
             entry.target.style.opacity = 1
 
         } else {
