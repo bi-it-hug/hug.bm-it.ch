@@ -26,6 +26,7 @@ window.addEventListener("resize", () => {
         skillsSectionText.style.gridRow = 2
         skills.style.gridRow = 3
 
+        contactSection.style.gridTemplateColumns = "1fr"
         mailForm.style.gridRow = "3 / 5"
         mailForm.style.gridColumn = 1
         socials.style.gridRow = 5
@@ -41,6 +42,7 @@ window.addEventListener("resize", () => {
         skillsSectionText.style.gridRow = 1
         skills.style.gridRow = 2
 
+        contactSection.style.gridTemplateColumns = "2fr 1fr"
         mailForm.style.gridRow = "1 / 3"
         mailForm.style.gridColumn = 2
         socials.style.gridRow = 3

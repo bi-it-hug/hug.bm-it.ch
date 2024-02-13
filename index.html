@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hug.bm-it.ch | welcome</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/icon/icon.ico" type="image/x-icon">
+    <link rel="icon" href="images/header/shrooms-fat.svg" type="image/x-icon">
     <script src="js/scroll.js" defer></script>
     <script src="js/background.js" defer></script>
     <script src="js/observer.js" defer></script>
@@ -15,14 +15,23 @@
     <script src="js/dynamicHeader.js" defer></script>
     <script src="js/timeline.js" defer ></script>
     <script src="js/responsive.js" defer></script>
+    <script src="js/popup.js" defer></script>
 </head>
 <body>
+    <div id="popupWindow">
+        <svg id="closePopup" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+            <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/>
+        </svg>
+        <p id="mailMessage">Your E-Mail has been sent successfully!</p>
+        <img class="cert" id="pythonCertificate" src="images/certificates/python.png">
+        <img class="cert" id="htmlCertificate" src="images/certificates/html.png">
+    </div>
     <div class="parallax">
         <div class="content">
             <div id="backgroundGif"></div>
             <header id="header">
                 <nav>
-                    <img class="fadeInDown" id="borderButton" src="images/header/wind.svg" alt="Icon">
+                    <img class="fadeInDown" id="borderButton" src="images/header/shrooms-fat.svg" alt="Icon">
                     <a class="fadeInDown" id="welcomeButton">welcome</a>
                     <a class="fadeInDown" id="aboutButton">about</a>
                     <a class="fadeInDown" id="skillsButton">skills</a>
@@ -31,9 +40,7 @@
             </header>
             <main>
                 <section id="welcomeSection">
-                    <div>
-                        <h1>Welcome</h1>
-                    </div>
+                    <h1>Welcome</h1>
                 </section>
                 <section id="aboutSection">
                     <div class="sectionHeader">
@@ -99,6 +106,11 @@
 
                     </div>
                 </section>
+                <section class="placeholderSection">
+                    <div>
+                        <h1 class="placeholder">Placeholder</h1>
+                    </div>
+                </section>
                 <section id="skillsSection">
                     <p class="sectionText">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
@@ -114,21 +126,21 @@
                         Lorem ipsum dolor sit amet.
                     </p>
                     <h2 class="sectionHeader">Skills</h2>
-
+                    <h3 id="skillsHeading">my coding skills</h3>
                     <div id="skills">
                         
                         <div class="coding-level">
-                            <h5>Rookie</h5>
+                            <h5>Beginner</h5>
                             <p>0% - 25%</p>
                         </div>
 
                         <div class="coding-level">
-                            <h5>Journeyman</h5>
+                            <h5>Intermediate</h5>
                             <p>25% - 50%</p>
                         </div>
 
                         <div class="coding-level">
-                            <h5>Experienced</h5>
+                            <h5>Advanced</h5>
                             <p>50% - 75%</p>
                         </div>
 
@@ -137,19 +149,19 @@
                             <p>75% - 100%</p>
                         </div>
 
-                        <img class="language" id="pythonIcon" src="images/skills/python-icon.svg" alt="Python Icon">
+                        <img class="language" id="pythonIcon" onclick="fillPopup(1)" src="images/skills/python-icon.svg" alt="Python Icon">
                         <img class="language" id="javaIcon" src="images/skills/java-icon.svg" alt="Java Icon">
-                        <img class="language" id="phpIcon" src="images/skills/php-icon.svg" alt="PHP Icon">
-                        <img class="language" id="htmlIcon" src="images/skills/html-icon.svg" alt="HTML Icon">
-                        <img class="language" id="cssIcon" src="images/skills//css-icon.svg" alt="CSS Icon">
+                        <img class="language" id="phpIcon" src="images/skills/php-icon-old.svg" alt="PHP Icon">
+                        <img class="language" id="htmlIcon" onclick="fillPopup(2)" src="images/skills/html-icon.svg" alt="HTML Icon">
+                        <img class="language" id="cssIcon" src="images/skills/css-icon.svg" alt="CSS Icon">
                         <img class="language" id="javaScriptIcon" src="images/skills/javaScript-icon.svg" alt="JavaScript Icon">
 
                         <div class="parting-line-hor"></div>
 
-                        <div class="parting-line"></div>
-                        <div class="parting-line"></div>
-                        <div class="parting-line"></div>
-                        <div class="parting-line"></div>
+                        <div class="parting-line-vert"></div>
+                        <div class="parting-line-vert"></div>
+                        <div class="parting-line-vert"></div>
+                        <div class="parting-line-vert"></div>
 
                         <div class="progression-bar" id="pythonBar">
                             <p>38%</p>
@@ -178,6 +190,11 @@
                     </div>
 
                 </section>
+                <section class="placeholderSection">
+                    <div>
+                        <h1 class="placeholder">Placeholder</h1>
+                    </div>
+                </section>
                 <section id="contactSection">
                     <h2 class="sectionHeader">Contact</h2>
                     <p class="sectionText">
@@ -205,28 +222,31 @@
                         </a>
                     </div>
                     <form action="mail.php" method="post">
-                        <label for="name">Name</label>
+                        <label>Name</label>
                         <input type="text" id="name" name="name" required>
                     
-                        <label for="email">E-Mail</label>
+                        <label>E-Mail</label>
                         <input type="email" id="email" name="email" required>
+
+                        <label>Subject</label>
+                        <input id="subject" name="subject" required>
                     
-                        <label for="message">Message</label>
+                        <label>Message</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
                     
-                        <button type="submit">Submit</button>
+                        <button onclick="fillPopup(3)" type="submit">Submit</button>
                     </form>
                 </section>
-                <section id="placeholderSection">
+                <section class="placeholderSection">
                     <div>
-                        <h1 id="placeholder">Placeholder</h1>
+                        <h1 class="placeholder">Placeholder</h1>
                     </div>
                 </section>
             </main>
             <footer>
-                <p id="deco1">大きなシュグラー \\</p>
-                <p id="copyright">// Copyright &copy; 2024 by Lorenzo Hug</p>
-                <p id="version">// v3.0</p>
+                <p id="deco1">プレースホルダー \\</p>
+                <p id="copyright">// &copy; 2024 Lorenzo Hug &nbsp; | &nbsp; Impressum</p>
+                <p id="version">// v3.2</p>
                 <p id="deco2">大きなシュグラー \\</p>
             </footer>
         </div>
