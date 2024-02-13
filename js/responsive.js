@@ -5,6 +5,7 @@ var timeline = document.getElementById("timeline")
 var skillsSection = document.getElementById("skillsSection")
 var skillsSectionText = skillsSection.firstElementChild
 var skillsSectionHeader = skillsSection.children[1]
+var skillsHeading = document.getElementById("skillsHeading")
 var skills = document.getElementById("skills")
 
 var contactSection = document.getElementById("contactSection")
@@ -21,10 +22,10 @@ window.addEventListener("resize", () => {
         timeline.style.gridColumn = 1
         timeline.style.gridRow = 3
 
-
+        skillsHeading.style.gridRow = 3
         skillsSectionHeader.style.gridColumn = 1
         skillsSectionText.style.gridRow = 2
-        skills.style.gridRow = 3
+        skills.style.gridRow = 4
 
         contactSection.style.gridTemplateColumns = "1fr"
         mailForm.style.gridRow = "3 / 5"
@@ -40,7 +41,8 @@ window.addEventListener("resize", () => {
 
         skillsSectionHeader.style.gridColumn = 2
         skillsSectionText.style.gridRow = 1
-        skills.style.gridRow = 2
+        skills.style.gridRow = 3
+        skillsHeading.style.gridRow = 2
 
         contactSection.style.gridTemplateColumns = "2fr 1fr"
         mailForm.style.gridRow = "1 / 3"
