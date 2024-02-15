@@ -12,15 +12,17 @@ var contactSection = document.getElementById("contactSection")
 var mailForm = document.getElementsByTagName("form")[0]
 var socials = document.getElementById("socials")
 
+var timelineHeading = document.querySelectorAll("h5")
+
 window.addEventListener("resize", () => {
-    var windowWidth = window.innerWidth
 
-    if (windowWidth < 1000) {
+    if (window.innerWidth < 1000) {
 
-        aboutSectionText.style.gridColumn = 1
+        aboutSectionText.style.gridColumn = "1 / 3"
         aboutSectionText.style.gridRow = 2
         timeline.style.gridColumn = 1
-        timeline.style.gridRow = 3
+        timeline.style.gridRow = 3  
+        timeline.style.width = "10px"
 
         skillsHeading.style.gridRow = 3
         skillsSectionHeader.style.gridColumn = 1
@@ -31,6 +33,12 @@ window.addEventListener("resize", () => {
         mailForm.style.gridRow = "3 / 5"
         mailForm.style.gridColumn = 1
         socials.style.gridRow = 5
+
+        timelineHeading.forEach((heading) => {
+            heading.style.display = "none"
+        })
+
+        timeline.style.display = "none"
 
     } else {
 
@@ -49,6 +57,10 @@ window.addEventListener("resize", () => {
         mailForm.style.gridColumn = 2
         socials.style.gridRow = 3
 
-    }
+        timelineHeading.forEach((heading) => {
+            heading.style.display = "block"
+        })
 
+        timeline.style.display = "grid"
+    }
 })

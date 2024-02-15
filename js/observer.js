@@ -21,6 +21,6 @@ var callback = (entries, observer) => {
 
 var observer = new IntersectionObserver(callback, options)
 
-sectionDiv.forEach(function(element) {
+sectionDiv.forEach(element => {
     observer.observe(element)
 })

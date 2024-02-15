@@ -2,19 +2,16 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
+    $senderEmail = htmlspecialchars($_POST["email"]);
     $subject = htmlspecialchars($_POST["subject"]);
     $message = htmlspecialchars($_POST["message"]);
 
-    $to = "lorenzo.hug@icloud.com";
-    $messageBody = "Name: $name\nEmail: $email\nMessage:\n$message";
-    $headers = "From: $email";
+    $receiverEmail = "lorenzo.hug@icloud.com";
+    $headers = "From: $senderEmail";
 
-    mail($to, $subject, $messageBody, $headers);
+    mail($receiverEmail, $subject, $message, $headers);
+    echo "Your E-Mail has been sent successfully!";
 
-    header("Location: /index.html");
-    exit();
+} else {
+    echo "Error: ";
 }
-
-?>

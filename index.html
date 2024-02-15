@@ -16,15 +16,40 @@
     <script src="js/timeline.js" defer ></script>
     <script src="js/responsive.js" defer></script>
     <script src="js/popup.js" defer></script>
+    <script src="js/lol.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#mailForm").submit(function(event) {
+
+                event.preventDefault()
+                var formData = $(this).serialize()
+
+                $.ajax({
+                    url: "mail.php",
+                    type: "POST",
+                    data: formData,
+                    success: function(response) {
+                        $("#mailMessage").html(response)
+                        fillPopup(3)
+                    },
+                    error: function(xhr, status, error) {
+                        $("#mailMessage").html(response + error)
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="popupWindow">
         <svg id="closePopup" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
             <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/>
         </svg>
-        <p id="mailMessage">Your E-Mail has been sent successfully!</p>
+        <p id="mailMessage"></p>
         <img class="cert" id="pythonCertificate" src="images/certificates/python.png">
         <img class="cert" id="htmlCertificate" src="images/certificates/html.png">
+        <img class="cert" id="primaryTranscript" src="images/bg/scorn.png">
     </div>
     <div class="parallax">
         <div class="content">
@@ -40,7 +65,7 @@
             </header>
             <main>
                 <section id="welcomeSection">
-                    <h1>Welcome</h1>
+                    <h1 id="welcomeHeader">Welcome</h1>
                 </section>
                 <section id="aboutSection">
                     <div class="sectionHeader">
@@ -63,37 +88,37 @@
                     <div id="timeline">
 
                         <div class="timeline-frame" id="primar">
-                            <h5>2010 - 2016</h5>
+                            <h5 class="timeline-heading">2010 - 2016</h5>
                             <p>Primarschule</p>
-                            <a href="https://primarschule-margelaecker.schule-wettingen.ch" class="timeline-top">Margeläcker</a>
+                            <span><a href="https://primarschule-margelaecker.schule-wettingen.ch" class="timeline-top">Margeläcker</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
                         </div>
 
                         <div class="timeline-frame" id="real">
                             <div></div>
-                            <h5 class="timeline-bottom">2016 - 2019</h5>
+                            <h5 class="timeline-heading timeline-bottom">2016 - 2019</h5>
                             <p>Realschule</p>
-                            <a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a>
+                            <span><a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
                         </div>
 
                         <div class="timeline-frame" id="ifauto">
                             <div></div>
-                            <h5>2019 - 2022</h5>
+                            <h5 class="timeline-heading">2019 - 2022</h5>
                             <p>Automobilfachmann</p>
-                            <a href="https://if-automobile.ch" class="timeline-top">IF Automobile AG</a>
+                            <span><a href="https://if-automobile.ch" class="timeline-top">IF Automobile AG</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
                         </div>
 
                         <div class="timeline-frame" id="lern">
                             <div></div>
-                            <h5 class="timeline-bottom">2022 - 2023</h5>
+                            <h5 class="timeline-heading timeline-bottom">2022 - 2023</h5>
                             <p>Fahrradmechaniker</p>
-                            <a href="https://www.lernwerk.ch">Verein Lernwerk</a>
+                            <span><a href="https://www.lernwerk.ch">Verein Lernwerk</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
                         </div>
 
                         <div class="timeline-frame" id="espas">
                             <div></div>
-                            <h5>2023 - now</h5>
+                            <h5 class="timeline-heading">2023 - now</h5>
                             <p>Informatiker</p>
-                            <a href="https://www.espas.ch" class="timeline-top">ESPAS Zürich</a>
+                            <span><a href="https://www.espas.ch" class="timeline-top">ESPAS Zürich</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
                         </div>
 
                         <div class="middle-border"></div>
@@ -107,9 +132,7 @@
                     </div>
                 </section>
                 <section class="placeholderSection">
-                    <div>
-                        <h1 class="placeholder">Placeholder</h1>
-                    </div>
+                    <h2 class="placeholder">Placeholder</h2>
                 </section>
                 <section id="skillsSection">
                     <p class="sectionText">
@@ -191,9 +214,7 @@
 
                 </section>
                 <section class="placeholderSection">
-                    <div>
-                        <h1 class="placeholder">Placeholder</h1>
-                    </div>
+                    <h2 class="placeholder">Placeholder</h2>
                 </section>
                 <section id="contactSection">
                     <h2 class="sectionHeader">Contact</h2>
@@ -221,12 +242,9 @@
                             <img src="images/contact/linkedin-white.svg" alt="LinkedIn Link">
                         </a>
                     </div>
-                    <form action="mail.php" method="post">
-                        <label>Name</label>
-                        <input type="text" id="name" name="name" required>
-                    
+                    <form id="mailForm" action="mail.php" method="post">
                         <label>E-Mail</label>
-                        <input type="email" id="email" name="email" required>
+                        <input id="email" name="email" type="email" required>
 
                         <label>Subject</label>
                         <input id="subject" name="subject" required>
@@ -234,13 +252,11 @@
                         <label>Message</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
                     
-                        <button onclick="fillPopup(3)" type="submit">Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
                 </section>
                 <section class="placeholderSection">
-                    <div>
-                        <h1 class="placeholder">Placeholder</h1>
-                    </div>
+                    <h2 class="placeholder">Placeholder</h2>
                 </section>
             </main>
             <footer>
