@@ -1,1 +1,1 @@
-<a href="https://hug.bm-it.ch" style="font-family: UnifrakturMaguntia; font-size: 50px; color: white; ">My Website</a>
+# [My Website](https://hug.bm-it.ch)
