@@ -19,7 +19,7 @@
     --section-padding: 6rem 16rem;
     --default-transition: all 200ms ease-in-out !important;
     --footer-padding: 12rem 12rem;
-    --language-padding: 0.8rem 1.4rem;
+    --language-padding: 0.6rem 1.2rem;
 }
 
 * {
@@ -422,7 +422,7 @@ h5 {
 }
 
 .language {
-    width: 100% !important;
+    width: 95% !important;
     grid-column: 1;
     width: 6rem;
     justify-self: center;
@@ -897,19 +897,23 @@ select:-webkit-autofill {
 @media screen and (max-width: 600px) {
     html {
         font-size: 11px;
+    }
+    
+    header {
+        padding: 5rem 5rem;
     }/*
     :root {
         --nav-font-size: 16px;
         --p-font-size: 10px;
     }*/
 }
-/*
+
 @media screen and (max-width: 480px) {
-    html {
-        font-size: 5px;
+    header {
+        padding: 5rem 3rem;
     }
 }
-*/
+
 @media screen and (max-width: 360px) {
     html {
         font-size: 10px;
