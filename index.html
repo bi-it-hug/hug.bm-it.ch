@@ -6,6 +6,7 @@
     <title>hug.bm-it.ch | welcome</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/header/shrooms-fat.svg" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/scroll.js" defer></script>
     <script src="js/background.js" defer></script>
     <script src="js/observer.js" defer></script>
@@ -17,39 +18,39 @@
     <script src="js/responsive.js" defer></script>
     <script src="js/popup.js" defer></script>
     <script src="js/lol.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#mailForm").submit(function(event) {
-
-                event.preventDefault()
-                var formData = $(this).serialize()
-
-                $.ajax({
-                    url: "mail.php",
-                    type: "POST",
-                    data: formData,
-                    success: function(response) {
-                        $("#mailMessage").html(response)
-                        fillPopup(3)
-                    },
-                    error: function(xhr, status, error) {
-                        $("#mailMessage").html(response + error)
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/mail.js" defer></script>
 </head>
 <body>
     <div id="popupWindow">
+
         <svg id="closePopup" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-            <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/>
+            <path id="closePopupPath" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/>
         </svg>
+
         <p id="mailMessage"></p>
+
         <img class="cert" id="pythonCertificate" src="images/certificates/python.png">
+
         <img class="cert" id="htmlCertificate" src="images/certificates/html.png">
+
         <img class="cert" id="primaryTranscript" src="images/bg/scorn.png">
+
+        <div class="cert" id="realTranscript">
+            <img class="cert-1" src="images/about/trans-real/0001.jpg">
+            <img class="cert-2" src="images/about/trans-real/0002.jpg">
+        </div>
+
+        <div class="cert" id="ifautoTranscript">
+            <img class="cert-1" src="images/about/trans-ifauto/trans-bbb.jpg">
+            <img class="cert-2" src="images/about/trans-ifauto/trans-ifauto.jpg">
+        </div>
+
+        <div class="cert" id="espasTranscript">
+            <img class="cert-1" src="images/about/trans-espas/BSFG - Zeugnis S1-1.jpg">
+            <img class="cert-2" src="images/about/trans-espas/BSFG - Zeugnis S1-2.jpg">
+            <img class="cert-3" src="images/about/trans-espas/BSFG - Zeugnis S1-3.jpg">
+        </div>
+
     </div>
     <div class="parallax">
         <div class="content">
@@ -65,7 +66,7 @@
             </header>
             <main>
                 <section id="welcomeSection">
-                    <h1 id="welcomeHeader">Welcome</h1>
+                    <h1 id="welcomeHeader"></h1>
                 </section>
                 <section id="aboutSection">
                     <div class="sectionHeader">
@@ -90,35 +91,35 @@
                         <div class="timeline-frame" id="primar">
                             <h5 class="timeline-heading">2010 - 2016</h5>
                             <p>Primarschule</p>
-                            <span><a href="https://primarschule-margelaecker.schule-wettingen.ch" class="timeline-top">Margeläcker</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
+                            <span><a href="https://primarschule-margelaecker.schule-wettingen.ch" class="timeline-top">Margeläcker</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(3)"></span>
                         </div>
 
                         <div class="timeline-frame" id="real">
                             <div></div>
                             <h5 class="timeline-heading timeline-bottom">2016 - 2019</h5>
                             <p>Realschule</p>
-                            <span><a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
+                            <span><a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a><img src="images/about/cert.svg" id="realTrans" onclick="fillPopup(4)"></span>
                         </div>
 
                         <div class="timeline-frame" id="ifauto">
                             <div></div>
                             <h5 class="timeline-heading">2019 - 2022</h5>
                             <p>Automobilfachmann</p>
-                            <span><a href="https://if-automobile.ch" class="timeline-top">IF Automobile AG</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
+                            <span><a href="https://if-automobile.ch" class="timeline-top">IF Automobile AG</a><img src="images/about/cert.svg" id="ifautoTrans" onclick="fillPopup(5)"></span>
                         </div>
 
                         <div class="timeline-frame" id="lern">
                             <div></div>
                             <h5 class="timeline-heading timeline-bottom">2022 - 2023</h5>
                             <p>Fahrradmechaniker</p>
-                            <span><a href="https://www.lernwerk.ch">Verein Lernwerk</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
+                            <span><a href="https://www.lernwerk.ch">Verein Lernwerk</a><img src="images/about/cert.svg" id="lernTrans" onclick="fillPopup(3)"></span>
                         </div>
 
                         <div class="timeline-frame" id="espas">
                             <div></div>
                             <h5 class="timeline-heading">2023 - now</h5>
                             <p>Informatiker</p>
-                            <span><a href="https://www.espas.ch" class="timeline-top">ESPAS Zürich</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(4)"></span>
+                            <span><a href="https://www.espas.ch" class="timeline-top">ESPAS Zürich</a><img src="images/about/cert.svg" id="espasTrans" onclick="fillPopup(6)"></span>
                         </div>
 
                         <div class="middle-border"></div>
@@ -128,7 +129,6 @@
                         <div class="vert-border"></div>
                         <div class="vert-border"></div>
                         <div class="vert-border"></div>
-
                     </div>
                 </section>
                 <section class="placeholderSection">
@@ -172,10 +172,10 @@
                             <p>75% - 100%</p>
                         </div>
 
-                        <img class="language" id="pythonIcon" onclick="fillPopup(1)" src="images/skills/python-icon.svg" alt="Python Icon">
+                        <img class="language" id="pythonIcon" src="images/skills/python-icon.svg" alt="Python Icon" onclick="fillPopup(1)">
                         <img class="language" id="javaIcon" src="images/skills/java-icon.svg" alt="Java Icon">
                         <img class="language" id="phpIcon" src="images/skills/new-php-logo.svg" alt="PHP Icon">
-                        <img class="language" id="htmlIcon" onclick="fillPopup(2)" src="images/skills/html-icon.svg" alt="HTML Icon">
+                        <img class="language" id="htmlIcon" src="images/skills/html-icon.svg" alt="HTML Icon" >
                         <img class="language" id="cssIcon" src="images/skills/css-icon.svg" alt="CSS Icon">
                         <img class="language" id="javaScriptIcon" src="images/skills/javaScript-icon.svg" alt="JavaScript Icon">
 
@@ -187,27 +187,27 @@
                         <div class="parting-line-vert"></div>
 
                         <div class="progression-bar" id="pythonBar">
-                            <p>38%</p>
+                            <p>30%</p>
                         </div>
 
                         <div class="progression-bar" id="javaBar">
-                            <p>22%</p>
+                            <p>17%</p>
                         </div>
 
                         <div class="progression-bar" id="phpBar">
-                            <p>18%</p>
+                            <p>13%</p>
                         </div>
 
                         <div class="progression-bar" id="htmlBar">
-                            <p>44%</p>
+                            <p>34%</p>
                         </div>
 
                         <div class="progression-bar" id="cssBar">
-                            <p>56%</p>
+                            <p>52%</p>
                         </div>
 
                         <div class="progression-bar" id="javaScriptBar">
-                            <p>36%</p>
+                            <p>31%</p>
                         </div>
 
                     </div>

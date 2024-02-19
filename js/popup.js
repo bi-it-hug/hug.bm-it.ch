@@ -1,4 +1,4 @@
-var body = document.body
+const htmlBody = document.body
 
 const headerContent = document.querySelector("header")
 const mainContent = document.querySelector("main")
@@ -6,16 +6,21 @@ const footerContent = document.querySelector("footer")
 
 const popupWindow = document.getElementById("popupWindow")
 const closePopup = document.getElementById("closePopup")
+const circle = document.querySelector("circle")
 
 const mailMsg = document.getElementById("mailMessage")
 const htmlCer = document.getElementById("htmlCertificate")
 const pyCer = document.getElementById("pythonCertificate")
+
 const primTrans = document.getElementById("primaryTranscript")
+const realTrans = document.getElementById("realTranscript")
+const ifautoTrans = document.getElementById("ifautoTranscript")
+const espasTrans = document.getElementById("espasTranscript")
 
 const inputs = document.querySelectorAll("input")
 const textareas = document.querySelectorAll("textarea")
 
-const targets = [pyCer, htmlCer, mailMsg, primTrans]
+const targets = [pyCer, htmlCer, mailMsg, primTrans, realTrans, ifautoTrans, espasTrans]
 
 function fillPopup(elementID) {
     popupWindow.style.display = "flex"
@@ -25,15 +30,22 @@ function fillPopup(elementID) {
     backgroundGif.style.filter = "blur(10px) opacity(0.3)"
 
     targets.forEach((target, index) => {
+        if (index == elementID) {
+            target.style.display = "grid"
+            
+            if (target.id == realTrans.id || target.id == ifautoTrans.id || target.id == espasTrans.id) {
+                popupWindow.style.position = "absolute"
+                popupWindow.style.top = "2100px"
+                htmlBody.style.overflowY = "scroll"
 
-        if (index === elementID - 1) {
-            target.style.display = "flex"
+            } else {
+                htmlBody.style.overflowY = "hidden"
+            }
 
         } else {
             target.style.display = "none"
         }
     })
-    body.style.overflowY = "hidden"
 }
 
 function clearInput() {
@@ -52,12 +64,14 @@ closePopup.addEventListener("click", () => {
     })
 
     popupWindow.style.display = "none"
+    popupWindow.style.position = "fixed"
+    popupWindow.style.top = 0
     headerContent.style.filter = "none"
     mainContent.style.filter = "none"
     footerContent.style.filter = "none"
     backgroundGif.style.filter = "opacity(0.3)"
 
-   body.style.overflowY = "scroll"
+    htmlBody.style.overflowY = "scroll"
 
     clearInput()
 })

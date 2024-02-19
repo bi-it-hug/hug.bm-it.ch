@@ -1,5 +1,6 @@
 /*
 var placeholders = document.getElementsByClassName("placeholderSection")
+var tests = document.querySelectorAll(".test")
 
 for (var y = 0; y < placeholders.length; y++) {
     var placeholder = placeholders[y]
@@ -10,8 +11,6 @@ for (var y = 0; y < placeholders.length; y++) {
         placeholder.appendChild(test)
     }
 }
-
-var tests = document.querySelectorAll(".test")
 
 tests.forEach((element, index) => {
     setInterval(() => {

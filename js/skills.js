@@ -13,7 +13,7 @@ window.addEventListener("scroll", () => {
     if (skillsOpacity >= 1) {
         var delay = 0
 
-        progressionBar.forEach((element) => {
+        progressionBar.forEach(element => {
             var currentLanguageValue = parseInt(element.children[0].innerHTML)
 
             setTimeout(() => {
@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
     } else {
         var delay = 0
 
-        progressionBar.forEach((element) => {
+        progressionBar.forEach(element => {
 
             setTimeout(() => {
                 element.style.width = 0
@@ -41,12 +41,12 @@ window.addEventListener("scroll", () => {
 })
 
 
-codingLevel.forEach((element) => {
+codingLevel.forEach(element => {
     element.style.gridColumn = codingLevelPos
     codingLevelPos += 2
 })
 
-partingLineVert.forEach((element) => {
+partingLineVert.forEach(element => {
     element.style.gridColumn = partingLineVertPos
     partingLineVertPos += 2
 })

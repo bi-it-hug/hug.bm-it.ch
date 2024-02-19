@@ -1,5 +1,6 @@
 var welcomeHeader = document.getElementById("welcomeHeader")
+welcomeHeader.innerHTML = "Welcome"
 
 setTimeout(() => {
-    welcomeHeader.innerHTML = "Name"
+    welcomeHeader.innerHTML = "I am Lorenzo"
 }, 4000)

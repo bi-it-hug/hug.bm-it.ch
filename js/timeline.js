@@ -3,7 +3,7 @@ var gridRowPos = 1
 var gridColumnPos = 2
 var counter = 1
 
-vertBorder.forEach((currentElement) => {
+vertBorder.forEach(currentElement => {
 
     //console.log(`Element ${counter}:\nRow: ${gridRowPos}\nColumn: ${gridColumnPos}\n\n`)
 

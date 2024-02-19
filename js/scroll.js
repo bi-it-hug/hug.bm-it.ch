@@ -12,7 +12,6 @@ var aboutSection = document.getElementById("aboutSection")
 var skillsSection = document.getElementById("skillsSection")
 var contactSection = document.getElementById("contactSection")
 
-// Function to update the title based on the currently active section
 function updateTitle(section) {
     if (section == welcomeSection) {
         title.innerHTML = "hug.bm-it.ch | welcome"
@@ -28,7 +27,6 @@ function updateTitle(section) {
     }
 }
 
-// Function to check which section is currently in view and update the title
 function checkCurrentSection() {
     var sections = [welcomeSection, aboutSection, skillsSection, contactSection]
     var scrollPos = window.scrollY + headerHeight
@@ -44,10 +42,8 @@ function checkCurrentSection() {
     }
 }
 
-// Listen for scroll events and update the title accordingly
-window.addEventListener("scroll", checkCurrentSection);
+window.addEventListener("scroll", checkCurrentSection)
 
-// Event listeners for button clicks to scroll to corresponding sections
 welcomeButton.addEventListener("click", () => {
     window.scrollTo({
         top: welcomeSection.offsetTop - headerHeight,
@@ -76,5 +72,4 @@ contactButton.addEventListener("click", () => {
     })
 })
 
-// Initial check to set the title when the page loads
 checkCurrentSection()
