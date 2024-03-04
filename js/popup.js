@@ -1,77 +1,72 @@
-const htmlBody = document.body
-
-const headerContent = document.querySelector("header")
-const mainContent = document.querySelector("main")
-const footerContent = document.querySelector("footer")
-
-const popupWindow = document.getElementById("popupWindow")
-const closePopup = document.getElementById("closePopup")
-const circle = document.querySelector("circle")
-
-const mailMsg = document.getElementById("mailMessage")
-const htmlCer = document.getElementById("htmlCertificate")
-const pyCer = document.getElementById("pythonCertificate")
-
-const primTrans = document.getElementById("primaryTranscript")
-const realTrans = document.getElementById("realTranscript")
-const ifautoTrans = document.getElementById("ifautoTranscript")
-const espasTrans = document.getElementById("espasTranscript")
-
-const inputs = document.querySelectorAll("input")
-const textareas = document.querySelectorAll("textarea")
-
-const targets = [pyCer, htmlCer, mailMsg, primTrans, realTrans, ifautoTrans, espasTrans]
+const elements = {
+    body: document.body,
+    headerContent: document.querySelector('header'),
+    mainContent: document.querySelector('main'),
+    footerContent: document.querySelector('footer'),
+    popupWindow: document.getElementById('popupWindow'),
+    closePopup: document.getElementById('closePopup'),
+    mailMsg: document.getElementById('mailMessage'),
+    htmlCer: document.getElementById('htmlCertificate'),
+    pyCer: document.getElementById('pythonCertificate'),
+    primTrans: document.getElementById('primaryTranscript'),
+    realTrans: document.getElementById('realTranscript'),
+    ifautoTrans: document.getElementById('ifautoTranscript'),
+    espasTrans: document.getElementById('espasTranscript'),
+    impressum: document.getElementById('impressum'),
+    inputs: document.querySelectorAll('input'),
+    textareas: document.querySelectorAll('textarea'),
+    backgroundGif: document.getElementById('backgroundGif'),
+    overlay: document.getElementById('overlay'),
+    lernTrans: document.getElementById('lernTranscript')
+}
 
 function fillPopup(elementID) {
-    popupWindow.style.display = "flex"
-    headerContent.style.filter = "blur(10px)"
-    mainContent.style.filter = "blur(10px)"
-    footerContent.style.filter = "blur(10px)"
-    backgroundGif.style.filter = "blur(10px) opacity(0.3)"
+
+    const { popupWindow, body, mailMsg, htmlCer, pyCer, primTrans, realTrans, ifautoTrans, lernTrans, espasTrans, impressum } = elements
+    
+    overlay.classList.add('toggle-overlay')
+    setTimeout(() => {
+        overlay.style.opacity = 0.5
+    })
+    
+    popupWindow.style.display = 'flex'
+    const targets = [primTrans, realTrans, ifautoTrans, lernTrans, espasTrans, pyCer, htmlCer, mailMsg, impressum]
 
     targets.forEach((target, index) => {
-        if (index == elementID) {
-            target.style.display = "grid"
-            
-            if (target.id == realTrans.id || target.id == ifautoTrans.id || target.id == espasTrans.id) {
-                popupWindow.style.position = "absolute"
-                popupWindow.style.top = "2100px"
-                htmlBody.style.overflowY = "scroll"
+        if (index === elementID) {
+
+            //console.info(`Index called from HTML: ${elementID}\nCurrent Iteration`)
+
+            target.style.display = 'flex'
+            target.style.alignSelf = 'center'
+            target.style.justifySelf = 'center'
+
+            if ([realTrans, ifautoTrans, espasTrans].includes(target)) {
+                popupWindow.style.width = '60%'
+                popupWindow.style.height = '80%'
 
             } else {
-                htmlBody.style.overflowY = "hidden"
+                popupWindow.style.width = 'fit-content'
+                popupWindow.style.height = 'fit-content'
             }
-
         } else {
-            target.style.display = "none"
+            target.style.display = 'none'
         }
     })
 }
 
 function clearInput() {
-    inputs.forEach(input => {
-        input.value = ""
-    })
-
-    textareas.forEach(textarea => {
-        textarea.value = ""
-    })
+    const { inputs, textareas } = elements;
+    [...inputs, ...textareas].forEach(el => el.value = '');
 }
 
-closePopup.addEventListener("click", () => {
-    targets.forEach(target => {
-        target.style.display = "none"
-    })
+elements.closePopup.addEventListener('click', () => {
+    const { popupWindow, body } = elements
 
-    popupWindow.style.display = "none"
-    popupWindow.style.position = "fixed"
-    popupWindow.style.top = 0
-    headerContent.style.filter = "none"
-    mainContent.style.filter = "none"
-    footerContent.style.filter = "none"
-    backgroundGif.style.filter = "opacity(0.3)"
+    overlay.style.opacity = 0
+    setTimeout(() => {
+        overlay.classList.remove('toggle-overlay')
+    }, 400)
 
-    htmlBody.style.overflowY = "scroll"
-
-    clearInput()
+    popupWindow.setAttribute('style', 'display: none position: fixed top: 0')
 })

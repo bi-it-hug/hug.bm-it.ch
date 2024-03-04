@@ -1,20 +1,36 @@
-var codingLevel = document.querySelectorAll(".coding-level")
-var language = document.querySelectorAll(".language")
-var partingLineVert = document.querySelectorAll(".parting-line-vert")
-var progressionBar = document.querySelectorAll(".progression-bar")
+const codingLevel = document.querySelectorAll(".coding-level")
+const language = document.querySelectorAll(".language")
+const progressionBar = document.querySelectorAll(".progression-bar")
+const skills = language[0].parentNode
+let columnPos = 2
 
-var codingLevelPos = 3
-var languagePos = 3
-var partingLineVertPos = 1
+codingLevel.forEach((element, index) => {
+
+    if (index <= language.length) {
+
+        //console.log("-------------------------------------------")
+
+        let skillsVertBorder = document.createElement("div")
+        skillsVertBorder.style.gridColumn = columnPos
+        skillsVertBorder.classList.add("skills-vert-border")
+        skills.appendChild(skillsVertBorder)
+    }
+    //console.log(element)
+    columnPos += 2
+})
+
+let codingLevelPos = 3
+let languagePos = 3
+let partingLineVertPos = 1
 
 window.addEventListener("scroll", () => {
     skillsOpacity = window.getComputedStyle(skills).opacity
 
     if (skillsOpacity >= 1) {
-        var delay = 0
+        let delay = 0
 
         progressionBar.forEach(element => {
-            var currentLanguageValue = parseInt(element.children[0].innerHTML)
+            let currentLanguageValue = parseInt(element.children[0].innerHTML)
 
             setTimeout(() => {
                 element.style.width = `${currentLanguageValue}%`
@@ -25,7 +41,7 @@ window.addEventListener("scroll", () => {
         })
 
     } else {
-        var delay = 0
+        let delay = 0
 
         progressionBar.forEach(element => {
 
@@ -36,7 +52,6 @@ window.addEventListener("scroll", () => {
             
             delay += 200
         })
-
     }
 })
 
@@ -46,13 +61,15 @@ codingLevel.forEach(element => {
     codingLevelPos += 2
 })
 
+/*
 partingLineVert.forEach(element => {
     element.style.gridColumn = partingLineVertPos
     partingLineVertPos += 2
 })
+*/
 
 language.forEach((languageElement, index) => {
-    var progressionBarElement = progressionBar[index]
+    let progressionBarElement = progressionBar[index]
     languageElement.style.gridRow = languagePos
     progressionBarElement.style.gridRow = languagePos
     languagePos++

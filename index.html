@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html language="en-de">
+<html language="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +7,109 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/header/shrooms-fat.svg" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/scroll.js" defer></script>
+    <script src="js/navigation.js" defer></script>
     <script src="js/background.js" defer></script>
     <script src="js/observer.js" defer></script>
     <script src="js/date.js" defer></script>
-    <script src="js/animations.js" defer></script>
     <script src="js/skills.js" defer></script>
     <script src="js/dynamicHeader.js" defer></script>
-    <script src="js/timeline.js" defer ></script>
-    <script src="js/responsive.js" defer></script>
+    <script src="js/timeline.js" defer></script>
     <script src="js/popup.js" defer></script>
     <script src="js/lol.js" defer></script>
     <script src="js/mail.js" defer></script>
 </head>
 <body>
+    <div id="overlay"></div>
     <div id="popupWindow">
 
-        <svg id="closePopup" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-            <path id="closePopupPath" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/>
-        </svg>
+        <!-- 0 -->
+        <p class="cert" id="primaryTranscript">Coming soon!</p>
 
-        <p id="mailMessage"></p>
-
-        <img class="cert" id="pythonCertificate" src="images/certificates/python.png">
-
-        <img class="cert" id="htmlCertificate" src="images/certificates/html.png">
-
-        <img class="cert" id="primaryTranscript" src="images/bg/scorn.png">
-
+        <!-- 1 -->
         <div class="cert" id="realTranscript">
             <img class="cert-1" src="images/about/trans-real/0001.jpg">
             <img class="cert-2" src="images/about/trans-real/0002.jpg">
         </div>
 
+        <!-- 2 -->
         <div class="cert" id="ifautoTranscript">
             <img class="cert-1" src="images/about/trans-ifauto/trans-bbb.jpg">
             <img class="cert-2" src="images/about/trans-ifauto/trans-ifauto.jpg">
         </div>
 
+        <!-- 3 -->
+        <p class="cert" id="lernTranscript">Coming soon!</p>
+
+        <!-- 4 -->
         <div class="cert" id="espasTranscript">
             <img class="cert-1" src="images/about/trans-espas/BSFG - Zeugnis S1-1.jpg">
             <img class="cert-2" src="images/about/trans-espas/BSFG - Zeugnis S1-2.jpg">
             <img class="cert-3" src="images/about/trans-espas/BSFG - Zeugnis S1-3.jpg">
         </div>
 
+        <!-- 5 -->
+        <img class="cert" id="pythonCertificate" src="images/certificates/python.png">
+        
+        <!-- 6 -->
+        <img class="cert" id="htmlCertificate" src="images/certificates/html.png">
+
+        <!-- 7 -->
+        <p id="mailMessage"></p>
+        
+        <!-- 8 -->
+        <div class="cert" id="impressum">
+
+            <div class="imp-box">
+                <p id="ownerName">Owner: Lorenzo Noa Hug</p>
+
+                <div id="ownerAdress">
+                    <p>Kreuzkapellenweg 5c</p>
+                    <p>5430 Wettingen</p>
+                </div>
+    
+                <div id="ownerContact">
+                    <p>E-Mail: lorenzo.hug@icloud.com</p>
+                    <p>Phone: +41 76 425 03 11</p>
+                </div>
+            </div>
+            
+            <div class="imp-box legal-shit">
+                <p class="imp-1">
+                    For external links, we assume no liability
+                    despite careful content control.<br>The operators
+                    of the linked pages are solely responsible
+                    for their content.
+                </p>
+
+                <p class="imp-2">Copyright notice:</p>
+                    
+                <p class="imp-3">
+                    All content of this website, especially texts,
+                    images, and graphics,<br>is protected by copyright.
+                    Copying or using the content, even in part,<br>
+                    is not permitted without the written permission
+                    of the copyright holder.
+                </p>
+            </div>
+
+        </div>
+
+        <img id="closePopup" src="images/popup/close.svg">
+
     </div>
     <div class="parallax">
         <div class="content">
             <div id="backgroundGif"></div>
+            <!--<div id="backgroundGifif"></div>-->
             <header id="header">
                 <nav>
-                    <img class="fadeInDown" id="borderButton" src="images/header/shrooms-fat.svg" alt="Icon">
-                    <a class="fadeInDown" id="welcomeButton">welcome</a>
-                    <a class="fadeInDown" id="aboutButton">about</a>
-                    <a class="fadeInDown" id="skillsButton">skills</a>
-                    <a class="fadeInDown" id="contactButton">contact</a>
+                    <img onclick="fillPopup(8)" class="fadeInDown" id="borderButton" src="images/header/shrooms-fat.svg" alt="Icon">
+                    <div class="nav-items">
+                        <a class="fadeInDown" id="welcomeButton">Welcome</a>
+                        <a class="fadeInDown" id="aboutButton">About</a>
+                        <a class="fadeInDown" id="skillsButton">Skills</a>
+                        <a class="fadeInDown" id="contactButton">Contact</a>
+                    </div>
                 </nav>
             </header>
             <main>
@@ -69,10 +117,7 @@
                     <h1 id="welcomeHeader"></h1>
                 </section>
                 <section id="aboutSection">
-                    <div class="sectionHeader">
-                        <h2 class="headShake">About</h2>
-                        <h4>Hi! I'm Lorenzo, currently <span id="age"></span> years old, and I'm an aspiring application developer.</h4>
-                    </div>
+                    <h2 class="sectionHeader">About</h2>
                     <p class="sectionText">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -87,48 +132,59 @@
                         Lorem ipsum dolor sit amet.
                     </p>
                     <div id="timeline">
-
                         <div class="timeline-frame" id="primar">
                             <h5 class="timeline-heading">2010 - 2016</h5>
                             <p>Primarschule</p>
-                            <span><a href="https://primarschule-margelaecker.schule-wettingen.ch" class="timeline-top">Margeläcker</a><img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(3)"></span>
+                            <span>
+                                <a
+                                    href="https://primarschule-margelaecker.schule-wettingen.ch"
+                                    class="timeline-top"
+                                >Margeläcker</a>
+                                <img src="images/about/cert.svg" id="primTrans" onclick="fillPopup(0)">
+                            </span>
                         </div>
 
                         <div class="timeline-frame" id="real">
-                            <div></div>
                             <h5 class="timeline-heading timeline-bottom">2016 - 2019</h5>
                             <p>Realschule</p>
-                            <span><a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a><img src="images/about/cert.svg" id="realTrans" onclick="fillPopup(4)"></span>
+                            <span>
+                                <a href="https://sereal.schule-wettingen.ch">Sereal Wettingen</a>
+                                <img src="images/about/cert.svg" id="realTrans" onclick="fillPopup(1)">
+                            </span>
                         </div>
 
                         <div class="timeline-frame" id="ifauto">
-                            <div></div>
                             <h5 class="timeline-heading">2019 - 2022</h5>
                             <p>Automobilfachmann</p>
-                            <span><a href="https://if-automobile.ch" class="timeline-top">IF Automobile AG</a><img src="images/about/cert.svg" id="ifautoTrans" onclick="fillPopup(5)"></span>
+                            <span>
+                                <a
+                                    href="https://if-automobile.ch"
+                                    class="timeline-top"
+                                >IF Automobile AG</a>
+                                <img src="images/about/cert.svg" id="ifautoTrans" onclick="fillPopup(2)">
+                            </span>
                         </div>
 
                         <div class="timeline-frame" id="lern">
-                            <div></div>
                             <h5 class="timeline-heading timeline-bottom">2022 - 2023</h5>
                             <p>Fahrradmechaniker</p>
-                            <span><a href="https://www.lernwerk.ch">Verein Lernwerk</a><img src="images/about/cert.svg" id="lernTrans" onclick="fillPopup(3)"></span>
+                            <span>
+                                <a href="https://www.lernwerk.ch">Verein Lernwerk</a>
+                                <img src="images/about/cert.svg" id="lernTrans" onclick="fillPopup(3)">
+                            </span>
                         </div>
 
                         <div class="timeline-frame" id="espas">
-                            <div></div>
                             <h5 class="timeline-heading">2023 - now</h5>
                             <p>Informatiker</p>
-                            <span><a href="https://www.espas.ch" class="timeline-top">ESPAS Zürich</a><img src="images/about/cert.svg" id="espasTrans" onclick="fillPopup(6)"></span>
+                            <span>
+                                <a
+                                    href="https://www.espas.ch"
+                                    class="timeline-top"
+                                >ESPAS Zürich</a>
+                                <img src="images/about/cert.svg" id="espasTrans" onclick="fillPopup(4)">
+                            </span>
                         </div>
-
-                        <div class="middle-border"></div>
-
-                        <div class="vert-border"></div>
-                        <div class="vert-border"></div>
-                        <div class="vert-border"></div>
-                        <div class="vert-border"></div>
-                        <div class="vert-border"></div>
                     </div>
                 </section>
                 <section class="placeholderSection">
@@ -172,19 +228,51 @@
                             <p>75% - 100%</p>
                         </div>
 
-                        <img class="language" id="pythonIcon" src="images/skills/python-icon.svg" alt="Python Icon" onclick="fillPopup(1)">
-                        <img class="language" id="javaIcon" src="images/skills/java-icon.svg" alt="Java Icon">
-                        <img class="language" id="phpIcon" src="images/skills/new-php-logo.svg" alt="PHP Icon">
-                        <img class="language" id="htmlIcon" src="images/skills/html-icon.svg" alt="HTML Icon" >
-                        <img class="language" id="cssIcon" src="images/skills/css-icon.svg" alt="CSS Icon">
-                        <img class="language" id="javaScriptIcon" src="images/skills/javaScript-icon.svg" alt="JavaScript Icon">
+                        <img
+                            class="language"
+                            id="pythonIcon"
+                            src="images/skills/python-icon.svg"
+                            alt="Python Icon"
+                            onclick="fillPopup(5)"
+                        >
 
-                        <div class="parting-line-hor"></div>
+                        <img
+                            class="language"
+                            id="javaIcon"
+                            src="images/skills/java-icon.svg"
+                            alt="Java Icon"
+                        >
 
-                        <div class="parting-line-vert"></div>
-                        <div class="parting-line-vert"></div>
-                        <div class="parting-line-vert"></div>
-                        <div class="parting-line-vert"></div>
+                        <img
+                            class="language"
+                            id="phpIcon"
+                            src="images/skills/new-php-logo.svg"
+                            alt="PHP Icon"
+                        >
+
+                        <img
+                            class="language"
+                            id="htmlIcon"
+                            src="images/skills/html-icon.svg"
+                            alt="HTML Icon" 
+                            onclick="fillPopup(6)"
+                        >
+
+                        <img
+                            class="language"
+                            id="cssIcon"
+                            src="images/skills/css-icon.svg"
+                            alt="CSS Icon"
+                        >
+
+                        <img
+                            class="language"
+                            id="javaScriptIcon"
+                            src="images/skills/javaScript-icon.svg"
+                            alt="JavaScript Icon"
+                        >
+
+                        <div class="skills-hor-border"></div>
 
                         <div class="progression-bar" id="pythonBar">
                             <p>30%</p>
@@ -203,7 +291,7 @@
                         </div>
 
                         <div class="progression-bar" id="cssBar">
-                            <p>52%</p>
+                            <p>42%</p>
                         </div>
 
                         <div class="progression-bar" id="javaScriptBar">
@@ -260,10 +348,12 @@
                 </section>
             </main>
             <footer>
-                <p id="deco1">プレースホルダー \\</p>
-                <p id="copyright">// &copy; 2024 Lorenzo Hug &nbsp; | &nbsp; Impressum</p>
-                <p id="version">// v3.2</p>
-                <p id="deco2">大きなシュグラー \\</p>
+                <p>// &copy; 2024 Lorenzo Hug \\</p>
+                <p>\\ Placeholder //<!--プレースホルダー--></p>
+                <p>// Placeholder \\<!--プレースホルダー--></p>
+                <p>\\ Placeholder //<!--プレースホルダー--></p>
+                <p>// Placeholder \\<!--プレースホルダー--></p>
+                <p>// v3.2 \\</p>
             </footer>
         </div>
     </div>

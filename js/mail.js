@@ -10,7 +10,7 @@ $(document).ready(function() {
             data: formData,
             success: function(response) {
                 $("#mailMessage").html(response)
-                fillPopup(3)
+                fillPopup(7)
             },
             error: function(xhr, status, error) {
                 $("#mailMessage").html(response + error)
