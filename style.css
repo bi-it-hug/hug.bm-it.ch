@@ -9,7 +9,8 @@
     align-items: center;
     box-sizing: border-box;
     overflow: hidden;
-    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
     color: white;
     font-size: 8vw;
     margin: 0;
