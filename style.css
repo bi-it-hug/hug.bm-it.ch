@@ -3,6 +3,11 @@
     src: url(Poppins.ttf);
 }
 
+:root {
+    --background: rgb(15, 15, 15);
+    --text: rgb(20, 20, 20);
+}
+
 *:not(head) {
     display: flex;
     justify-content: center;
@@ -11,9 +16,8 @@
     overflow: hidden;
     user-select: none;
     pointer-events: none;
-    color: white;
-    font-size: 8vw;
     margin: 0;
+    color: var(--text);
 }
 
 body {
@@ -22,43 +26,25 @@ body {
     height: 100vh;
 }
 
-main,
-div {
+main {
     flex-direction: column;
-    position: relative;
 }
 
-ion-icon {
-    animation: spin 20s linear infinite;
-    position: absolute;
-}
-
-.first {
-    animation-direction: normal;
-    left: 8.6%;
-}
-
-.second {
-    animation-direction: reverse;
-    right: 7.6%;
-}
-
-h1 {
+h1,
+h2 {
     font-family: Poppins;
     font-weight: normal;
     text-transform: uppercase;
     line-height: 1;
+    padding: 3px 10px;
 }
 
-.top {
+h1 {
     font-size: 20vw;
+    text-shadow: 6px 6px 16px black;
 }
 
-p {
-    visibility: hidden;
-}
-
-@keyframes spin {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+h2 {
+    font-size: 8vw;
+    text-shadow: 4px 4px 8px black;
 }
