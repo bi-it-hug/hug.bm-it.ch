@@ -1,105 +1,72 @@
-:root {
-    /* S/L Values */
-    --saturation: 40%;
-    --lightness: 65%;
-
-    /* Shades */
-    --bg-000: hsl(0, 0%, 000%);
-    --bg-005: hsl(0, 0%, 005%);
-    --bg-010: hsl(0, 0%, 010%);
-    --bg-015: hsl(0, 0%, 015%);
-    --bg-020: hsl(0, 0%, 020%);
-    --bg-025: hsl(0, 0%, 025%);
-    --bg-030: hsl(0, 0%, 030%);
-    --bg-035: hsl(0, 0%, 035%);
-    --bg-040: hsl(0, 0%, 040%);
-    --bg-045: hsl(0, 0%, 045%);
-    --bg-050: hsl(0, 0%, 050%);
-    --bg-055: hsl(0, 0%, 055%);
-    --bg-060: hsl(0, 0%, 060%);
-    --bg-065: hsl(0, 0%, 065%);
-    --bg-070: hsl(0, 0%, 070%);
-    --bg-075: hsl(0, 0%, 075%);
-    --bg-080: hsl(0, 0%, 080%);
-    --bg-085: hsl(0, 0%, 085%);
-    --bg-090: hsl(0, 0%, 090%);
-    --bg-095: hsl(0, 0%, 095%);
-    --bg-100: hsl(0, 0%, 100%);
-
-    /* Colors */
-    --red: hsl(0, var(--saturation), var(--lightness));
-    --orange: hsl(30, var(--saturation), var(--lightness));
-    --yellow: hsl(60, var(--saturation), var(--lightness));
-    --lime: hsl(90, var(--saturation), var(--lightness));
-    --green: hsl(120, var(--saturation), var(--lightness));
-    --aqua: hsl(160, var(--saturation), var(--lightness));
-    --sky: hsl(190, var(--saturation), var(--lightness));
-    --blue: hsl(220, var(--saturation), var(--lightness));
-    --purple: hsl(250, var(--saturation), var(--lightness));
-    --violet: hsl(280, var(--saturation), var(--lightness));
-    --magenta: hsl(320, var(--saturation), var(--lightness));
-
-    --main-color: var(--green);
-
-    /* Beziers */
-    --exponential: cubic-bezier(0.19, 1, 0.22, 1);
-
-    /* Fonts */
-    --paragraph: "Gilroy";
-    --heading: "Playfair Display";
-
-    /* Other */
-    --radius: var(--spacing);
-}
-
 *,
 *::before,
 *::after {
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.25);
-    vertical-align: baseline;
-    line-height: 1;
+    font-size: 1rem;
 
     box-sizing: border-box;
+    min-width: max-content;
 
-    transition-timing-function: var(--exponential);
+    transition-timing-function: var(--exp);
     transition-property: all;
-    transition-duration: 0.2s;
+    transition-duration: 0.4s;
 
     scroll-behavior: smooth;
     margin: 0;
 }
 
-*:not(head, h1, h2) {
+*:not(head, script, h1) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: var(--main-color);
-    gap: 1rem;
+}
+
+:root .dark-mode {
+    background: var(--bg-004);
+
+    --ac-hue: var(--red-hue);
+    --ac-sat: var(--sat);
+    --ac-lig: var(--lig);
+
+    --ac-100: hsla(var(--ac-hue), var(--ac-sat), var(--ac-lig), 1);
+    --ac-080: hsla(var(--ac-hue), var(--ac-sat), var(--ac-lig), 0.8);
+    --ac-060: hsla(var(--ac-hue), var(--ac-sat), var(--ac-lig), 0.6);
+    --ac-040: hsla(var(--ac-hue), var(--ac-sat), var(--ac-lig), 0.4);
+    --ac-020: hsla(var(--ac-hue), var(--ac-sat), var(--ac-lig), 0.2);
+    --ac-010: hsla(var(--ac-hue), var(--ac-sat), var(--ac-lig), 0.1);
 }
 
 h1 {
     font-family: var(--heading);
-    font-size: 20vw;
-    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--bg-020);
 }
 
-h2 {
-    font-family: var(--heading);
-    font-size: 8.8vw;
-    font-weight: 900;
+ion-icon {
+    font-size: 2rem;
+    color: var(--bg-020);
 }
 
-.inset-text-shadow {
-    background-color: rgba(0, 0, 0, 0.3);
-    background-clip: text;
-    color: transparent;
-    text-shadow: 5px 10px 1rem var(--main-color);
+.maintenance {
+    flex-direction: row;
+    gap: 0.6rem;
+    background: var(--ac-020);
+    padding: 1.6rem 2rem;
+    border: 2px solid var(--ac-060);
+    border-radius: var(--radius);
+}
+
+.maintenance-icon {
+    color: var(--ac-100);
+}
+
+.maintenance-text {
+    line-height: 1;
     text-transform: uppercase;
+    color: var(--ac-100);
 }
