@@ -1,43 +1,32 @@
 @import "tailwindcss";
 
 @font-face {
-	font-family: "Plus Jakarta Sans";
-	src: url(./assets/fonts/PlusJakartaSans.ttf);
+    font-family: "Geist";
+    src: url("./assets/fonts/Geist/Geist-VariableFont_wght.ttf");
 }
 
 @font-face {
-	font-family: "Inter";
-	src: url(./assets/fonts/Inter.ttf);
-}
-
-@font-face {
-	font-family: "JetBrains Mono";
-	src: url(./assets/fonts/JetBrainsMono.ttf);
+    font-family: "Geist Mono";
+    src: url("./assets/fonts/Geist_Mono/GeistMono-VariableFont_wght.ttf");
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--text-root: 16px;
-	--text-label: 0.75rem;
+    --text-root: 16px;
+    --font-sans: "Geist";
+    --font-mono: "Geist Mono" !important;
+    --width-border: 2px;
 
-	--font-sans: "Plus Jakarta Sans";
-	--font-serif: "Inter";
-	--font-mono: "JetBrains Mono";
-
-	--mask-overflow-top: linear-gradient(to bottom, black 15%, transparent 100%);
-	--mask-overflow-bottom: linear-gradient(to top, black 15%, transparent 100%);
-
-	--width-border: 1px;
-
-	--bezier-default: cubic-bezier(0.23, 1, 0.32, 1);
-	--duration-default: 0.4s;
+    --primary: var(--color-blue-400);
+    --primary-darken: color-mix(in oklab, var(--primary) 20%, var(--color-neutral-700));
+    --primary-accent: color-mix(in oklab, var(--primary) 50%, black);
 }
 
 @layer base {
-	* {
-		font-family: var(--font-sans);
-		transition: all var(--duration-default) var(--bezier-default);
-		min-width: max-content;
-	}
+    * {
+        font-family: var(--font-sans);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        line-height: var(--leading-normal);
+    }
 }
