@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export function InlineLink({
     href,
@@ -15,7 +16,10 @@ export function InlineLink({
             <Button
                 variant="link"
                 size="sm"
-                className={`h-fit px-0 text-sm transition-[colors,opacity,shadow,transform] ${className}`}
+                className={cn(
+                    "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]",
+                    className
+                )}
                 asChild
             >
                 <a href={href}>{children}</a>
