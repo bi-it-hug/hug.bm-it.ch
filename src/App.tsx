@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button"
+import { PrivacyPolicy } from "@/components/privacy-policy"
 import { ThemeSelector } from "@/components/theme-selector"
-import { PrivacyPolicyDialog } from "@/components/privacy-policy-dialog"
+import { InlineLink } from "./components/inline-link"
 
-export default function App() {
+export function App() {
     return (
         <>
             <header className="flex p-4">
@@ -15,21 +15,19 @@ export default function App() {
                     </h1>
                     <p className="mt-2 w-full text-sm leading-normal text-muted-foreground sm:mt-3 sm:text-base sm:leading-6">
                         This site's getting worked on. Meanwhile, you can check
-                        out my stuff on{" "}
-                        <Button
-                            variant="link"
-                            size="sm"
-                            className="h-fit px-0 text-sm sm:text-base"
-                            asChild
+                        out my stuff on
+                        <InlineLink
+                            href="https://github.com/bi-it-hug"
+                            className="sm:text-base"
                         >
-                            <a href="https://github.com/bi-it-hug">GitHub</a>
-                        </Button>
+                            GitHub
+                        </InlineLink>
                         .
                     </p>
                 </div>
             </main>
             <footer className="flex items-center justify-center p-4">
-                <PrivacyPolicyDialog />
+                <PrivacyPolicy />
             </footer>
         </>
     )

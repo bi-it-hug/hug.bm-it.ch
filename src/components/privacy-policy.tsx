@@ -1,15 +1,16 @@
+import { InlineLink } from "@/components/inline-link"
 import { Button } from "@/components/ui/button"
 import {
     Dialog,
-    DialogTrigger,
     DialogContent,
-    DialogHeader,
-    DialogTitle,
     DialogDescription,
     DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
 } from "@/components/ui/dialog"
 
-export function PrivacyPolicyDialog() {
+export function PrivacyPolicy() {
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -17,28 +18,25 @@ export function PrivacyPolicyDialog() {
                     Privacy Policy
                 </Button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className="sm:max-w-md">
                 <DialogHeader className="text-left">
                     <DialogTitle>Privacy Policy</DialogTitle>
                     <DialogDescription className="text-muted-foreground">
-                        {" "}
                         This policy applies to hug.bm-it.ch.
                     </DialogDescription>
                 </DialogHeader>
-                <div className="-mx-4 no-scrollbar max-h-[50vh] overflow-y-auto px-4 text-sm [&>section]:mb-4 [&>section:last-child]:mb-0">
+                {/*[&>section>p]:text-slightly-muted-foreground*/}
+                <div className="-mx-4 no-scrollbar max-h-[50vh] overflow-y-auto px-4 text-sm [&_h3]:mb-1 [&_h3]:font-semibold [&>section]:mb-4 [&>section:last-child]:mb-0">
                     <section>
-                        <h3 className="mb-1 font-semibold">Data we collect</h3>
-                        <p className="text-">
+                        <h3>Data we collect</h3>
+                        <p>
                             This site does not use forms, cookies, or analytics.
                             We do not intentionally collect any personal data
                             from you.
                         </p>
                     </section>
-
                     <section>
-                        <h3 className="mb-1 font-semibold">
-                            Hosting and access logs
-                        </h3>
+                        <h3>Hosting and access logs</h3>
                         <p>
                             The hosting provider for this website may collect
                             technical access data (such as IP address, date and
@@ -48,28 +46,19 @@ export function PrivacyPolicyDialog() {
                             hosting provider's privacy policy.
                         </p>
                     </section>
-
                     <section>
-                        <h3 className="mb-1 font-semibold">External links</h3>
+                        <h3>External links</h3>
                         <p>
                             This site links to GitHub. When you follow that
-                            link, GitHub's privacy practices apply. See{" "}
-                            <Button
-                                variant="link"
-                                size="sm"
-                                className="px-0"
-                                asChild
-                            >
-                                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">
-                                    GitHub's Privacy Statement
-                                </a>
-                            </Button>
-                            .
+                            link,
+                            <InlineLink href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">
+                                GitHub's privacy practices
+                            </InlineLink>{" "}
+                            apply.
                         </p>
                     </section>
-
                     <section>
-                        <h3 className="mb-1 font-semibold">Your rights</h3>
+                        <h3>Your rights</h3>
                         <p>
                             Under Swiss (FADP) and EU (GDPR) law, you may have
                             rights to access, correct, or delete personal data.
@@ -79,22 +68,23 @@ export function PrivacyPolicyDialog() {
                             provider.
                         </p>
                     </section>
-
                     <section>
-                        <h3 className="mb-1 font-semibold">
-                            Questions and changes
-                        </h3>
+                        <h3>Questions and changes</h3>
                         <p>
                             For questions about this privacy policy, please
-                            contact us via the domain bm-it.ch. We may update
-                            this policy from time to time; the “Last updated”
-                            date at the top will be revised accordingly.
+                            contact us via
+                            <InlineLink href="mailto:lorenzo.hug@icloud.com">
+                                lorenzo.hug@icloud.com
+                            </InlineLink>
+                            . We may update this policy from time to time; the
+                            “Last updated” date at the bottom will be revised
+                            accordingly.
                         </p>
                     </section>
                 </div>
                 <DialogFooter>
                     <p className="text-xs font-light text-muted-foreground">
-                        Last updated: January 2025.
+                        Last updated: April 2025
                     </p>
                 </DialogFooter>
             </DialogContent>

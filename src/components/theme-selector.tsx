@@ -1,4 +1,6 @@
+import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
+import { Moon, Sun } from "lucide-react"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -8,8 +10,6 @@ import {
     DropdownMenuRadioItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "@/components/theme-provider"
 
 export function ThemeSelector() {
     const { theme, setTheme } = useTheme()
@@ -32,13 +32,13 @@ export function ThemeSelector() {
                             setTheme(value as "light" | "dark" | "system")
                         }
                     >
-                        <DropdownMenuRadioItem value="light" className="py-1">
+                        <DropdownMenuRadioItem value="light">
                             Light
                         </DropdownMenuRadioItem>
-                        <DropdownMenuRadioItem value="dark" className="py-1">
+                        <DropdownMenuRadioItem value="dark">
                             Dark
                         </DropdownMenuRadioItem>
-                        <DropdownMenuRadioItem value="system" className="py-1">
+                        <DropdownMenuRadioItem value="system">
                             System
                         </DropdownMenuRadioItem>
                     </DropdownMenuRadioGroup>

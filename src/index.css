@@ -27,6 +27,7 @@
     --color-destructive: var(--destructive);
     --color-accent-foreground: var(--accent-foreground);
     --color-accent: var(--accent);
+    --color-slightly-muted-foreground: var(--slightly-muted-foreground);
     --color-muted-foreground: var(--muted-foreground);
     --color-muted: var(--muted);
     --color-secondary-foreground: var(--secondary-foreground);
@@ -39,6 +40,8 @@
     --color-card: var(--card);
     --color-foreground: var(--foreground);
     --color-background: var(--background);
+    --color-selection: var(--selection);
+    --color-selection-foreground: var(--selection-foreground);
     --radius-sm: calc(var(--radius) * 0.6);
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
@@ -61,6 +64,7 @@
     --secondary-foreground: oklch(0.205 0 0);
     --muted: oklch(0.97 0 0);
     --muted-foreground: oklch(0.556 0 0);
+    --slightly-muted-foreground: oklch(43.861% 0.00005 271.152);
     --accent: oklch(0.97 0 0);
     --accent-foreground: oklch(0.205 0 0);
     --destructive: oklch(0.577 0.245 27.325);
@@ -81,6 +85,8 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --selection: oklch(14.479% 0.00002 271.152);
+    --selection-foreground: oklch(100% 0.00011 271.152);
 }
 
 .dark {
@@ -96,6 +102,7 @@
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.269 0 0);
     --muted-foreground: oklch(0.708 0 0);
+    --slightly-muted-foreground: oklch(86.995% 0.0001 271.152);
     --accent: oklch(0.269 0 0);
     --accent-foreground: oklch(0.985 0 0);
     --destructive: oklch(0.704 0.191 22.216);
@@ -115,6 +122,8 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+    --selection: oklch(92.191% 0.0001 271.152);
+    --selection-foreground: oklch(20.463% 0.00002 271.152);
 }
 
 @layer base {
@@ -126,5 +135,8 @@
     }
     html {
         @apply font-sans;
+    }
+    ::selection {
+        @apply bg-selection text-selection-foreground;
     }
 }
