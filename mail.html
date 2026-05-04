@@ -1,0 +1,202 @@
+<!-- EmailJS: matches mail-form template params (from_name, from_email, reply_to, subject, message) -->
+<table
+    role="presentation"
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    style="
+        margin: 0;
+        padding: 24px 16px;
+        background-color: #fafafa;
+        font-family:
+            ui-sans-serif,
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            &quot;Segoe UI&quot;,
+            Roboto,
+            &quot;Helvetica Neue&quot;,
+            Arial,
+            sans-serif;
+    "
+>
+    <tr>
+        <td align="center">
+            <table
+                role="presentation"
+                cellpadding="0"
+                cellspacing="0"
+                width="100%"
+                style="
+                    max-width: 480px;
+                    background-color: #ffffff;
+                    border: 1px solid #ebebeb;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow:
+                        0 1px 2px rgba(0, 0, 0, 0.04),
+                        0 1px 3px rgba(0, 0, 0, 0.06);
+                "
+            >
+                <tr>
+                    <td
+                        style="
+                            padding: 20px 20px 16px;
+                            border-bottom: 1px solid #ebebeb;
+                            background-color: #ffffff;
+                        "
+                    >
+                        <p
+                            style="
+                                margin: 0 0 4px;
+                                font-size: 11px;
+                                font-weight: 600;
+                                letter-spacing: 0.04em;
+                                text-transform: uppercase;
+                                color: #737373;
+                            "
+                        >
+                            New message
+                        </p>
+                        <h1
+                            style="
+                                margin: 0;
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 1.35;
+                                color: #252525;
+                            "
+                        >
+                            {{subject}}
+                        </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                        style="
+                            padding: 16px 20px 20px;
+                            background-color: #ffffff;
+                        "
+                    >
+                        <p
+                            style="
+                                margin: 0 0 16px;
+                                font-size: 14px;
+                                line-height: 1.5;
+                                color: #525252;
+                            "
+                        >
+                            A message from
+                            <strong style="color: #252525"
+                                >{{from_name}}</strong
+                            >
+                            was submitted via your site contact form.
+                        </p>
+
+                        <table
+                            role="presentation"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="margin-bottom: 12px"
+                        >
+                            <tr>
+                                <td style="padding-bottom: 10px">
+                                    <div
+                                        style="
+                                            font-size: 11px;
+                                            font-weight: 500;
+                                            color: #737373;
+                                            margin-bottom: 6px;
+                                        "
+                                    >
+                                        Email
+                                    </div>
+                                    <div
+                                        style="
+                                            display: inline-block;
+                                            padding: 8px 12px;
+                                            font-size: 14px;
+                                            color: #252525;
+                                            background-color: #fafafa;
+                                            border: 1px solid #ebebeb;
+                                            border-radius: 6px;
+                                        "
+                                    >
+                                        <a
+                                            href="mailto:{{from_email}}"
+                                            style="
+                                                color: #252525;
+                                                text-decoration: none;
+                                            "
+                                            >{{from_email}}</a
+                                        >
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 10px">
+                                    <div
+                                        style="
+                                            font-size: 11px;
+                                            font-weight: 500;
+                                            color: #737373;
+                                            margin-bottom: 6px;
+                                        "
+                                    >
+                                        Reply-To
+                                    </div>
+                                    <div
+                                        style="
+                                            display: inline-block;
+                                            padding: 8px 12px;
+                                            font-size: 14px;
+                                            color: #252525;
+                                            background-color: #fafafa;
+                                            border: 1px solid #ebebeb;
+                                            border-radius: 6px;
+                                        "
+                                    >
+                                        <a
+                                            href="mailto:{{reply_to}}"
+                                            style="
+                                                color: #252525;
+                                                text-decoration: none;
+                                            "
+                                            >{{reply_to}}</a
+                                        >
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div
+                            style="
+                                font-size: 11px;
+                                font-weight: 500;
+                                color: #737373;
+                                margin-bottom: 6px;
+                            "
+                        >
+                            Message
+                        </div>
+                        <div
+                            style="
+                                padding: 12px 12px;
+                                font-size: 14px;
+                                line-height: 1.55;
+                                color: #252525;
+                                background-color: #fafafa;
+                                border: 1px solid #ebebeb;
+                                border-radius: 6px;
+                                white-space: pre-wrap;
+                            "
+                        >
+                            {{message}}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

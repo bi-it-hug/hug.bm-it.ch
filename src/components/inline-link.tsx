@@ -14,8 +14,8 @@ export function InlineLink({
         <>
             {" "}
             <Button
-                variant="link"
                 size="sm"
+                variant="link"
                 className={cn(
                     "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]",
                     className

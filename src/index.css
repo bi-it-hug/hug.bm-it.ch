@@ -139,4 +139,8 @@
     ::selection {
         @apply bg-selection text-selection-foreground;
     }
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
 }
