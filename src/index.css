@@ -139,6 +139,9 @@
     ::selection {
         @apply bg-selection text-selection-foreground;
     }
+    :focus-visible {
+        box-shadow: none !important;
+    }
     button:not(:disabled),
     [role="button"]:not(:disabled) {
         cursor: pointer;

@@ -1,8 +1,8 @@
 import { PrivacyPolicy } from "@/components/privacy-policy"
 import { ThemeSelector } from "@/components/theme-selector"
 import { InlineLink } from "@/components/inline-link"
-import { Toaster } from "@/components/ui/sonner"
 import { MailForm } from "./components/mail-form"
+import { Toaster } from "@/components/ui/sonner"
 
 export function App() {
     return (

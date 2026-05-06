@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export function InlineLink({
@@ -13,17 +13,19 @@ export function InlineLink({
     return (
         <>
             {" "}
-            <Button
-                size="sm"
-                variant="link"
+            <a
+                href={href}
                 className={cn(
+                    buttonVariants({
+                        variant: "link",
+                        size: "sm",
+                    }),
                     "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]",
                     className
                 )}
-                asChild
             >
-                <a href={href}>{children}</a>
-            </Button>
+                {children}
+            </a>
         </>
     )
 }

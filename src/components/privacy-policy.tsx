@@ -1,5 +1,8 @@
 import { InlineLink } from "@/components/inline-link"
+import { MailForm } from "@/components/mail-form"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { RefreshCcw } from "lucide-react"
 import {
     Dialog,
     DialogContent,
@@ -9,18 +12,17 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { MailForm } from "@/components/mail-form"
-import { RefreshCcw } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
 
 export function PrivacyPolicy() {
     return (
         <Dialog>
-            <DialogTrigger asChild>
-                <Button variant="link" size="sm">
-                    Privacy Policy
-                </Button>
-            </DialogTrigger>
+            <DialogTrigger
+                render={
+                    <Button variant="link" size="sm">
+                        Privacy Policy
+                    </Button>
+                }
+            />
             <DialogContent className="sm:max-w-md">
                 <DialogHeader className="text-left">
                     <DialogTitle>Privacy Policy</DialogTitle>

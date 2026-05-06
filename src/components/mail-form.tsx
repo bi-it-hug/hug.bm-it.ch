@@ -1,12 +1,13 @@
-import emailjs from "@emailjs/browser"
-import { Button } from "@/components/ui/button"
-import { Controller, useForm } from "react-hook-form"
-import { Input } from "@/components/ui/input"
-import { Spinner } from "@/components/ui/spinner"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "sonner"
-import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { Controller, useForm } from "react-hook-form"
+import { Textarea } from "@/components/ui/textarea"
+import { Spinner } from "@/components/ui/spinner"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import emailjs from "@emailjs/browser"
+import { cn } from "@/lib/utils"
+import { useState } from "react"
+import { toast } from "sonner"
 import * as z from "zod"
 import {
     Dialog,
@@ -18,13 +19,12 @@ import {
 } from "@/components/ui/dialog"
 import {
     Field,
-    FieldDescription,
+    // FieldDescription,
     FieldError,
     FieldGroup,
     FieldLabel,
     FieldSet,
 } from "@/components/ui/field"
-import { cn } from "@/lib/utils"
 
 const formSchema = z.object({
     firstName: z.string().min(1, "First name is required."),
@@ -125,19 +125,21 @@ export function MailForm({
                 if (!next) reset()
             }}
         >
-            <DialogTrigger asChild>
-                <Button
-                    size="sm"
-                    variant="link"
-                    className={cn(
-                        inline &&
-                            "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]"
-                    )}
-                >
-                    {buttonText}
-                </Button>
-            </DialogTrigger>
-            <DialogContent className="min-w-sm">
+            <DialogTrigger
+                render={
+                    <Button
+                        size="sm"
+                        variant="link"
+                        className={cn(
+                            inline &&
+                                "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]"
+                        )}
+                    >
+                        {buttonText}
+                    </Button>
+                }
+            />
+            <DialogContent className="min-w-sm lg:min-w-lg">
                 <DialogHeader>
                     <DialogTitle>Contact me</DialogTitle>
                     <DialogDescription className="text-muted-foreground">
@@ -239,9 +241,9 @@ export function MailForm({
                                                     fieldState.invalid
                                                 }
                                             />
-                                            <FieldDescription>
+                                            {/* <FieldDescription>
                                                 For replies only.
-                                            </FieldDescription>
+                                            </FieldDescription> */}
                                             {fieldState.invalid && (
                                                 <FieldError
                                                     errors={[fieldState.error]}
@@ -270,9 +272,9 @@ export function MailForm({
                                                     fieldState.invalid
                                                 }
                                             />
-                                            <FieldDescription>
+                                            {/* <FieldDescription>
                                                 One line is enough.
-                                            </FieldDescription>
+                                            </FieldDescription> */}
                                             {fieldState.invalid && (
                                                 <FieldError
                                                     errors={[fieldState.error]}
@@ -300,9 +302,9 @@ export function MailForm({
                                                     fieldState.invalid
                                                 }
                                             />
-                                            <FieldDescription>
+                                            {/* <FieldDescription>
                                                 Enough detail that I can reply.
-                                            </FieldDescription>
+                                            </FieldDescription> */}
                                             {fieldState.invalid && (
                                                 <FieldError
                                                     errors={[fieldState.error]}
@@ -314,14 +316,18 @@ export function MailForm({
                             </FieldGroup>
                         </FieldSet>
                         <Field orientation="horizontal">
-                            <Button type="submit" disabled={isSubmitting}>
+                            <Button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full"
+                            >
                                 {isSubmitting ? (
                                     <>
                                         <Spinner data-icon="inline-start" />{" "}
                                         Sending
                                     </>
                                 ) : (
-                                    "Send"
+                                    "Submit"
                                 )}
                             </Button>
                         </Field>
