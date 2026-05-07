@@ -125,20 +125,18 @@ export function MailForm({
                 if (!next) reset()
             }}
         >
-            <DialogTrigger
-                render={
-                    <Button
-                        size="sm"
-                        variant="link"
-                        className={cn(
-                            inline &&
-                                "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]"
-                        )}
-                    >
-                        {buttonText}
-                    </Button>
-                }
-            />
+            <DialogTrigger asChild>
+                <Button
+                    size="sm"
+                    variant="link"
+                    className={cn(
+                        inline &&
+                            "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]"
+                    )}
+                >
+                    {buttonText}
+                </Button>
+            </DialogTrigger>
             <DialogContent className="min-w-sm lg:min-w-lg">
                 <DialogHeader>
                     <DialogTitle>Contact me</DialogTitle>
@@ -170,7 +168,7 @@ export function MailForm({
                                                 <Input
                                                     {...field}
                                                     id={field.name}
-                                                    placeholder="Alex"
+                                                    placeholder="John"
                                                     autoComplete="given-name"
                                                     aria-invalid={
                                                         fieldState.invalid
@@ -203,7 +201,7 @@ export function MailForm({
                                                 <Input
                                                     {...field}
                                                     id={field.name}
-                                                    placeholder="Rivera"
+                                                    placeholder="Doe"
                                                     autoComplete="family-name"
                                                     aria-invalid={
                                                         fieldState.invalid
@@ -235,7 +233,7 @@ export function MailForm({
                                                 {...field}
                                                 id={field.name}
                                                 type="email"
-                                                placeholder="talent@company.com"
+                                                placeholder="john.doe@example.com"
                                                 autoComplete="email"
                                                 aria-invalid={
                                                     fieldState.invalid
@@ -267,7 +265,7 @@ export function MailForm({
                                                 {...field}
                                                 id={field.name}
                                                 type="text"
-                                                placeholder="Hiring: senior engineer (remote)"
+                                                placeholder="Hiring: junior engineer (remote)"
                                                 aria-invalid={
                                                     fieldState.invalid
                                                 }
@@ -296,11 +294,12 @@ export function MailForm({
                                             <Textarea
                                                 {...field}
                                                 id={field.name}
-                                                placeholder="We're hiring for a product team and your work stood out. Would you be open to a short intro call next week? Happy to share the JD and comp range."
+                                                placeholder="We're hiring for a product team and your work stood out. Would you be open to a short intro call next week?"
                                                 rows={8}
                                                 aria-invalid={
                                                     fieldState.invalid
                                                 }
+                                                className="min-h-48"
                                             />
                                             {/* <FieldDescription>
                                                 Enough detail that I can reply.

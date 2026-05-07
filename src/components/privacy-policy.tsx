@@ -16,13 +16,11 @@ import {
 export function PrivacyPolicy() {
     return (
         <Dialog>
-            <DialogTrigger
-                render={
-                    <Button variant="link" size="sm">
-                        Privacy Policy
-                    </Button>
-                }
-            />
+            <DialogTrigger asChild>
+                <Button variant="link" size="sm">
+                    Privacy Policy
+                </Button>
+            </DialogTrigger>
             <DialogContent className="sm:max-w-md">
                 <DialogHeader className="text-left">
                     <DialogTitle>Privacy Policy</DialogTitle>
@@ -77,7 +75,7 @@ export function PrivacyPolicy() {
                         <h3>Questions and changes</h3>
                         <p>
                             For questions about this privacy policy, please
-                            contact me via
+                            contact me via{" "}
                             <MailForm
                                 buttonText="lorenzo.hug@icloud.com"
                                 inline
