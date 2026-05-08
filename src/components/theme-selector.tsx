@@ -1,6 +1,6 @@
 import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
-import { Moon, Sun } from "lucide-react"
+import { Monitor, Moon, Sun } from "lucide-react"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -33,12 +33,15 @@ export function ThemeSelector() {
                         }
                     >
                         <DropdownMenuRadioItem value="light">
+                            <Sun />
                             Light
                         </DropdownMenuRadioItem>
                         <DropdownMenuRadioItem value="dark">
+                            <Moon />
                             Dark
                         </DropdownMenuRadioItem>
                         <DropdownMenuRadioItem value="system">
+                            <Monitor />
                             System
                         </DropdownMenuRadioItem>
                     </DropdownMenuRadioGroup>
