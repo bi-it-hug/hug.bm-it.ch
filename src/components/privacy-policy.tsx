@@ -88,7 +88,7 @@ export function PrivacyPolicy() {
                 <DialogFooter>
                     <Badge variant="outline" className="font-light">
                         <RefreshCcw data-icon="inline-start" />
-                        May 2025
+                        May 2026
                     </Badge>
                 </DialogFooter>
             </DialogContent>
