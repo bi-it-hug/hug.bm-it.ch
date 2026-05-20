@@ -323,7 +323,7 @@ export function MailForm({
                                 {isSubmitting ? (
                                     <>
                                         <Spinner data-icon="inline-start" />{" "}
-                                        Sending
+                                        Submitting
                                     </>
                                 ) : (
                                     "Submit"

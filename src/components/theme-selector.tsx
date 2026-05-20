@@ -1,6 +1,6 @@
-import { useTheme } from "@/components/theme-provider"
-import { Button } from "@/components/ui/button"
+import { useTheme, type Theme } from "@/components/theme-provider"
 import { Monitor, Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -17,9 +17,13 @@ export function ThemeSelector() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon-sm">
-                    <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-                    <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                <Button
+                    variant="outline"
+                    size="icon-sm"
+                    className="[&>*:not(span)]:size-[1.2rem] [&>*:not(span)]:transition-all"
+                >
+                    <Sun className="scale-100 rotate-0 dark:scale-0 dark:-rotate-90" />
+                    <Moon className="absolute scale-0 rotate-90 dark:scale-100 dark:rotate-0" />
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
@@ -28,9 +32,7 @@ export function ThemeSelector() {
                     <DropdownMenuLabel>Theme</DropdownMenuLabel>
                     <DropdownMenuRadioGroup
                         value={theme}
-                        onValueChange={(value) =>
-                            setTheme(value as "light" | "dark" | "system")
-                        }
+                        onValueChange={(value) => setTheme(value as Theme)}
                     >
                         <DropdownMenuRadioItem value="light">
                             <Sun />
