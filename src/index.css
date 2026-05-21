@@ -136,7 +136,7 @@
     html {
         @apply font-sans;
     }
-    :not([data-slot="dropdown-menu-content"]):focus-visible {
+    :focus-visible:not([data-slot="dropdown-menu-content"]) {
         box-shadow: none !important;
     }
     button:not(:disabled),

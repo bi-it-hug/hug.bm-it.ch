@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
-import { Textarea } from "@/components/ui/textarea"
 import { Spinner } from "@/components/ui/spinner"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,6 +24,14 @@ import {
     FieldLabel,
     FieldSet,
 } from "@/components/ui/field"
+import {
+    InputGroup,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroupTextarea,
+} from "@/components/ui/input-group"
+
+type MailFormData = z.infer<typeof formSchema>
 
 const formSchema = z.object({
     firstName: z.string().min(1, "First name is required."),
@@ -40,14 +47,14 @@ const formSchema = z.object({
     subject: z
         .string()
         .min(1, "Subject is required.")
-        .min(5, "Subject must be at least 5 characters."),
+        .min(3, "Subject must be at least 3 characters.")
+        .max(50, "Subject must be at most 50 characters"),
     message: z
         .string()
         .min(1, "Message is required.")
-        .min(20, "Message must be at least 20 characters."),
+        .min(10, "Message must be at least 20 characters.")
+        .max(1000, "Message must be at most 1000 characters."),
 })
-
-type MailFormData = z.infer<typeof formSchema>
 
 /** EmailJS template variables: {{from_name}}, {{from_email}}, {{reply_to}}, {{subject}}, {{message}} */
 function buildTemplateParams(data: MailFormData) {
@@ -291,16 +298,26 @@ export function MailForm({
                                             <FieldLabel htmlFor={field.name}>
                                                 Message
                                             </FieldLabel>
-                                            <Textarea
-                                                {...field}
-                                                id={field.name}
-                                                placeholder="We're hiring for a product team and your work stood out. Would you be open to a short intro call next week?"
-                                                rows={8}
-                                                aria-invalid={
-                                                    fieldState.invalid
-                                                }
-                                                className="min-h-48"
-                                            />
+
+                                            <InputGroup>
+                                                <InputGroupTextarea
+                                                    {...field}
+                                                    id={field.name}
+                                                    placeholder="We're hiring for a product team and your work stood out. Would you be open to a short intro call next week?"
+                                                    rows={8}
+                                                    aria-invalid={
+                                                        fieldState.invalid
+                                                    }
+                                                    className="no-scrollbar max-h-80 min-h-48 overflow-y-auto"
+                                                />
+                                                <InputGroupAddon align="block-end">
+                                                    <InputGroupText className="tabular-nums">
+                                                        {field.value.length}
+                                                        /1000 characters
+                                                    </InputGroupText>
+                                                </InputGroupAddon>
+                                            </InputGroup>
+
                                             {/* <FieldDescription>
                                                 Enough detail that I can reply.
                                             </FieldDescription> */}
