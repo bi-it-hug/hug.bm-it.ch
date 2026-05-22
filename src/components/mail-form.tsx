@@ -80,6 +80,7 @@ export function MailForm({
         control,
         handleSubmit,
         reset,
+        watch,
         formState: { isSubmitting },
     } = useForm<MailFormData>({
         resolver: zodResolver(formSchema),
@@ -92,6 +93,10 @@ export function MailForm({
         },
         mode: "onSubmit",
     })
+
+    const hasFormContent = Object.values(
+        watch(["firstName", "lastName", "email", "subject", "message"])
+    ).some((value) => value.length > 0)
 
     async function onSubmit(data: MailFormData) {
         const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
@@ -126,6 +131,7 @@ export function MailForm({
 
     return (
         <Dialog
+            modal={true}
             open={open}
             onOpenChange={(next) => {
                 setOpen(next)
@@ -144,7 +150,12 @@ export function MailForm({
                     {buttonText}
                 </Button>
             </DialogTrigger>
-            <DialogContent className="min-w-sm lg:min-w-lg">
+            <DialogContent
+                className="min-w-sm lg:min-w-lg"
+                onInteractOutside={(event) => {
+                    if (hasFormContent) event.preventDefault()
+                }}
+            >
                 <DialogHeader>
                     <DialogTitle>Contact me</DialogTitle>
                     <DialogDescription className="text-muted-foreground">
