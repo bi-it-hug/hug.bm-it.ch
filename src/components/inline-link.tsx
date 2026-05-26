@@ -17,7 +17,7 @@ export function InlineLink({
                 variant="link"
                 size="sm"
                 className={cn(
-                    "h-fit px-0 text-sm transition-[colors,opacity,shadow,transform]",
+                    "h-fit px-0 text-xs transition-[colors,opacity,shadow,transform]",
                     className
                 )}
                 asChild
