@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/empty"
 
 export function App() {
-    const { theme } = useTheme()
+    const { resolvedTheme } = useTheme()
 
     return (
         <>
@@ -41,7 +41,7 @@ export function App() {
             <div className="pointer-events-none absolute inset-0 -z-1 size-full">
                 <Grainient
                     color1="#67787c"
-                    color2={theme === "dark" ? "#171717" : "#ffffff"}
+                    color2={resolvedTheme === "dark" ? "#171717" : "#ffffff"}
                     color3="#79697b"
                     timeSpeed={0.25}
                     colorBalance={0}
@@ -57,7 +57,7 @@ export function App() {
                     grainScale={2}
                     grainAnimated={false}
                     contrast={1}
-                    gamma={theme === "dark" ? 0.4 : 2}
+                    gamma={resolvedTheme === "dark" ? 0.4 : 2}
                     saturation={1}
                     centerX={0}
                     centerY={0}
@@ -84,17 +84,30 @@ export function App() {
                             This site's getting worked on. Meanwhile, you can
                             check out my stuff on the Links below.
                         </EmptyDescription>
-                        <EmptyContent>
+                        <EmptyContent className="flex-row justify-center gap-2">
                             <Button variant="default" size="icon-sm" asChild>
                                 <a href="https://github.com/bi-it-hug">
                                     <img
                                         src={
-                                            theme === "dark"
-                                                ? "/GitHub_Invertocat_Black.svg"
-                                                : "/GitHub_Invertocat_White.svg"
+                                            resolvedTheme === "dark"
+                                                ? "/logo-github-black.svg"
+                                                : "/logo-github-white.svg"
                                         }
                                         alt="GitHub Invertocat"
-                                        className="p-1"
+                                        className="p-0.75"
+                                    />
+                                </a>
+                            </Button>
+                            <Button variant="default" size="icon-sm" asChild>
+                                <a href="https://linkedin.com/in/lorenzo-hug-0931b72b0">
+                                    <img
+                                        src={
+                                            resolvedTheme === "dark"
+                                                ? "/logo-linkedin-black.svg"
+                                                : "/logo-linkedin-white.svg"
+                                        }
+                                        alt="LinkedIn Logo"
+                                        className="p-0.75"
                                     />
                                 </a>
                             </Button>
