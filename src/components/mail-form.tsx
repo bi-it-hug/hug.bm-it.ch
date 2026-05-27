@@ -319,7 +319,7 @@ export function MailForm({
                                                     aria-invalid={
                                                         fieldState.invalid
                                                     }
-                                                    className="no-scrollbar max-h-80 min-h-48 overflow-y-auto"
+                                                    className="no-scrollbar max-h-80 min-h-28 overflow-y-auto sm:min-h-48"
                                                 />
                                                 <InputGroupAddon align="block-end">
                                                     <InputGroupText className="tabular-nums">

@@ -1,10 +1,8 @@
+import { ThemeIconButton } from "@/components/theme-icon-button"
 import { PrivacyPolicy } from "@/components/privacy-policy"
 import { ThemeSelector } from "@/components/theme-selector"
-import { useTheme } from "./components/theme-provider"
-import { MailForm } from "./components/mail-form"
+import { MailForm } from "@/components/mail-form"
 import { Toaster } from "@/components/ui/sonner"
-import { Button } from "@/components/ui/button"
-// import Grainient from "@/components/Grainient"
 import { Construction } from "lucide-react"
 import {
     Empty,
@@ -15,13 +13,10 @@ import {
 } from "@/components/ui/empty"
 
 export function App() {
-    const { resolvedTheme } = useTheme()
-
     return (
         <>
             <Toaster />
-            {/* 
-            <div className="pointer-events-none absolute inset-0 size-full">
+            {/* <div className="pointer-events-none absolute inset-0 size-full">
                 <LightPillar
                     topColor="#8faea0"
                     bottomColor="#b198b4"
@@ -85,32 +80,23 @@ export function App() {
                             check out my stuff on the Links below.
                         </EmptyDescription>
                         <EmptyContent className="flex-row justify-center gap-2">
-                            <Button variant="default" size="icon-sm" asChild>
-                                <a href="https://github.com/bi-it-hug">
-                                    <img
-                                        src={
-                                            resolvedTheme === "dark"
-                                                ? "/logo-github-black.svg"
-                                                : "/logo-github-white.svg"
-                                        }
-                                        alt="GitHub Invertocat"
-                                        className="p-0.75"
-                                    />
-                                </a>
-                            </Button>
-                            <Button variant="default" size="icon-sm" asChild>
-                                <a href="https://linkedin.com/in/lorenzo-hug-0931b72b0">
-                                    <img
-                                        src={
-                                            resolvedTheme === "dark"
-                                                ? "/logo-linkedin-black.svg"
-                                                : "/logo-linkedin-white.svg"
-                                        }
-                                        alt="LinkedIn Logo"
-                                        className="p-0.75"
-                                    />
-                                </a>
-                            </Button>
+                            <ThemeIconButton
+                                href="https://github.com/bi-it-hug"
+                                src={{
+                                    dark: "/logo-github-black.svg",
+                                    light: "/logo-github-white.svg",
+                                }}
+                                alt="GitHub Invertocat"
+                            />
+
+                            <ThemeIconButton
+                                href="https://linkedin.com/in/lorenzo-hug-0931b72b0"
+                                src={{
+                                    dark: "/logo-linkedin-black.svg",
+                                    light: "/logo-linkedin-white.svg",
+                                }}
+                                alt="LinkedIn Logo"
+                            />
                         </EmptyContent>
                     </EmptyHeader>
                 </Empty>

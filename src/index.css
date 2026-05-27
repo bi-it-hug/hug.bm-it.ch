@@ -128,16 +128,24 @@
     * {
         @apply border-border outline-ring/50;
     }
-    body {
-        @apply bg-background text-foreground;
-    }
+
     html {
         @apply font-sans;
     }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    ::selection {
+        @apply bg-selection text-selection-foreground;
+    }
+
     button:not(:disabled),
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+
     [data-slot="input"],
     [data-slot="input-group"],
     [data-slot="textarea"] {
@@ -145,8 +153,7 @@
     }
 }
 
-@layer utilities {
-    ::selection {
-        @apply bg-selection text-selection-foreground;
-    }
+@utility size-screen {
+    width: 100vw;
+    height: 100vh;
 }
