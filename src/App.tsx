@@ -4,7 +4,7 @@ import { useTheme } from "./components/theme-provider"
 import { MailForm } from "./components/mail-form"
 import { Toaster } from "@/components/ui/sonner"
 import { Button } from "@/components/ui/button"
-import Grainient from "@/components/Grainient"
+// import Grainient from "@/components/Grainient"
 import { Construction } from "lucide-react"
 import {
     Empty,
