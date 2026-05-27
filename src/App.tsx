@@ -38,7 +38,7 @@ export function App() {
                 />
             </div> */}
 
-            <div className="pointer-events-none absolute inset-0 -z-1 size-full">
+            {/* <div className="pointer-events-none absolute inset-0 -z-1 size-full">
                 <Grainient
                     color1="#67787c"
                     color2={resolvedTheme === "dark" ? "#171717" : "#ffffff"}
@@ -63,7 +63,7 @@ export function App() {
                     centerY={0}
                     zoom={0.9}
                 />
-            </div>
+            </div> */}
 
             <header className="flex p-4">
                 <ThemeSelector />
