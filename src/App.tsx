@@ -16,50 +16,6 @@ export function App() {
     return (
         <>
             <Toaster />
-            {/* <div className="pointer-events-none absolute inset-0 size-full">
-                <LightPillar
-                    topColor="#8faea0"
-                    bottomColor="#b198b4"
-                    intensity={1}
-                    rotationSpeed={0.3}
-                    glowAmount={0.002}
-                    pillarWidth={3}
-                    pillarHeight={0.4}
-                    noiseIntensity={0.7}
-                    pillarRotation={-25}
-                    interactive={false}
-                    mixBlendMode="screen"
-                    quality="high"
-                />
-            </div> */}
-
-            {/* <div className="pointer-events-none absolute inset-0 -z-1 size-full">
-                <Grainient
-                    color1="#67787c"
-                    color2={resolvedTheme === "dark" ? "#171717" : "#ffffff"}
-                    color3="#79697b"
-                    timeSpeed={0.25}
-                    colorBalance={0}
-                    warpStrength={1}
-                    warpFrequency={5}
-                    warpSpeed={2}
-                    warpAmplitude={50}
-                    blendAngle={0}
-                    blendSoftness={0.05}
-                    rotationAmount={500}
-                    noiseScale={2}
-                    grainAmount={0.1}
-                    grainScale={2}
-                    grainAnimated={false}
-                    contrast={1}
-                    gamma={resolvedTheme === "dark" ? 0.4 : 2}
-                    saturation={1}
-                    centerX={0}
-                    centerY={0}
-                    zoom={0.9}
-                />
-            </div> */}
-
             <header className="flex p-4">
                 <ThemeSelector />
             </header>
