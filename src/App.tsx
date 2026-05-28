@@ -71,7 +71,6 @@ export function App() {
                             strokeWidth={1}
                             className="opacity-25"
                         />
-
                         <EmptyTitle className="text-4xl">
                             Work in Progress
                         </EmptyTitle>
@@ -88,7 +87,6 @@ export function App() {
                                 }}
                                 alt="GitHub Invertocat"
                             />
-
                             <ThemeIconButton
                                 href="https://linkedin.com/in/lorenzo-hug-0931b72b0"
                                 src={{
